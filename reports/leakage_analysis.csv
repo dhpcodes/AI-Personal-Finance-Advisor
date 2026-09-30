@@ -1,0 +1,3 @@
+Split Strategy,Test Set Overlapping Descriptions Count,Test Records Leaked Count,Test Set Leakage Percentage (%),Explanation
+Random Stratified Split (Full Dataset),237216,1008488,74.69,Identical raw transaction descriptions appear in both training and test sets.
+Deduplicated Stratified Split (Unique Descriptions),0,0,0.0,Data grouped by unique description to guarantee zero train/test text overlap.

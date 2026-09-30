@@ -1,0 +1,53 @@
+{
+    "random_seed": 42,
+    "deduplicated": true,
+    "sample_size_used": 200000,
+    "total_raw_dataset_rows": 4501043,
+    "split_ratios": {
+        "train": 0.7,
+        "validation": 0.15,
+        "test": 0.15
+    },
+    "sample_counts": {
+        "train": 140000,
+        "validation": 30000,
+        "test": 30000
+    },
+    "class_counts_train": {
+        "Food & Dining": 14203,
+        "Transportation": 14180,
+        "Government & Legal": 14157,
+        "Financial Services": 14062,
+        "Shopping & Retail": 14015,
+        "Entertainment & Recreation": 13999,
+        "Healthcare & Medical": 13926,
+        "Utilities & Services": 13902,
+        "Charity & Donations": 13812,
+        "Income": 13744
+    },
+    "class_counts_val": {
+        "Food & Dining": 3043,
+        "Transportation": 3039,
+        "Government & Legal": 3033,
+        "Financial Services": 3014,
+        "Shopping & Retail": 3003,
+        "Entertainment & Recreation": 3000,
+        "Healthcare & Medical": 2984,
+        "Utilities & Services": 2979,
+        "Charity & Donations": 2960,
+        "Income": 2945
+    },
+    "class_counts_test": {
+        "Food & Dining": 3044,
+        "Transportation": 3038,
+        "Government & Legal": 3034,
+        "Financial Services": 3013,
+        "Shopping & Retail": 3004,
+        "Entertainment & Recreation": 3000,
+        "Healthcare & Medical": 2984,
+        "Utilities & Services": 2979,
+        "Charity & Donations": 2959,
+        "Income": 2945
+    },
+    "preprocessing_version": "v1_lowercased_whitespace_normalized"
+}
