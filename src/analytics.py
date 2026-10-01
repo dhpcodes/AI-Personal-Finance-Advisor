@@ -125,7 +125,13 @@ class FinanceAnalytics:
         else:
             df["is_income"] = df["amount"] > 0
 
-        trends = df.groupby(["YearMonth", "is_income"])["amount"].abs().sum().unstack(fill_value=0.0).reset_index()
+        trends = (
+    df.assign(amount_abs=df["amount"].abs())
+      .groupby(["YearMonth", "is_income"])["amount_abs"]
+      .sum()
+      .unstack(fill_value=0.0)
+      .reset_index()
+)
         
         # Rename columns safely
         trends.rename(columns={True: "Income", False: "Expense"}, inplace=True)
