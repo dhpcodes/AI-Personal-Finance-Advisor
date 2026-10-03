@@ -1,4 +1,4 @@
 model,accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,training_time_sec
-Logistic Regression,0.9855,0.9855,0.9856,0.9855,0.9855,4.511
-Linear SVM,0.9869,0.9869,0.9869,0.9869,0.9869,24.134
-Naive Bayes,0.9697,0.9697,0.9698,0.9697,0.9697,0.036
+Logistic Regression,0.9859,0.9859,0.986,0.9859,0.9859,5.247
+Linear SVM,0.9866,0.9866,0.9867,0.9866,0.9866,27.266
+Naive Bayes,0.9702,0.9703,0.9703,0.9703,0.9702,0.031

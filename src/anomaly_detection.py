@@ -5,6 +5,22 @@ from sklearn.ensemble import IsolationForest
 from src.config import config
 from src.utils import logger
 
+CURRENCY_SYMBOLS = {
+    "USD": "$",
+    "INR": "INR ",
+    "EUR": "€",
+    "GBP": "£",
+    "AUD": "A$",
+    "CAD": "C$",
+    "JPY": "¥",
+}
+
+def format_currency_amount(amount: float, currency_str: str = "USD") -> str:
+    """Format numeric amount using currency-specific symbol or code."""
+    curr = str(currency_str).strip().upper() if currency_str else "USD"
+    symbol = CURRENCY_SYMBOLS.get(curr, f"{curr} ")
+    return f"{symbol}{amount:,.2f}"
+
 class SpendingAnomalyDetector:
     """Detects unusual spending patterns using IsolationForest and statistical z-score thresholds."""
 
@@ -25,6 +41,9 @@ class SpendingAnomalyDetector:
         df_out = df.copy()
         amounts = pd.to_numeric(df_out["amount"], errors="coerce").abs().fillna(0.0)
         
+        # Extract currency column if present
+        currencies = df_out["currency"].astype(str).tolist() if "currency" in df_out.columns else ["USD"] * len(df_out)
+
         # 1. Statistical z-score computation
         mean_amt = amounts.mean()
         std_amt = amounts.std() if amounts.std() > 0 else 1.0
@@ -42,17 +61,18 @@ class SpendingAnomalyDetector:
         df_out["is_unusual"] = is_unusual
         df_out["anomaly_score"] = np.round(scores, 4)
         
-        # Assign plain-language explanatory reason
+        # Assign plain-language explanatory reason with proper currency formatting
         reasons = []
-        for amt, z, un in zip(amounts, z_scores, is_unusual):
+        for amt, z, un, curr in zip(amounts, z_scores, is_unusual, currencies):
+            fmt_amt = format_currency_amount(amt, curr)
             if not un:
                 reasons.append("Normal spending pattern")
             elif z > 3.0:
-                reasons.append(f"Significantly high transaction amount (${amt:.2f}, >3x standard deviation above average)")
+                reasons.append(f"Significantly high transaction amount ({fmt_amt}, >3x standard deviation above average)")
             elif z > 2.0:
-                reasons.append(f"Unusual high amount relative to your average spending (${amt:.2f})")
+                reasons.append(f"Unusual high amount relative to your average spending ({fmt_amt})")
             else:
-                reasons.append("Unusual spending frequency / statistical outlier flagged by model")
+                reasons.append(f"Unusual spending frequency / statistical outlier flagged by model ({fmt_amt})")
                 
         df_out["anomaly_reason"] = reasons
         logger.info(f"Anomaly detection complete. Flagged {is_unusual.sum()} unusual transactions out of {len(df)}.")
