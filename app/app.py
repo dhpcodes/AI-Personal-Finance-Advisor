@@ -1,4 +1,3 @@
-
 import os
 import sys
 from pathlib import Path
@@ -40,35 +39,47 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+
+        /* Main application background */
+        .stApp {
+            background-color: #F7F9FC;
+        }
+
+        /* Main content spacing */
+        .main .block-container {
+            padding-top: 2.5rem;
+            padding-bottom: 2rem;
+            padding-left: 3.5rem;
+            padding-right: 3.5rem;
+            max-width: 1500px;
+        }
+
+        /* Main header */
         .main-header {
-            font-size: 2rem;
+            font-size: 2.45rem;
             font-weight: 750;
-            color: #172B4D;
-            margin-bottom: 0.4rem;
+            color: #163A63;
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.5px;
         }
 
+        /* Main subtitle */
         .sub-header {
-            font-size: 1rem;
-            color: #64748B;
-            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #5F7592;
+            margin-bottom: 2.2rem;
         }
 
-        .metric-card {
-            background-color: #F8FAFC;
-            padding: 1.2rem;
-            border-radius: 12px;
-            border: 1px solid #E2E8F0;
-            text-align: center;
-        }
-
+        /* Information / explanation box */
         .explanation-box {
             background-color: #F0F9FF;
             border-left: 4px solid #0284C7;
             padding: 1rem;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-top: 1rem;
         }
 
+        /* Evidence card */
         .evidence-card {
             background-color: #F8FAFC;
             border-left: 4px solid #10B981;
@@ -78,53 +89,167 @@ st.markdown(
             margin-bottom: 0.5rem;
         }
 
-        /* Neutral input borders */
-        div[data-baseweb="input"] > div {
-            border-color: #CBD5E1;
-            border-radius: 8px;
+        /* Sidebar */
+        section[data-testid="stSidebar"] {
+            background-color: #FFFFFF;
+            border-right: 1px solid #E5EAF0;
         }
 
-        div[data-baseweb="input"] > div:focus-within {
-            border-color: #176B67;
-            box-shadow: 0 0 0 1px #176B67;
+        section[data-testid="stSidebar"] > div {
+            padding-top: 2.2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
 
-        /* Text areas */
+        /* Sidebar brand */
+        .sidebar-brand {
+            padding: 0.8rem 0.4rem 1.5rem 0.4rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #E4E9F0;
+        }
+
+        .sidebar-title {
+            font-size: 1.55rem;
+            font-weight: 750;
+            color: #163A63;
+            line-height: 1.2;
+            margin-bottom: 0.65rem;
+        }
+
+        .sidebar-subtitle {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #7A8798;
+            max-width: 235px;
+        }
+
+        .sidebar-section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #315274;
+            margin: 0.4rem 0 0.6rem 0.25rem;
+        }
+
+        .sidebar-footer {
+            margin-top: 2rem;
+            padding: 1.2rem 0.45rem 0.5rem 0.45rem;
+            border-top: 1px solid #E4E9F0;
+        }
+
+        .sidebar-footer-title {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #4A6078;
+            margin-bottom: 0.45rem;
+        }
+
+        .sidebar-footer-line {
+            font-size: 0.76rem;
+            color: #8996A7;
+            line-height: 1.5;
+            margin-bottom: 0.35rem;
+        }
+
+        .sidebar-footer-note {
+            font-size: 0.72rem;
+            color: #A0AAB8;
+            line-height: 1.5;
+        }
+
+        /* Sidebar navigation */
+        section[data-testid="stSidebar"] div[data-testid="stRadio"] label {
+            color: #244A70;
+            font-size: 0.94rem;
+            padding-top: 0.12rem;
+            padding-bottom: 0.12rem;
+        }
+
+        /* Input boxes */
+        div[data-baseweb="input"] > div,
         div[data-baseweb="textarea"] > div {
-            border-color: #CBD5E1;
+            background-color: #FFFFFF;
+            border: 1px solid #D7DEE8;
             border-radius: 8px;
         }
 
+        div[data-baseweb="input"] > div:focus-within,
         div[data-baseweb="textarea"] > div:focus-within {
-            border-color: #176B67;
-            box-shadow: 0 0 0 1px #176B67;
+            border-color: #6B8DB5;
+            box-shadow: 0 0 0 1px #6B8DB5;
         }
 
-        /* Primary buttons */
-        .stButton > button[kind="primary"] {
-            background-color: #176B67;
-            border-color: #176B67;
-            color: white;
+        /* Buttons */
+        .stButton > button {
             border-radius: 8px;
-            padding: 0.55rem 1rem;
+            border: 1px solid #D6DEE9;
+            background-color: #FFFFFF;
+            color: #173A63;
+            font-weight: 500;
+            min-height: 42px;
+        }
+
+        .stButton > button:hover {
+            border-color: #9CB4D0;
+            color: #163A63;
+            background-color: #F7FAFD;
+        }
+
+        .stButton > button[kind="primary"] {
+            background-color: #275E8E;
+            border-color: #275E8E;
+            color: #FFFFFF;
+            border-radius: 8px;
             font-weight: 600;
         }
 
         .stButton > button[kind="primary"]:hover {
-            background-color: #125653;
-            border-color: #125653;
-            color: white;
+            background-color: #214F78;
+            border-color: #214F78;
+            color: #FFFFFF;
         }
 
-        /* Sidebar */
-        section[data-testid="stSidebar"] {
-            background-color: #F4F7FB;
+        /* Alerts */
+        .stAlert {
+            border-radius: 10px;
         }
 
-        /* Slightly softer dividers */
+        /* Metrics */
+        [data-testid="stMetric"] {
+            background-color: transparent;
+            padding: 0.2rem 0.2rem 0.8rem 0.2rem;
+        }
+
+        [data-testid="stMetricLabel"] {
+            color: #284A6F;
+            font-size: 0.95rem;
+        }
+
+        [data-testid="stMetricValue"] {
+            color: #203B5C;
+            font-size: 2rem;
+        }
+
+        /* Headings */
+        h1, h2, h3 {
+            color: #203B5C;
+        }
+
+        /* DataFrames */
+        [data-testid="stDataFrame"] {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Dividers */
         hr {
-            border-color: #E2E8F0;
+            border-color: #DCE3EC;
         }
+
+        /* Captions */
+        .stCaption {
+            color: #8794A6;
+        }
+
     </style>
     """,
     unsafe_allow_html=True,
@@ -168,8 +293,22 @@ except Exception as e:
 # =============================================================================
 # SIDEBAR NAVIGATION
 # =============================================================================
-st.sidebar.title("💰 Finance Advisor")
-st.sidebar.caption("AI-Powered Transaction Classifier & Analytics")
+st.sidebar.markdown(
+    """
+    <div class="sidebar-brand">
+        <div class="sidebar-title">💰 Finance Advisor</div>
+        <div class="sidebar-subtitle">
+            AI-Powered Transaction Classifier &amp; Analytics
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.sidebar.markdown(
+    '<div class="sidebar-section-title">Navigation Menu</div>',
+    unsafe_allow_html=True,
+)
 
 nav_option = st.sidebar.radio(
     "Navigation Menu",
@@ -182,6 +321,7 @@ nav_option = st.sidebar.radio(
         "🔍 Model & Data Quality",
         "🛡️ Privacy & Advice Safety",
     ],
+    label_visibility="collapsed",
 )
 
 
@@ -204,6 +344,27 @@ if nav_option == "🤖 AI Financial Chatbot":
 
 
 # =============================================================================
+# SIDEBAR FOOTER
+# =============================================================================
+st.sidebar.markdown(
+    """
+    <div class="sidebar-footer">
+        <div class="sidebar-footer-title">
+            AI Personal Finance Advisor
+        </div>
+        <div class="sidebar-footer-line">
+            Transaction Intelligence • Analytics • AI
+        </div>
+        <div class="sidebar-footer-note">
+            Educational project • Financial insights &amp; analysis
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+# =============================================================================
 # APPLICATION HEADER
 # =============================================================================
 st.markdown(
@@ -213,8 +374,8 @@ st.markdown(
 
 st.markdown(
     '<div class="sub-header">'
-    "Automated transaction categorization, spending behavior analysis, "
-    "and explainable financial insights."
+    "Understand your spending, analyze your finances, "
+    "and ask questions about your transaction data."
     "</div>",
     unsafe_allow_html=True,
 )
@@ -224,7 +385,7 @@ st.markdown(
 # HELPER: LOAD A DEMO DATASET
 # =============================================================================
 def load_demo_data(rows=1000):
-    """Load a sample from the existing processed test dataset."""
+    """Load a sample from the public synthetic demo dataset."""
     test_path = (
         config.raw_data_path.parent.parent
         / "demo"
@@ -241,8 +402,8 @@ if nav_option == "🏠 Home / Overview":
     st.header("Executive Financial Overview")
 
     st.info(
-        "Upload transactions in **Categorize Transactions** or explore "
-        "the available benchmark dataset."
+        "Upload your transaction CSV from **Categorize Transactions** "
+        "to generate personalized financial analysis."
     )
 
     if st.session_state.user_df is not None:
@@ -254,14 +415,17 @@ if nav_option == "🏠 Home / Overview":
         try:
             df_active = load_demo_data(1000)
             st.caption(
-                "Showing a sample of the benchmark test dataset."
+                "Showing the public synthetic demo dataset."
             )
         except Exception as e:
             df_active = pd.DataFrame()
             st.warning(f"Could not load demo data: {e}")
 
     if not df_active.empty:
-        summary = FinanceAnalytics.calculate_summary(df_active)
+
+        summary = FinanceAnalytics.calculate_summary(
+            df_active
+        )
 
         col1, col2, col3, col4 = st.columns(4)
 
@@ -273,50 +437,97 @@ if nav_option == "🏠 Home / Overview":
 
         with col2:
             if summary.get("has_amount_data"):
+
                 by_curr = summary["by_currency"].get(
-                    "USD",
-                    next(iter(summary["by_currency"].values()), {}),
+                    "INR",
+                    next(
+                        iter(
+                            summary["by_currency"].values()
+                        ),
+                        {},
+                    ),
                 )
+
                 st.metric(
                     "Total Income",
-                    f"${by_curr.get('total_income', 0.0):,.2f}",
+                    f"INR {by_curr.get('total_income', 0.0):,.2f}",
                 )
+
             else:
-                st.metric("Total Income", "N/A")
+                st.metric(
+                    "Total Income",
+                    "N/A",
+                )
 
         with col3:
             if summary.get("has_amount_data"):
+
                 by_curr = summary["by_currency"].get(
-                    "USD",
-                    next(iter(summary["by_currency"].values()), {}),
+                    "INR",
+                    next(
+                        iter(
+                            summary["by_currency"].values()
+                        ),
+                        {},
+                    ),
                 )
+
                 st.metric(
                     "Total Expenses",
-                    f"${by_curr.get('total_expense', 0.0):,.2f}",
+                    f"INR {by_curr.get('total_expense', 0.0):,.2f}",
                 )
+
             else:
-                st.metric("Total Expenses", "N/A")
+                st.metric(
+                    "Total Expenses",
+                    "N/A",
+                )
 
         with col4:
             if summary.get("has_amount_data"):
+
                 by_curr = summary["by_currency"].get(
-                    "USD",
-                    next(iter(summary["by_currency"].values()), {}),
+                    "INR",
+                    next(
+                        iter(
+                            summary["by_currency"].values()
+                        ),
+                        {},
+                    ),
                 )
-                net = by_curr.get("net_cash_flow", 0.0)
-                st.metric("Net Cash Flow", f"${net:,.2f}")
+
+                net = by_curr.get(
+                    "net_cash_flow",
+                    0.0,
+                )
+
+                st.metric(
+                    "Net Cash Flow",
+                    f"INR {net:,.2f}",
+                )
+
             else:
-                st.metric("Net Cash Flow", "N/A")
+                st.metric(
+                    "Net Cash Flow",
+                    "N/A",
+                )
 
         st.divider()
-        st.subheader("Category Distribution")
 
-        cat_df = FinanceAnalytics.get_category_breakdown(df_active)
+        st.subheader(
+            "Category Distribution"
+        )
+
+        cat_df = FinanceAnalytics.get_category_breakdown(
+            df_active
+        )
 
         if not cat_df.empty:
+
             percentage_col = (
                 "Percentage (%)"
-                if "Percentage (%)" in cat_df.columns
+                if "Percentage (%)"
+                in cat_df.columns
                 else cat_df.columns[1]
             )
 
@@ -326,14 +537,23 @@ if nav_option == "🏠 Home / Overview":
                 values=percentage_col,
                 title="Transaction Breakdown by Category",
                 hole=0.45,
-                color_discrete_sequence=px.colors.qualitative.Set2,
+                color_discrete_sequence=(
+                    px.colors.qualitative.Set2
+                ),
             )
-            st.plotly_chart(fig, use_container_width=True)
 
-        st.subheader("Recent Transactions")
+            st.plotly_chart(
+                fig,
+                width="stretch",
+            )
+
+        st.subheader(
+            "Recent Transactions"
+        )
+
         st.dataframe(
             df_active.head(20),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -343,17 +563,22 @@ if nav_option == "🏠 Home / Overview":
 # =============================================================================
 elif nav_option == "🏷️ Categorize Transactions":
 
-    st.header("Transaction Categorization")
+    st.header(
+        "Transaction Categorization"
+    )
+
     st.caption(
         "Predict a category for an individual transaction or upload a CSV "
         "to categorize multiple transactions."
     )
 
     if not model_loaded:
+
         st.error(
             f"Prediction model unavailable: {load_error}. "
             "Check that the existing model artifact is present."
         )
+
         st.stop()
 
     tab_single, tab_batch = st.tabs(
@@ -364,7 +589,10 @@ elif nav_option == "🏷️ Categorize Transactions":
     )
 
     with tab_single:
-        st.subheader("Predict a Transaction Category")
+
+        st.subheader(
+            "Predict a Transaction Category"
+        )
 
         desc_input = st.text_input(
             "Transaction description",
@@ -373,13 +601,28 @@ elif nav_option == "🏷️ Categorize Transactions":
             ),
         )
 
-        if st.button("Categorize Transaction", type="primary"):
+        if st.button(
+            "Categorize Transaction",
+            type="primary",
+        ):
 
             if not desc_input.strip():
-                st.warning("Enter a transaction description first.")
+
+                st.warning(
+                    "Enter a transaction description first."
+                )
+
             else:
-                with st.spinner("Analyzing transaction..."):
-                    exp_res = explainer.explain_prediction(desc_input)
+
+                with st.spinner(
+                    "Analyzing transaction..."
+                ):
+
+                    exp_res = (
+                        explainer.explain_prediction(
+                            desc_input
+                        )
+                    )
 
                 st.success(
                     "Predicted category: "
@@ -391,16 +634,26 @@ elif nav_option == "🏷️ Categorize Transactions":
                     f"{exp_res['confidence'] * 100:.1f}%",
                 )
 
-                st.subheader("Top Category Probabilities")
+                st.subheader(
+                    "Top Category Probabilities"
+                )
 
                 for item in exp_res["top_k"]:
+
                     st.write(
                         f"**{item['category']}** — "
                         f"{item['probability'] * 100:.1f}%"
                     )
-                    st.progress(float(item["probability"]))
 
-                st.subheader("Model Explanation")
+                    st.progress(
+                        float(
+                            item["probability"]
+                        )
+                    )
+
+                st.subheader(
+                    "Model Explanation"
+                )
 
                 st.markdown(
                     '<div class="explanation-box">'
@@ -410,15 +663,25 @@ elif nav_option == "🏷️ Categorize Transactions":
                 )
 
                 if exp_res["important_features"]:
-                    st.caption("Important words or phrases")
+
+                    st.caption(
+                        "Important words or phrases"
+                    )
+
                     st.dataframe(
-                        pd.DataFrame(exp_res["important_features"]),
-                        use_container_width=True,
+                        pd.DataFrame(
+                            exp_res["important_features"]
+                        ),
+                        width="stretch",
                         hide_index=True,
                     )
 
     with tab_batch:
-        st.subheader("Upload Transactions")
+
+        st.subheader(
+            "Upload Transactions"
+        )
+
         st.write(
             "Upload a CSV containing transaction descriptions and any "
             "required fields accepted by your data validator."
@@ -430,53 +693,78 @@ elif nav_option == "🏷️ Categorize Transactions":
         )
 
         if uploaded_file is not None:
+
             try:
-                raw_user_df = pd.read_csv(uploaded_file)
+
+                raw_user_df = pd.read_csv(
+                    uploaded_file
+                )
 
                 is_valid, val_info, clean_user_df = (
-                    DataValidator.validate_user_upload(raw_user_df)
+                    DataValidator.validate_user_upload(
+                        raw_user_df
+                    )
                 )
 
                 if not is_valid:
+
                     st.error(
                         "Validation error: "
-                        + "; ".join(val_info["errors"])
+                        + "; ".join(
+                            val_info["errors"]
+                        )
                     )
+
                 else:
+
                     for warning in val_info["warnings"]:
                         st.warning(warning)
 
                     st.success(
-                        f"Validated {val_info['valid_rows']:,} rows."
+                        f"Validated "
+                        f"{val_info['valid_rows']:,} rows."
                     )
 
                     if st.button(
                         "Process & Categorize File",
                         type="primary",
                     ):
-                        with st.spinner("Categorizing transactions..."):
-                            proc_df = predictor.predict_batch(
-                                clean_user_df
+
+                        with st.spinner(
+                            "Categorizing transactions..."
+                        ):
+
+                            proc_df = (
+                                predictor.predict_batch(
+                                    clean_user_df
+                                )
                             )
 
                             if "amount" in proc_df.columns:
+
                                 proc_df = (
                                     anomaly_detector.detect_anomalies(
                                         proc_df
                                     )
                                 )
 
-                            st.session_state.user_df = proc_df
+                            st.session_state.user_df = (
+                                proc_df
+                            )
 
                         st.success(
-                            "Categorization complete. The uploaded "
-                            "dataset is now available to other sections."
+                            "Categorization complete. "
+                            "The uploaded dataset is now available "
+                            "to other sections."
                         )
 
-                        st.subheader("Processed Transactions")
+                        st.subheader(
+                            "Processed Transactions"
+                        )
+
                         st.dataframe(
                             proc_df,
-                            use_container_width=True,
+                            width="stretch",
                             hide_index=True,
                         )
 
@@ -485,12 +773,17 @@ elif nav_option == "🏷️ Categorize Transactions":
                             data=proc_df.to_csv(
                                 index=False
                             ).encode("utf-8"),
-                            file_name="categorized_transactions_report.csv",
+                            file_name=(
+                                "categorized_transactions_report.csv"
+                            ),
                             mime="text/csv",
                         )
 
             except Exception as ex:
-                st.error(f"Error processing file: {ex}")
+
+                st.error(
+                    f"Error processing file: {ex}"
+                )
 
 
 # =============================================================================
@@ -498,87 +791,145 @@ elif nav_option == "🏷️ Categorize Transactions":
 # =============================================================================
 elif nav_option == "🤖 AI Financial Chatbot":
 
-    st.header("AI Financial Assistant")
+    st.header(
+        "AI Financial Assistant"
+    )
+
     st.caption(
         "Ask about spending, monthly cash flow, recurring expenses, "
         "forecasts, and transaction classifications."
     )
 
     if st.session_state.user_df is not None:
-        active_df = st.session_state.user_df
-        st.success(
-            f"Active dataset: {len(active_df):,} transactions."
+
+        active_df = (
+            st.session_state.user_df
         )
+
+        st.success(
+            f"Active dataset: "
+            f"{len(active_df):,} transactions."
+        )
+
     else:
+
         try:
-            active_df = load_demo_data(1000)
-            st.info(
-                "Demo mode: using 1,000 benchmark transactions. Upload your "
-                "own CSV in Categorize Transactions for personalized analysis."
+
+            active_df = load_demo_data(
+                1000
             )
+
+            st.info(
+                "Demo mode: using the public synthetic demo transactions. "
+                "Upload your own CSV in Categorize Transactions "
+                "for personalized analysis."
+            )
+
         except Exception as e:
+
             active_df = pd.DataFrame()
-            st.warning(f"No dataset is available: {e}")
+
+            st.warning(
+                f"No dataset is available: {e}"
+            )
 
     st.divider()
-    st.subheader("Suggested Questions")
+
+    st.subheader(
+        "Suggested Questions"
+    )
 
     col1, col2, col3 = st.columns(3)
+
     selected_prompt = None
 
     with col1:
+
         if st.button(
             "Where am I spending the most?",
-            use_container_width=True,
+            width="stretch",
         ):
-            selected_prompt = "Where am I spending the most money?"
+
+            selected_prompt = (
+                "Where am I spending the most money?"
+            )
 
         if st.button(
             "What are my recurring expenses?",
-            use_container_width=True,
+            width="stretch",
         ):
-            selected_prompt = "What are my recurring expenses?"
+
+            selected_prompt = (
+                "What are my recurring expenses?"
+            )
 
     with col2:
+
         if st.button(
             "How much did I spend on food this month?",
-            use_container_width=True,
+            width="stretch",
         ):
-            selected_prompt = "How much did I spend on food this month?"
+
+            selected_prompt = (
+                "How much did I spend on food this month?"
+            )
 
         if st.button(
             "Why was Netflix classified as entertainment?",
-            use_container_width=True,
+            width="stretch",
         ):
+
             selected_prompt = (
-                "Why was 'Netflix Subscription' classified as entertainment?"
+                "Why was 'Netflix Subscription' "
+                "classified as entertainment?"
             )
 
     with col3:
+
         if st.button(
             "Estimate next month's expenses",
-            use_container_width=True,
+            width="stretch",
         ):
-            selected_prompt = "What could my expenses look like next month?"
+
+            selected_prompt = (
+                "What could my expenses look like next month?"
+            )
 
     st.divider()
 
     for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
 
-            if message.get("details"):
+        with st.chat_message(
+            message["role"]
+        ):
+
+            st.markdown(
+                message["content"]
+            )
+
+            if message.get(
+                "details"
+            ):
+
                 with st.expander(
                     "🔍 View Verified Calculation Details & Evidence"
                 ):
-                    st.json(message["details"])
+
+                    st.json(
+                        message["details"]
+                    )
 
     user_input = st.chat_input(
         "Ask a question about your transaction data..."
     )
-    prompt_to_process = selected_prompt or user_input
+
+    prompt_to_process = (
+        selected_prompt
+        or user_input
+    )
 
     if prompt_to_process:
+
         st.session_state.messages.append(
             {
                 "role": "user",
@@ -586,101 +937,188 @@ elif nav_option == "🤖 AI Financial Chatbot":
             }
         )
 
-        with st.chat_message("user"):
-            st.markdown(prompt_to_process)
+        with st.chat_message(
+            "user"
+        ):
 
-        with st.chat_message("assistant"):
-            with st.spinner("Analyzing and verifying calculations..."):
-                response_obj = assistant.process_query(
-                    prompt_to_process,
-                    active_df,
-                    history=st.session_state.messages,
+            st.markdown(
+                prompt_to_process
+            )
+
+        with st.chat_message(
+            "assistant"
+        ):
+
+            with st.spinner(
+                "Analyzing and verifying calculations..."
+            ):
+
+                response_obj = (
+                    assistant.process_query(
+                        prompt_to_process,
+                        active_df,
+                        history=(
+                            st.session_state.messages
+                        ),
+                    )
                 )
 
-                ans_text = response_obj["answer"]
-                tool_res = response_obj["tool_result"]
-                intent = response_obj["intent"]
+                ans_text = response_obj[
+                    "answer"
+                ]
 
-                st.markdown(ans_text)
+                tool_res = response_obj[
+                    "tool_result"
+                ]
+
+                intent = response_obj[
+                    "intent"
+                ]
+
+                st.markdown(
+                    ans_text
+                )
 
                 if (
-                    intent == "spending_breakdown"
-                    and tool_res.get("status") == "success"
+                    intent
+                    == "spending_breakdown"
+                    and tool_res.get(
+                        "status"
+                    )
+                    == "success"
                 ):
+
                     b_df = pd.DataFrame(
-                        tool_res.get("category_breakdown", [])
+                        tool_res.get(
+                            "category_breakdown",
+                            [],
+                        )
                     )
 
                     if b_df.empty:
-                        st.info("No category spending data is available.")
-                    elif {"category", "total_amount"}.issubset(
+
+                        st.info(
+                            "No category spending data "
+                            "is available."
+                        )
+
+                    elif {
+                        "category",
+                        "total_amount",
+                    }.issubset(
                         b_df.columns
                     ):
-                        b_df["total_amount"] = pd.to_numeric(
-                            b_df["total_amount"],
+
+                        b_df[
+                            "total_amount"
+                        ] = pd.to_numeric(
+                            b_df[
+                                "total_amount"
+                            ],
                             errors="coerce",
                         )
+
                         b_df = b_df.dropna(
-                            subset=["category", "total_amount"]
+                            subset=[
+                                "category",
+                                "total_amount",
+                            ]
                         )
 
                         b_df = (
                             b_df.groupby(
                                 "category",
                                 as_index=False,
-                            )["total_amount"]
+                            )[
+                                "total_amount"
+                            ]
                             .sum()
                         )
-                        b_df = b_df[b_df["total_amount"] > 0].copy()
 
-                        total_spending = b_df["total_amount"].sum()
+                        b_df = b_df[
+                            b_df[
+                                "total_amount"
+                            ] > 0
+                        ].copy()
+
+                        total_spending = (
+                            b_df[
+                                "total_amount"
+                            ].sum()
+                        )
 
                         if total_spending > 0:
-                            b_df["percentage"] = (
-                                b_df["total_amount"] / total_spending * 100
-                            )
-                            b_df = b_df.sort_values(
-                                "total_amount",
-                                ascending=False,
+
+                            b_df[
+                                "percentage"
+                            ] = (
+                                b_df[
+                                    "total_amount"
+                                ]
+                                / total_spending
+                                * 100
                             )
 
-                            st.subheader("📊 Complete Spending Breakdown")
+                            b_df = (
+                                b_df.sort_values(
+                                    "total_amount",
+                                    ascending=False,
+                                )
+                            )
+
+                            st.subheader(
+                                "📊 Complete Spending Breakdown"
+                            )
+
                             st.metric(
                                 "Total Recorded Spending",
-                                f"{total_spending:,.2f}",
+                                f"INR {total_spending:,.2f}",
                             )
+
                             st.caption(
-                                "Totals cover the transactions returned by "
-                                "the analysis; they may not represent a "
-                                "particular month."
+                                "Totals cover the transactions "
+                                "returned by the analysis; they may "
+                                "not represent a particular month."
                             )
 
                             fig = px.bar(
                                 b_df,
                                 x="category",
                                 y="total_amount",
-                                text=b_df["total_amount"].map(
-                                    lambda x: f"{x:,.0f}"
+                                text=(
+                                    b_df[
+                                        "total_amount"
+                                    ].map(
+                                        lambda x: (
+                                            f"{x:,.0f}"
+                                        )
+                                    )
                                 ),
                                 hover_data={
                                     "total_amount": ":,.2f",
                                     "percentage": ":.2f",
                                 },
-                                title="Spending by Category",
+                                title=(
+                                    "Spending by Category"
+                                ),
                                 labels={
                                     "category": "Category",
                                     "total_amount": "Amount",
-                                    "percentage": "Share of Total (%)",
+                                    "percentage": (
+                                        "Share of Total (%)"
+                                    ),
                                 },
                                 color="category",
                                 color_discrete_sequence=(
                                     px.colors.qualitative.Set2
                                 ),
                             )
+
                             fig.update_traces(
                                 textposition="outside",
                                 cliponaxis=False,
                             )
+
                             fig.update_layout(
                                 xaxis_tickangle=-30,
                                 showlegend=False,
@@ -691,75 +1129,125 @@ elif nav_option == "🤖 AI Financial Chatbot":
                                     b=100,
                                 ),
                             )
+
                             st.plotly_chart(
                                 fig,
-                                use_container_width=True,
+                                width="stretch",
                             )
 
-                            display_df = b_df[
-                                [
-                                    "category",
-                                    "total_amount",
-                                    "percentage",
+                            display_df = (
+                                b_df[
+                                    [
+                                        "category",
+                                        "total_amount",
+                                        "percentage",
+                                    ]
                                 ]
-                            ].rename(
-                                columns={
-                                    "category": "Category",
-                                    "total_amount": "Total Amount",
-                                    "percentage": "Percentage (%)",
-                                }
+                                .rename(
+                                    columns={
+                                        "category": (
+                                            "Category"
+                                        ),
+                                        "total_amount": (
+                                            "Total Amount"
+                                        ),
+                                        "percentage": (
+                                            "Percentage (%)"
+                                        ),
+                                    }
+                                )
                             )
+
                             st.dataframe(
                                 display_df.style.format(
                                     {
-                                        "Total Amount": "{:,.2f}",
-                                        "Percentage (%)": "{:.2f}%",
+                                        "Total Amount": (
+                                            "{:,.2f}"
+                                        ),
+                                        "Percentage (%)": (
+                                            "{:.2f}%"
+                                        ),
                                     }
                                 ),
-                                use_container_width=True,
+                                width="stretch",
                                 hide_index=True,
                             )
+
                     else:
+
                         st.warning(
-                            "The spending results are missing required fields."
+                            "The spending results are "
+                            "missing required fields."
                         )
 
                 elif (
-                    intent == "monthly_cash_flow"
-                    and tool_res.get("status") == "success"
-                ):
-                    m_df = pd.DataFrame(
-                        tool_res.get("monthly_cash_flow", [])
+                    intent
+                    == "monthly_cash_flow"
+                    and tool_res.get(
+                        "status"
                     )
+                    == "success"
+                ):
+
+                    m_df = pd.DataFrame(
+                        tool_res.get(
+                            "monthly_cash_flow",
+                            [],
+                        )
+                    )
+
                     if not m_df.empty:
+
                         fig = px.line(
                             m_df,
                             x="YearMonth",
-                            y=["Income", "Expense", "Net_Cash_Flow"],
-                            title="Monthly Cash Flow",
+                            y=[
+                                "Income",
+                                "Expense",
+                                "Net_Cash_Flow",
+                            ],
+                            title=(
+                                "Monthly Cash Flow"
+                            ),
                             markers=True,
                         )
+
                         st.plotly_chart(
                             fig,
-                            use_container_width=True,
+                            width="stretch",
                         )
 
                 elif (
-                    intent == "recurring_expenses"
-                    and tool_res.get("status") == "success"
+                    intent
+                    == "recurring_expenses"
+                    and tool_res.get(
+                        "status"
+                    )
+                    == "success"
                 ):
-                    rec_items = tool_res.get("recurring_expenses", [])
+
+                    rec_items = tool_res.get(
+                        "recurring_expenses",
+                        [],
+                    )
+
                     if rec_items:
+
                         st.dataframe(
-                            pd.DataFrame(rec_items),
-                            use_container_width=True,
+                            pd.DataFrame(
+                                rec_items
+                            ),
+                            width="stretch",
                             hide_index=True,
                         )
 
                 with st.expander(
                     "🔍 View Verified Calculation Details & Evidence"
                 ):
-                    st.json(tool_res)
+
+                    st.json(
+                        tool_res
+                    )
 
         st.session_state.messages.append(
             {
@@ -775,75 +1263,135 @@ elif nav_option == "🤖 AI Financial Chatbot":
 # =============================================================================
 elif nav_option == "📊 Spending Analysis":
 
-    st.header("Spending Behavior & Financial Breakdown")
+    st.header(
+        "Spending Behavior & Financial Breakdown"
+    )
 
-    df_active = st.session_state.user_df
+    df_active = (
+        st.session_state.user_df
+    )
 
     if df_active is None:
+
         try:
-            df_active = load_demo_data(2000)
-            st.caption("Showing a sample of the benchmark test dataset.")
+
+            df_active = load_demo_data(
+                2000
+            )
+
+            st.caption(
+                "Showing a sample of the public synthetic demo dataset."
+            )
+
         except Exception as e:
+
             df_active = pd.DataFrame()
-            st.warning(f"Could not load analysis data: {e}")
+
+            st.warning(
+                f"Could not load analysis data: {e}"
+            )
 
     if not df_active.empty:
-        cat_df = FinanceAnalytics.get_category_breakdown(df_active)
 
-        st.subheader("Category-wise Spending Breakdown")
-        col_left, col_right = st.columns([1, 1])
+        cat_df = (
+            FinanceAnalytics.get_category_breakdown(
+                df_active
+            )
+        )
+
+        st.subheader(
+            "Category-wise Spending Breakdown"
+        )
+
+        col_left, col_right = st.columns(
+            [1, 1]
+        )
 
         with col_left:
+
             st.dataframe(
                 cat_df,
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
 
         with col_right:
+
             if not cat_df.empty:
+
                 percentage_col = (
                     "Percentage (%)"
-                    if "Percentage (%)" in cat_df.columns
+                    if "Percentage (%)"
+                    in cat_df.columns
                     else cat_df.columns[1]
                 )
+
                 fig = px.bar(
                     cat_df,
                     x=cat_df.columns[0],
                     y=percentage_col,
-                    title="Spending Distribution (%)",
+                    title=(
+                        "Spending Distribution (%)"
+                    ),
                     color=cat_df.columns[0],
-                    color_discrete_sequence=px.colors.qualitative.Set2,
+                    color_discrete_sequence=(
+                        px.colors.qualitative.Set2
+                    ),
                 )
-                fig.update_layout(xaxis_tickangle=-30)
+
+                fig.update_layout(
+                    xaxis_tickangle=-30
+                )
+
                 st.plotly_chart(
                     fig,
-                    use_container_width=True,
+                    width="stretch",
                 )
 
         st.divider()
-        st.subheader("Monthly Income vs Expense Trends")
 
-        trends_df = FinanceAnalytics.get_monthly_trends(df_active)
+        st.subheader(
+            "Monthly Income vs Expense Trends"
+        )
+
+        trends_df = (
+            FinanceAnalytics.get_monthly_trends(
+                df_active
+            )
+        )
 
         if not trends_df.empty:
+
             fig_trend = px.line(
                 trends_df,
                 x="YearMonth",
-                y=["Income", "Expense", "Net_Cash_Flow"],
-                title="Monthly Cash Flow Timeline",
+                y=[
+                    "Income",
+                    "Expense",
+                    "Net_Cash_Flow",
+                ],
+                title=(
+                    "Monthly Cash Flow Timeline"
+                ),
                 markers=True,
             )
+
             st.plotly_chart(
                 fig_trend,
-                use_container_width=True,
+                width="stretch",
             )
+
         else:
+
             st.info(
                 "Monthly trends require valid date and amount columns."
             )
+
     else:
-        st.info("No transaction data is available for analysis.")
+
+        st.info(
+            "No transaction data is available for analysis."
+        )
 
 
 # =============================================================================
@@ -851,26 +1399,46 @@ elif nav_option == "📊 Spending Analysis":
 # =============================================================================
 elif nav_option == "⚠️ Budget & Anomalies":
 
-    st.header("Budget Insights & Unusual Spending Flags")
-    df_active = st.session_state.user_df
+    st.header(
+        "Budget Insights & Unusual Spending Flags"
+    )
+
+    df_active = (
+        st.session_state.user_df
+    )
 
     if df_active is None:
+
         st.info(
-            "Upload a transaction CSV in Categorize Transactions to run "
-            "anomaly detection and recurring merchant analysis."
+            "Upload a transaction CSV in Categorize Transactions "
+            "to run anomaly detection and recurring merchant analysis."
         )
+
     else:
-        st.subheader("Unusual Spending Detection")
+
+        st.subheader(
+            "Unusual Spending Detection"
+        )
 
         if "amount" in df_active.columns:
-            anom_df = anomaly_detector.detect_anomalies(df_active)
+
+            anom_df = (
+                anomaly_detector.detect_anomalies(
+                    df_active
+                )
+            )
 
             if "is_unusual" in anom_df.columns:
+
                 unusual_records = anom_df[
                     anom_df["is_unusual"] == True
                 ]
+
             else:
-                unusual_records = pd.DataFrame()
+
+                unusual_records = (
+                    pd.DataFrame()
+                )
 
             st.metric(
                 "Flagged Unusual Transactions",
@@ -878,10 +1446,12 @@ elif nav_option == "⚠️ Budget & Anomalies":
             )
 
             if not unusual_records.empty:
+
                 st.warning(
                     "These transactions were flagged by statistical "
                     "thresholds or anomaly detection. Review them manually."
                 )
+
                 display_cols = [
                     col
                     for col in [
@@ -892,35 +1462,57 @@ elif nav_option == "⚠️ Budget & Anomalies":
                     ]
                     if col in unusual_records.columns
                 ]
+
                 st.dataframe(
-                    unusual_records[display_cols],
-                    use_container_width=True,
+                    unusual_records[
+                        display_cols
+                    ],
+                    width="stretch",
                     hide_index=True,
                 )
+
                 st.caption(
                     "An unusual transaction is not automatically fraud."
                 )
+
             else:
-                st.success("No unusual transactions were flagged.")
+
+                st.success(
+                    "No unusual transactions were flagged."
+                )
+
         else:
-            st.info("Anomaly detection requires transaction amount values.")
+
+            st.info(
+                "Anomaly detection requires transaction amount values."
+            )
 
         st.divider()
-        st.subheader("Recurring Expenses & Subscriptions")
 
-        recurring_df = FinanceAnalytics.detect_recurring_transactions(
-            df_active,
-            min_count=2,
+        st.subheader(
+            "Recurring Expenses & Subscriptions"
+        )
+
+        recurring_df = (
+            FinanceAnalytics.detect_recurring_transactions(
+                df_active,
+                min_count=2,
+            )
         )
 
         if not recurring_df.empty:
+
             st.dataframe(
                 recurring_df,
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
+
         else:
-            st.info("No recurring transaction patterns detected.")
+
+            st.info(
+                "No recurring transaction patterns detected."
+            )
 
 
 # =============================================================================
@@ -928,75 +1520,139 @@ elif nav_option == "⚠️ Budget & Anomalies":
 # =============================================================================
 elif nav_option == "🔍 Model & Data Quality":
 
-    st.header("Dataset Quality & Model Evaluation")
+    st.header(
+        "Dataset Quality & Model Evaluation"
+    )
+
     reports_dir = config.reports_dir
 
-    st.subheader("Dataset Statistics")
+    st.subheader(
+        "Dataset Statistics"
+    )
+
     try:
+
         df_stats = pd.read_csv(
-            reports_dir / "dataset_statistics.csv"
+            reports_dir
+            / "dataset_statistics.csv"
         )
+
         st.dataframe(
             df_stats,
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
-    except Exception:
-        st.info("Dataset statistics report not found.")
 
-    st.subheader("Candidate Model Evaluation")
-    try:
-        df_models = pd.read_csv(
-            reports_dir / "model_evaluation.csv"
+    except Exception:
+
+        st.info(
+            "Dataset statistics report not found."
         )
+
+    st.subheader(
+        "Candidate Model Evaluation"
+    )
+
+    try:
+
+        df_models = pd.read_csv(
+            reports_dir
+            / "model_evaluation.csv"
+        )
+
         st.dataframe(
             df_models,
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
-    except Exception:
-        st.info("Model evaluation report not found.")
 
-    col_cm, col_leak = st.columns(2)
+    except Exception:
+
+        st.info(
+            "Model evaluation report not found."
+        )
+
+    col_cm, col_leak = st.columns(
+        2
+    )
 
     with col_cm:
-        st.subheader("Confusion Matrix")
-        cm_path = reports_dir / "confusion_matrix.png"
+
+        st.subheader(
+            "Confusion Matrix"
+        )
+
+        cm_path = (
+            reports_dir
+            / "confusion_matrix.png"
+        )
+
         if cm_path.exists():
+
             st.image(
                 str(cm_path),
-                caption="Confusion Matrix on Test Set",
-                use_container_width=True,
+                caption=(
+                    "Confusion Matrix on Test Set"
+                ),
+                width="stretch",
             )
+
         else:
-            st.info("Confusion matrix image unavailable.")
+
+            st.info(
+                "Confusion matrix image unavailable."
+            )
 
     with col_leak:
-        st.subheader("Data Leakage Audit")
+
+        st.subheader(
+            "Data Leakage Audit"
+        )
+
         try:
+
             df_leak = pd.read_csv(
-                reports_dir / "leakage_analysis.csv"
+                reports_dir
+                / "leakage_analysis.csv"
             )
+
             st.dataframe(
                 df_leak,
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
-        except Exception:
-            st.info("Leakage report unavailable.")
 
-    st.subheader("Preprocessing Examples")
+        except Exception:
+
+            st.info(
+                "Leakage report unavailable."
+            )
+
+    st.subheader(
+        "Preprocessing Examples"
+    )
+
     try:
-        df_pre = pd.read_csv(
-            reports_dir / "preprocessing_examples.csv"
-        ).head(15)
+
+        df_pre = (
+            pd.read_csv(
+                reports_dir
+                / "preprocessing_examples.csv"
+            )
+            .head(15)
+        )
+
         st.dataframe(
             df_pre,
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
+
     except Exception:
-        st.info("Preprocessing examples unavailable.")
+
+        st.info(
+            "Preprocessing examples unavailable."
+        )
 
 
 # =============================================================================
@@ -1004,9 +1660,13 @@ elif nav_option == "🔍 Model & Data Quality":
 # =============================================================================
 elif nav_option == "🛡️ Privacy & Advice Safety":
 
-    st.header("Privacy, Security & Financial Advice Safety")
+    st.header(
+        "Privacy, Security & Financial Advice Safety"
+    )
 
-    st.subheader("Educational Financial Guidance")
+    st.subheader(
+        "Educational Financial Guidance"
+    )
 
     st.warning(
         """
@@ -1022,7 +1682,9 @@ elif nav_option == "🛡️ Privacy & Advice Safety":
         """
     )
 
-    st.subheader("Privacy & Security")
+    st.subheader(
+        "Privacy & Security"
+    )
 
     st.info(
         """
