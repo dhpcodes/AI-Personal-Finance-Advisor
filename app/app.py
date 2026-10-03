@@ -39,47 +39,54 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-
-        /* Main application background */
-        .stApp {
-            background-color: #F7F9FC;
-        }
-
-        /* Main content spacing */
-        .main .block-container {
-            padding-top: 2.5rem;
-            padding-bottom: 2rem;
-            padding-left: 3.5rem;
-            padding-right: 3.5rem;
-            max-width: 1500px;
-        }
-
-        /* Main header */
         .main-header {
-            font-size: 2.45rem;
+            font-size: 2rem;
             font-weight: 750;
-            color: #163A63;
-            margin-bottom: 0.35rem;
-            letter-spacing: -0.5px;
+            color: #172B4D;
+            margin-bottom: 0.4rem;
         }
 
-        /* Main subtitle */
         .sub-header {
-            font-size: 1.05rem;
-            color: #5F7592;
-            margin-bottom: 2.2rem;
+            font-size: 1rem;
+            color: #64748B;
+            margin-bottom: 0;
+            line-height: 1.6;
         }
 
-        /* Information / explanation box */
+        .hero-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F1F6FC 100%);
+            border: 1px solid #E0E8F2;
+            border-radius: 16px;
+            padding: 1.45rem 1.65rem;
+            margin-bottom: 1.35rem;
+            box-shadow: 0 4px 18px rgba(27, 55, 87, 0.05);
+        }
+
+        .hero-kicker {
+            font-size: 0.72rem;
+            font-weight: 750;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+            color: #5F7D9D;
+            margin-bottom: 0.45rem;
+        }
+
+        .metric-card {
+            background-color: #F8FAFC;
+            padding: 1.2rem;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            text-align: center;
+        }
+
         .explanation-box {
             background-color: #F0F9FF;
             border-left: 4px solid #0284C7;
             padding: 1rem;
-            border-radius: 8px;
+            border-radius: 6px;
             margin-top: 1rem;
         }
 
-        /* Evidence card */
         .evidence-card {
             background-color: #F8FAFC;
             border-left: 4px solid #10B981;
@@ -89,6 +96,44 @@ st.markdown(
             margin-bottom: 0.5rem;
         }
 
+        /* Neutral input borders */
+        div[data-baseweb="input"] > div {
+            border-color: #CBD5E1;
+            border-radius: 8px;
+        }
+
+        div[data-baseweb="input"] > div:focus-within {
+            border-color: #176B67;
+            box-shadow: 0 0 0 1px #176B67;
+        }
+
+        /* Text areas */
+        div[data-baseweb="textarea"] > div {
+            border-color: #CBD5E1;
+            border-radius: 8px;
+        }
+
+        div[data-baseweb="textarea"] > div:focus-within {
+            border-color: #176B67;
+            box-shadow: 0 0 0 1px #176B67;
+        }
+
+        /* Primary buttons */
+        .stButton > button[kind="primary"] {
+            background-color: #176B67;
+            border-color: #176B67;
+            color: white;
+            border-radius: 8px;
+            padding: 0.55rem 1rem;
+            font-weight: 600;
+        }
+
+        .stButton > button[kind="primary"]:hover {
+            background-color: #125653;
+            border-color: #125653;
+            color: white;
+        }
+
         /* Sidebar */
         section[data-testid="stSidebar"] {
             background-color: #FFFFFF;
@@ -96,160 +141,78 @@ st.markdown(
         }
 
         section[data-testid="stSidebar"] > div {
-            padding-top: 2.2rem;
+            padding-top: 1.6rem;
             padding-left: 1rem;
             padding-right: 1rem;
         }
 
-        /* Sidebar brand */
         .sidebar-brand {
-            padding: 0.8rem 0.4rem 1.5rem 0.4rem;
-            margin-bottom: 1.2rem;
-            border-bottom: 1px solid #E4E9F0;
+            padding: 0.6rem 0.35rem 1.25rem 0.35rem;
+            margin-bottom: 1.05rem;
+            border-bottom: 1px solid #E8EDF3;
         }
 
         .sidebar-title {
-            font-size: 1.55rem;
+            font-size: 1.5rem;
             font-weight: 750;
-            color: #163A63;
-            line-height: 1.2;
-            margin-bottom: 0.65rem;
+            color: #183B63;
+            line-height: 1.15;
+            margin-bottom: 0.55rem;
         }
 
         .sidebar-subtitle {
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.84rem;
+            line-height: 1.55;
             color: #7A8798;
             max-width: 235px;
         }
 
         .sidebar-section-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #315274;
-            margin: 0.4rem 0 0.6rem 0.25rem;
+            font-size: 0.83rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #55708F;
+            margin: 0.25rem 0 0.45rem 0.2rem;
         }
 
         .sidebar-footer {
             margin-top: 2rem;
-            padding: 1.2rem 0.45rem 0.5rem 0.45rem;
-            border-top: 1px solid #E4E9F0;
+            padding: 1rem 0.35rem 0.25rem 0.35rem;
+            border-top: 1px solid #E8EDF3;
         }
 
         .sidebar-footer-title {
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: #4A6078;
-            margin-bottom: 0.45rem;
-        }
-
-        .sidebar-footer-line {
-            font-size: 0.76rem;
-            color: #8996A7;
-            line-height: 1.5;
+            font-size: 0.84rem;
+            font-weight: 650;
+            color: #4D647E;
             margin-bottom: 0.35rem;
         }
 
-        .sidebar-footer-note {
+        .sidebar-footer-line {
             font-size: 0.72rem;
-            color: #A0AAB8;
+            color: #8998AA;
             line-height: 1.5;
+            margin-bottom: 0.2rem;
         }
 
-        /* Sidebar navigation */
+        .sidebar-footer-note {
+            font-size: 0.68rem;
+            color: #A1ACB9;
+            line-height: 1.45;
+        }
+
         section[data-testid="stSidebar"] div[data-testid="stRadio"] label {
-            color: #244A70;
-            font-size: 0.94rem;
-            padding-top: 0.12rem;
-            padding-bottom: 0.12rem;
+            color: #2C5075;
+            font-size: 0.93rem;
+            font-weight: 520;
+            padding-top: 0.18rem;
+            padding-bottom: 0.18rem;
         }
 
-        /* Input boxes */
-        div[data-baseweb="input"] > div,
-        div[data-baseweb="textarea"] > div {
-            background-color: #FFFFFF;
-            border: 1px solid #D7DEE8;
-            border-radius: 8px;
-        }
-
-        div[data-baseweb="input"] > div:focus-within,
-        div[data-baseweb="textarea"] > div:focus-within {
-            border-color: #6B8DB5;
-            box-shadow: 0 0 0 1px #6B8DB5;
-        }
-
-        /* Buttons */
-        .stButton > button {
-            border-radius: 8px;
-            border: 1px solid #D6DEE9;
-            background-color: #FFFFFF;
-            color: #173A63;
-            font-weight: 500;
-            min-height: 42px;
-        }
-
-        .stButton > button:hover {
-            border-color: #9CB4D0;
-            color: #163A63;
-            background-color: #F7FAFD;
-        }
-
-        .stButton > button[kind="primary"] {
-            background-color: #275E8E;
-            border-color: #275E8E;
-            color: #FFFFFF;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        .stButton > button[kind="primary"]:hover {
-            background-color: #214F78;
-            border-color: #214F78;
-            color: #FFFFFF;
-        }
-
-        /* Alerts */
-        .stAlert {
-            border-radius: 10px;
-        }
-
-        /* Metrics */
-        [data-testid="stMetric"] {
-            background-color: transparent;
-            padding: 0.2rem 0.2rem 0.8rem 0.2rem;
-        }
-
-        [data-testid="stMetricLabel"] {
-            color: #284A6F;
-            font-size: 0.95rem;
-        }
-
-        [data-testid="stMetricValue"] {
-            color: #203B5C;
-            font-size: 2rem;
-        }
-
-        /* Headings */
-        h1, h2, h3 {
-            color: #203B5C;
-        }
-
-        /* DataFrames */
-        [data-testid="stDataFrame"] {
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Dividers */
+        /* Slightly softer dividers */
         hr {
-            border-color: #DCE3EC;
+            border-color: #E2E8F0;
         }
-
-        /* Captions */
-        .stCaption {
-            color: #8794A6;
-        }
-
     </style>
     """,
     unsafe_allow_html=True,
@@ -294,14 +257,12 @@ except Exception as e:
 # SIDEBAR NAVIGATION
 # =============================================================================
 st.sidebar.markdown(
-    """
-    <div class="sidebar-brand">
-        <div class="sidebar-title">💰 Finance Advisor</div>
-        <div class="sidebar-subtitle">
-            AI-Powered Transaction Classifier &amp; Analytics
-        </div>
-    </div>
-    """,
+    """<div class="sidebar-brand">
+<div class="sidebar-title">💰 Finance Advisor</div>
+<div class="sidebar-subtitle">
+AI-Powered Transaction Classifier &amp; Analytics
+</div>
+</div>""",
     unsafe_allow_html=True,
 )
 
@@ -324,6 +285,15 @@ nav_option = st.sidebar.radio(
     label_visibility="collapsed",
 )
 
+st.sidebar.markdown(
+    """<div class="sidebar-footer">
+<div class="sidebar-footer-title">AI Personal Finance Advisor</div>
+<div class="sidebar-footer-line">Transaction Intelligence • Analytics • AI</div>
+<div class="sidebar-footer-note">Educational project • Financial insights &amp; analysis</div>
+</div>""",
+    unsafe_allow_html=True,
+)
+
 
 # =============================================================================
 # SESSION STATE
@@ -344,39 +314,14 @@ if nav_option == "🤖 AI Financial Chatbot":
 
 
 # =============================================================================
-# SIDEBAR FOOTER
-# =============================================================================
-st.sidebar.markdown(
-    """
-    <div class="sidebar-footer">
-        <div class="sidebar-footer-title">
-            AI Personal Finance Advisor
-        </div>
-        <div class="sidebar-footer-line">
-            Transaction Intelligence • Analytics • AI
-        </div>
-        <div class="sidebar-footer-note">
-            Educational project • Financial insights &amp; analysis
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-
-# =============================================================================
 # APPLICATION HEADER
 # =============================================================================
 st.markdown(
-    '<div class="main-header">AI Personal Finance Advisor</div>',
-    unsafe_allow_html=True,
-)
-
-st.markdown(
-    '<div class="sub-header">'
-    "Understand your spending, analyze your finances, "
-    "and ask questions about your transaction data."
-    "</div>",
+    """<div class="hero-card">
+<div class="hero-kicker">Smart Finance • AI-Powered</div>
+<div class="main-header">AI Personal Finance Advisor</div>
+<div class="sub-header">Understand spending patterns, categorize transactions, and explore explainable financial insights in one place.</div>
+</div>""",
     unsafe_allow_html=True,
 )
 
@@ -385,7 +330,7 @@ st.markdown(
 # HELPER: LOAD A DEMO DATASET
 # =============================================================================
 def load_demo_data(rows=1000):
-    """Load a sample from the public synthetic demo dataset."""
+    """Load the public synthetic demo dataset."""
     test_path = (
         config.raw_data_path.parent.parent
         / "demo"
@@ -402,8 +347,8 @@ if nav_option == "🏠 Home / Overview":
     st.header("Executive Financial Overview")
 
     st.info(
-        "Upload your transaction CSV from **Categorize Transactions** "
-        "to generate personalized financial analysis."
+        "Upload transactions in **Categorize Transactions** or explore "
+        "the available benchmark dataset."
     )
 
     if st.session_state.user_df is not None:
@@ -415,17 +360,14 @@ if nav_option == "🏠 Home / Overview":
         try:
             df_active = load_demo_data(1000)
             st.caption(
-                "Showing the public synthetic demo dataset."
+                "🧪 Demo Mode • Showing synthetic sample transactions."
             )
         except Exception as e:
             df_active = pd.DataFrame()
             st.warning(f"Could not load demo data: {e}")
 
     if not df_active.empty:
-
-        summary = FinanceAnalytics.calculate_summary(
-            df_active
-        )
+        summary = FinanceAnalytics.calculate_summary(df_active)
 
         col1, col2, col3, col4 = st.columns(4)
 
@@ -437,97 +379,53 @@ if nav_option == "🏠 Home / Overview":
 
         with col2:
             if summary.get("has_amount_data"):
-
                 by_curr = summary["by_currency"].get(
                     "INR",
-                    next(
-                        iter(
-                            summary["by_currency"].values()
-                        ),
-                        {},
-                    ),
+                    next(iter(summary["by_currency"].values()), {}),
                 )
-
                 st.metric(
                     "Total Income",
                     f"INR {by_curr.get('total_income', 0.0):,.2f}",
                 )
-
             else:
-                st.metric(
-                    "Total Income",
-                    "N/A",
-                )
+                st.metric("Total Income", "N/A")
 
         with col3:
             if summary.get("has_amount_data"):
-
                 by_curr = summary["by_currency"].get(
                     "INR",
-                    next(
-                        iter(
-                            summary["by_currency"].values()
-                        ),
-                        {},
-                    ),
+                    next(iter(summary["by_currency"].values()), {}),
                 )
-
                 st.metric(
                     "Total Expenses",
                     f"INR {by_curr.get('total_expense', 0.0):,.2f}",
                 )
-
             else:
-                st.metric(
-                    "Total Expenses",
-                    "N/A",
-                )
+                st.metric("Total Expenses", "N/A")
 
         with col4:
             if summary.get("has_amount_data"):
-
                 by_curr = summary["by_currency"].get(
                     "INR",
-                    next(
-                        iter(
-                            summary["by_currency"].values()
-                        ),
-                        {},
-                    ),
+                    next(iter(summary["by_currency"].values()), {}),
                 )
-
-                net = by_curr.get(
-                    "net_cash_flow",
-                    0.0,
-                )
-
+                net = by_curr.get("net_cash_flow", 0.0)
                 st.metric(
                     "Net Cash Flow",
                     f"INR {net:,.2f}",
                 )
-
             else:
-                st.metric(
-                    "Net Cash Flow",
-                    "N/A",
-                )
+                st.metric("Net Cash Flow", "N/A")
 
         st.divider()
+        st.subheader("Category Distribution")
 
-        st.subheader(
-            "Category Distribution"
-        )
-
-        cat_df = FinanceAnalytics.get_category_breakdown(
-            df_active
-        )
+        cat_df = FinanceAnalytics.get_category_breakdown(df_active)
 
         if not cat_df.empty:
-
             percentage_col = (
                 "Percentage (%)"
-                if "Percentage (%)"
-                in cat_df.columns
+                if "Percentage (%)" in cat_df.columns
                 else cat_df.columns[1]
             )
 
@@ -537,9 +435,7 @@ if nav_option == "🏠 Home / Overview":
                 values=percentage_col,
                 title="Transaction Breakdown by Category",
                 hole=0.45,
-                color_discrete_sequence=(
-                    px.colors.qualitative.Set2
-                ),
+                color_discrete_sequence=px.colors.qualitative.Set2,
             )
 
             st.plotly_chart(
@@ -547,10 +443,7 @@ if nav_option == "🏠 Home / Overview":
                 width="stretch",
             )
 
-        st.subheader(
-            "Recent Transactions"
-        )
-
+        st.subheader("Recent Transactions")
         st.dataframe(
             df_active.head(20),
             width="stretch",
@@ -563,22 +456,17 @@ if nav_option == "🏠 Home / Overview":
 # =============================================================================
 elif nav_option == "🏷️ Categorize Transactions":
 
-    st.header(
-        "Transaction Categorization"
-    )
-
+    st.header("Transaction Categorization")
     st.caption(
         "Predict a category for an individual transaction or upload a CSV "
         "to categorize multiple transactions."
     )
 
     if not model_loaded:
-
         st.error(
             f"Prediction model unavailable: {load_error}. "
             "Check that the existing model artifact is present."
         )
-
         st.stop()
 
     tab_single, tab_batch = st.tabs(
@@ -589,10 +477,7 @@ elif nav_option == "🏷️ Categorize Transactions":
     )
 
     with tab_single:
-
-        st.subheader(
-            "Predict a Transaction Category"
-        )
+        st.subheader("Predict a Transaction Category")
 
         desc_input = st.text_input(
             "Transaction description",
@@ -607,21 +492,15 @@ elif nav_option == "🏷️ Categorize Transactions":
         ):
 
             if not desc_input.strip():
-
                 st.warning(
                     "Enter a transaction description first."
                 )
-
             else:
-
                 with st.spinner(
                     "Analyzing transaction..."
                 ):
-
-                    exp_res = (
-                        explainer.explain_prediction(
-                            desc_input
-                        )
+                    exp_res = explainer.explain_prediction(
+                        desc_input
                     )
 
                 st.success(
@@ -639,7 +518,6 @@ elif nav_option == "🏷️ Categorize Transactions":
                 )
 
                 for item in exp_res["top_k"]:
-
                     st.write(
                         f"**{item['category']}** — "
                         f"{item['probability'] * 100:.1f}%"
@@ -663,7 +541,6 @@ elif nav_option == "🏷️ Categorize Transactions":
                 )
 
                 if exp_res["important_features"]:
-
                     st.caption(
                         "Important words or phrases"
                     )
@@ -677,10 +554,7 @@ elif nav_option == "🏷️ Categorize Transactions":
                     )
 
     with tab_batch:
-
-        st.subheader(
-            "Upload Transactions"
-        )
+        st.subheader("Upload Transactions")
 
         st.write(
             "Upload a CSV containing transaction descriptions and any "
@@ -693,9 +567,7 @@ elif nav_option == "🏷️ Categorize Transactions":
         )
 
         if uploaded_file is not None:
-
             try:
-
                 raw_user_df = pd.read_csv(
                     uploaded_file
                 )
@@ -707,18 +579,19 @@ elif nav_option == "🏷️ Categorize Transactions":
                 )
 
                 if not is_valid:
-
                     st.error(
                         "Validation error: "
                         + "; ".join(
                             val_info["errors"]
                         )
                     )
-
                 else:
-
-                    for warning in val_info["warnings"]:
-                        st.warning(warning)
+                    for warning in val_info[
+                        "warnings"
+                    ]:
+                        st.warning(
+                            warning
+                        )
 
                     st.success(
                         f"Validated "
@@ -729,19 +602,19 @@ elif nav_option == "🏷️ Categorize Transactions":
                         "Process & Categorize File",
                         type="primary",
                     ):
-
                         with st.spinner(
                             "Categorizing transactions..."
                         ):
-
                             proc_df = (
                                 predictor.predict_batch(
                                     clean_user_df
                                 )
                             )
 
-                            if "amount" in proc_df.columns:
-
+                            if (
+                                "amount"
+                                in proc_df.columns
+                            ):
                                 proc_df = (
                                     anomaly_detector.detect_anomalies(
                                         proc_df
@@ -754,8 +627,8 @@ elif nav_option == "🏷️ Categorize Transactions":
 
                         st.success(
                             "Categorization complete. "
-                            "The uploaded dataset is now available "
-                            "to other sections."
+                            "The uploaded dataset is now "
+                            "available to other sections."
                         )
 
                         st.subheader(
@@ -770,9 +643,11 @@ elif nav_option == "🏷️ Categorize Transactions":
 
                         st.download_button(
                             "📥 Download Categorized CSV",
-                            data=proc_df.to_csv(
-                                index=False
-                            ).encode("utf-8"),
+                            data=(
+                                proc_df.to_csv(
+                                    index=False
+                                ).encode("utf-8")
+                            ),
                             file_name=(
                                 "categorized_transactions_report.csv"
                             ),
@@ -780,7 +655,6 @@ elif nav_option == "🏷️ Categorize Transactions":
                         )
 
             except Exception as ex:
-
                 st.error(
                     f"Error processing file: {ex}"
                 )
@@ -801,7 +675,6 @@ elif nav_option == "🤖 AI Financial Chatbot":
     )
 
     if st.session_state.user_df is not None:
-
         active_df = (
             st.session_state.user_df
         )
@@ -812,21 +685,18 @@ elif nav_option == "🤖 AI Financial Chatbot":
         )
 
     else:
-
         try:
-
             active_df = load_demo_data(
                 1000
             )
 
             st.info(
-                "Demo mode: using the public synthetic demo transactions. "
+                "🧪 Demo Mode: using synthetic sample transactions. "
                 "Upload your own CSV in Categorize Transactions "
                 "for personalized analysis."
             )
 
         except Exception as e:
-
             active_df = pd.DataFrame()
 
             st.warning(
@@ -839,7 +709,9 @@ elif nav_option == "🤖 AI Financial Chatbot":
         "Suggested Questions"
     )
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = (
+        st.columns(3)
+    )
 
     selected_prompt = None
 
@@ -849,7 +721,6 @@ elif nav_option == "🤖 AI Financial Chatbot":
             "Where am I spending the most?",
             width="stretch",
         ):
-
             selected_prompt = (
                 "Where am I spending the most money?"
             )
@@ -858,7 +729,6 @@ elif nav_option == "🤖 AI Financial Chatbot":
             "What are my recurring expenses?",
             width="stretch",
         ):
-
             selected_prompt = (
                 "What are my recurring expenses?"
             )
@@ -869,7 +739,6 @@ elif nav_option == "🤖 AI Financial Chatbot":
             "How much did I spend on food this month?",
             width="stretch",
         ):
-
             selected_prompt = (
                 "How much did I spend on food this month?"
             )
@@ -878,7 +747,6 @@ elif nav_option == "🤖 AI Financial Chatbot":
             "Why was Netflix classified as entertainment?",
             width="stretch",
         ):
-
             selected_prompt = (
                 "Why was 'Netflix Subscription' "
                 "classified as entertainment?"
@@ -890,14 +758,15 @@ elif nav_option == "🤖 AI Financial Chatbot":
             "Estimate next month's expenses",
             width="stretch",
         ):
-
             selected_prompt = (
                 "What could my expenses look like next month?"
             )
 
     st.divider()
 
-    for message in st.session_state.messages:
+    for message in (
+        st.session_state.messages
+    ):
 
         with st.chat_message(
             message["role"]
@@ -1089,9 +958,8 @@ elif nav_option == "🤖 AI Financial Chatbot":
                                     b_df[
                                         "total_amount"
                                     ].map(
-                                        lambda x: (
-                                            f"{x:,.0f}"
-                                        )
+                                        lambda x:
+                                        f"{x:,.0f}"
                                     )
                                 ),
                                 hover_data={
@@ -1280,7 +1148,7 @@ elif nav_option == "📊 Spending Analysis":
             )
 
             st.caption(
-                "Showing a sample of the public synthetic demo dataset."
+                "🧪 Demo Mode • Showing synthetic sample transactions."
             )
 
         except Exception as e:
@@ -1303,8 +1171,10 @@ elif nav_option == "📊 Spending Analysis":
             "Category-wise Spending Breakdown"
         )
 
-        col_left, col_right = st.columns(
-            [1, 1]
+        col_left, col_right = (
+            st.columns(
+                [1, 1]
+            )
         )
 
         with col_left:
@@ -1428,11 +1298,18 @@ elif nav_option == "⚠️ Budget & Anomalies":
                 )
             )
 
-            if "is_unusual" in anom_df.columns:
+            if (
+                "is_unusual"
+                in anom_df.columns
+            ):
 
-                unusual_records = anom_df[
-                    anom_df["is_unusual"] == True
-                ]
+                unusual_records = (
+                    anom_df[
+                        anom_df[
+                            "is_unusual"
+                        ] == True
+                    ]
+                )
 
             else:
 
@@ -1524,7 +1401,9 @@ elif nav_option == "🔍 Model & Data Quality":
         "Dataset Quality & Model Evaluation"
     )
 
-    reports_dir = config.reports_dir
+    reports_dir = (
+        config.reports_dir
+    )
 
     st.subheader(
         "Dataset Statistics"
@@ -1572,8 +1451,8 @@ elif nav_option == "🔍 Model & Data Quality":
             "Model evaluation report not found."
         )
 
-    col_cm, col_leak = st.columns(
-        2
+    col_cm, col_leak = (
+        st.columns(2)
     )
 
     with col_cm:
@@ -1634,13 +1513,10 @@ elif nav_option == "🔍 Model & Data Quality":
 
     try:
 
-        df_pre = (
-            pd.read_csv(
-                reports_dir
-                / "preprocessing_examples.csv"
-            )
-            .head(15)
-        )
+        df_pre = pd.read_csv(
+            reports_dir
+            / "preprocessing_examples.csv"
+        ).head(15)
 
         st.dataframe(
             df_pre,
