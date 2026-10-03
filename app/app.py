@@ -227,7 +227,7 @@ def load_demo_data(rows=1000):
     """Load a sample from the existing processed test dataset."""
     test_path = (
         config.raw_data_path.parent.parent
-        / "processed"
+        / "demo"
         / "test.parquet"
     )
     return DataLoader.load_parquet(test_path).head(rows)
