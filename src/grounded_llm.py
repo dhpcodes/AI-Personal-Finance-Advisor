@@ -37,7 +37,8 @@ class GroundedFinancialAssistant:
         ).lower().strip()
 
         self.model_name = model_name or os.getenv(
-            "LLM_MODEL", "gemini-2.5-flash"
+            "LLM_MODEL",
+            "gemini-3.8-flash",
         )
 
         self.timeout = int(
@@ -49,7 +50,12 @@ class GroundedFinancialAssistant:
         )
 
         self.api_key = api_key or self._get_secret_key()
+
+        if isinstance(self.api_key, str):
+            self.api_key = self.api_key.strip()
+
         self.client = None
+        self.last_llm_error = None
 
         self._init_client()
 
@@ -108,7 +114,9 @@ class GroundedFinancialAssistant:
             if self.provider in ("gemini", "google"):
                 from google import genai
 
-                self.client = genai.Client(api_key=self.api_key)
+                self.client = genai.Client(
+                    api_key=self.api_key
+                )
 
                 logger.info(
                     f"Gemini client initialized with model "
@@ -166,16 +174,13 @@ class GroundedFinancialAssistant:
         """
         Route a question to either a financial tool or general chat.
 
-        IMPORTANT:
-        General/unmatched questions no longer default to spending
-        breakdown. This prevents questions such as "Are you working?"
-        from returning financial data.
+        General/unmatched questions do NOT default to spending analysis.
         """
+
         q = (question or "").lower().strip()
 
         # --------------------------------------------------------------
         # 1. SPENDING BREAKDOWN
-        # Check this BEFORE category-specific matching.
         # --------------------------------------------------------------
         spending_phrases = [
             "highest spending",
@@ -237,7 +242,10 @@ class GroundedFinancialAssistant:
             any(word in q for word in explanation_words)
             and any(word in q for word in classification_words)
         ):
-            match = re.search(r"['\"]([^'\"]+)['\"]", question)
+            match = re.search(
+                r"['\"]([^'\"]+)['\"]",
+                question,
+            )
 
             description = (
                 match.group(1)
@@ -295,8 +303,6 @@ class GroundedFinancialAssistant:
 
         # --------------------------------------------------------------
         # 5. ANOMALIES
-        # Do NOT use the generic word "high".
-        # "high spending category" should not automatically mean anomaly.
         # --------------------------------------------------------------
         anomaly_words = [
             "unusual spending",
@@ -383,8 +389,6 @@ class GroundedFinancialAssistant:
             "financial": "Financial Services",
         }
 
-        # "rent" is handled separately because it may be a category
-        # in the user's local dataset.
         if "rent" in q and not any(
             phrase in q for phrase in spending_phrases
         ):
@@ -416,8 +420,6 @@ class GroundedFinancialAssistant:
 
         # --------------------------------------------------------------
         # 9. FOLLOW-UP QUESTIONS
-        # Only use history when the current question is clearly a
-        # follow-up.
         # --------------------------------------------------------------
         follow_up_words = [
             "compare",
@@ -428,13 +430,17 @@ class GroundedFinancialAssistant:
             "more details",
         ]
 
-        if history and any(word in q for word in follow_up_words):
+        if history and any(
+            word in q for word in follow_up_words
+        ):
             last_result = self._get_last_tool_result(history)
 
             if isinstance(last_result, dict):
                 last_category = (
                     last_result.get("category")
-                    or last_result.get("highest_spending_category")
+                    or last_result.get(
+                        "highest_spending_category"
+                    )
                 )
 
                 if "transaction" in q or "details" in q:
@@ -457,7 +463,6 @@ class GroundedFinancialAssistant:
 
         # --------------------------------------------------------------
         # 10. GENERAL CHAT
-        # NEVER default to a financial calculation.
         # --------------------------------------------------------------
         return {
             "intent": "general_chat",
@@ -500,15 +505,7 @@ class GroundedFinancialAssistant:
         df: pd.DataFrame,
         history: Optional[List[Dict[str, Any]]] = None,
     ) -> Dict[str, Any]:
-        """
-        Process one chatbot question.
 
-        Financial questions:
-            route -> Python tool -> verified result -> Gemini/template
-
-        General questions:
-            route -> Gemini directly
-        """
         intent_info = self.route_intent(
             question,
             history=history,
@@ -542,7 +539,8 @@ class GroundedFinancialAssistant:
         try:
             if tool_name == "get_spending_by_category":
                 tool_result = (
-                    ChatbotFinancialTools.get_spending_by_category(df)
+                    ChatbotFinancialTools
+                    .get_spending_by_category(df)
                 )
 
             elif tool_name == "get_category_spending_for_period":
@@ -556,7 +554,8 @@ class GroundedFinancialAssistant:
 
             elif tool_name == "get_recurring_expenses":
                 tool_result = (
-                    ChatbotFinancialTools.get_recurring_expenses(df)
+                    ChatbotFinancialTools
+                    .get_recurring_expenses(df)
                 )
 
             elif tool_name == "explain_transaction_classification":
@@ -598,7 +597,8 @@ class GroundedFinancialAssistant:
                 tool_result = {
                     "status": "error",
                     "message": (
-                        "No financial tool was selected for this question."
+                        "No financial tool was selected "
+                        "for this question."
                     ),
                 }
 
@@ -610,7 +610,8 @@ class GroundedFinancialAssistant:
             tool_result = {
                 "status": "error",
                 "message": (
-                    f"Financial analysis could not be completed: {exc}"
+                    "Financial analysis could not be completed: "
+                    f"{exc}"
                 ),
             }
 
@@ -647,7 +648,7 @@ class GroundedFinancialAssistant:
         self,
         question: str,
     ) -> str:
-        """Answer a non-financial question with the configured LLM."""
+
         if not self.client:
             return (
                 "I'm your AI Personal Finance Assistant. "
@@ -664,8 +665,8 @@ class GroundedFinancialAssistant:
             "Answer the user's question naturally and concisely. "
             "Do not invent personal financial data. "
             "If the user asks a financial-data question, say that "
-            "financial calculations should be handled by the application's "
-            "verified transaction-analysis tools."
+            "financial calculations should be handled by the "
+            "application's verified transaction-analysis tools."
         )
 
         prompt = (
@@ -676,13 +677,17 @@ class GroundedFinancialAssistant:
 
         try:
             if self.provider in ("gemini", "google"):
-                response = self.client.models.generate_content(
+
+                # Current Gemini Interactions API
+                interaction = self.client.interactions.create(
                     model=self.model_name,
-                    contents=prompt,
+                    input=prompt,
                 )
-                text_out = response.text
+
+                text_out = interaction.output_text
 
             elif self.provider == "openai":
+
                 response = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=[
@@ -698,9 +703,11 @@ class GroundedFinancialAssistant:
                     max_tokens=self.max_tokens,
                     timeout=self.timeout,
                 )
+
                 text_out = response.choices[0].message.content
 
             elif self.provider == "anthropic":
+
                 response = self.client.messages.create(
                     model=self.model_name,
                     system=system_prompt,
@@ -726,13 +733,32 @@ class GroundedFinancialAssistant:
                 return text_out.strip()
 
         except Exception as exc:
+            self.last_llm_error = str(exc)
+
+            safe_error = str(exc).replace(
+                self.api_key or "",
+                "[API_KEY_HIDDEN]",
+            )
+
             logger.warning(
-                f"General LLM request failed: {exc}"
+                f"General LLM request failed: "
+                f"{safe_error}"
+            )
+
+            return (
+                "I couldn't reach the AI service right now.\n\n"
+                f"**Gemini diagnostic:** "
+                f"`{type(exc).__name__}: {safe_error}`\n\n"
+                f"**Model:** `{self.model_name}`\n\n"
+                "The API key is being read, but the Gemini "
+                "request was rejected or failed. "
+                "Check the diagnostic above."
             )
 
         return (
             "I couldn't reach the AI service right now. "
-            "Please check the configured API key and try again."
+            "No response was returned by the configured "
+            "AI provider."
         )
 
     # ------------------------------------------------------------------
@@ -745,9 +771,7 @@ class GroundedFinancialAssistant:
         intent_info: Dict[str, Any],
         tool_result: Dict[str, Any],
     ) -> Dict[str, Any]:
-        """
-        Ask Gemini to explain ONLY the verified Python result.
-        """
+
         system_prompt = (
             "You are a grounded AI personal finance assistant.\n\n"
             "GROUNDING RULES:\n"
@@ -768,22 +792,29 @@ class GroundedFinancialAssistant:
 
         prompt = (
             f"User question:\n{question}\n\n"
-            f"Selected intent:\n{intent_info.get('intent')}\n\n"
-            f"Verified Python tool output:\n{tool_result}\n\n"
+            f"Selected intent:\n"
+            f"{intent_info.get('intent')}\n\n"
+            f"Verified Python tool output:\n"
+            f"{tool_result}\n\n"
             "Explain the verified result in natural language."
         )
 
         try:
             if self.provider in ("gemini", "google"):
-                response = self.client.models.generate_content(
+
+                # Current Gemini Interactions API
+                interaction = self.client.interactions.create(
                     model=self.model_name,
-                    contents=(
-                        f"{system_prompt}\n\n{prompt}"
+                    input=(
+                        f"{system_prompt}\n\n"
+                        f"{prompt}"
                     ),
                 )
-                text_out = response.text
+
+                text_out = interaction.output_text
 
             elif self.provider == "openai":
+
                 response = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=[
@@ -799,9 +830,11 @@ class GroundedFinancialAssistant:
                     max_tokens=self.max_tokens,
                     timeout=self.timeout,
                 )
+
                 text_out = response.choices[0].message.content
 
             elif self.provider == "anthropic":
+
                 response = self.client.messages.create(
                     model=self.model_name,
                     system=system_prompt,
@@ -830,9 +863,17 @@ class GroundedFinancialAssistant:
                 }
 
         except Exception as exc:
+            self.last_llm_error = str(exc)
+
+            safe_error = str(exc).replace(
+                self.api_key or "",
+                "[API_KEY_HIDDEN]",
+            )
+
             logger.warning(
                 f"LLM API call ({self.provider}) failed: "
-                f"{exc}. Using offline response."
+                f"{safe_error}. "
+                "Using offline response."
             )
 
         return self._generate_template_response(
@@ -849,8 +890,11 @@ class GroundedFinancialAssistant:
         intent_info: Dict[str, Any],
         tool_result: Dict[str, Any],
     ) -> Dict[str, Any]:
-        """Generate a deterministic response from verified data."""
-        status = tool_result.get("status", "success")
+
+        status = tool_result.get(
+            "status",
+            "success",
+        )
 
         if status == "error":
             return {
@@ -880,12 +924,16 @@ class GroundedFinancialAssistant:
             }
 
         intent = intent_info.get("intent")
-        currency = tool_result.get("currency", "INR")
+        currency = tool_result.get(
+            "currency",
+            "INR",
+        )
 
         # --------------------------------------------------------------
         # SPENDING BREAKDOWN
         # --------------------------------------------------------------
         if intent == "spending_breakdown":
+
             top_category = tool_result.get(
                 "highest_spending_category",
                 "N/A",
@@ -909,9 +957,20 @@ class GroundedFinancialAssistant:
             lines = []
 
             for item in breakdown[:5]:
-                category = item.get("category", "Unknown")
-                amount = item.get("total_amount", 0.0)
-                percentage = item.get("percentage", 0)
+                category = item.get(
+                    "category",
+                    "Unknown",
+                )
+
+                amount = item.get(
+                    "total_amount",
+                    0.0,
+                )
+
+                percentage = item.get(
+                    "percentage",
+                    0,
+                )
 
                 lines.append(
                     f"- **{category}**: "
@@ -926,10 +985,12 @@ class GroundedFinancialAssistant:
             )
 
             answer = (
-                f"Your highest spending category is **{top_category}**, "
-                f"at **{format_currency_amount(top_amount, currency)}**, "
+                f"Your highest spending category is "
+                f"**{top_category}**, at "
+                f"**{format_currency_amount(top_amount, currency)}**, "
                 f"out of total recorded expenses of "
-                f"**{format_currency_amount(total_expense, currency)}**.\n\n"
+                f"**{format_currency_amount(total_expense, currency)}**."
+                f"\n\n"
                 f"**Top spending categories**\n"
                 f"{top_lines}"
             )
@@ -943,6 +1004,7 @@ class GroundedFinancialAssistant:
         # CATEGORY SPENDING
         # --------------------------------------------------------------
         if intent == "category_period_spending":
+
             category = tool_result.get(
                 "category",
                 "Selected category",
@@ -967,13 +1029,14 @@ class GroundedFinancialAssistant:
             )
 
             answer = (
-                f"You spent **"
-                f"{format_currency_amount(spending, currency)}** "
+                f"You spent "
+                f"**{format_currency_amount(spending, currency)}** "
                 f"on **{category}** during **{period}**, "
                 f"across **{count} transaction(s)**."
             )
 
             if tool_result.get("has_previous_period"):
+
                 previous = tool_result.get(
                     "previous_spending",
                     0.0,
@@ -991,8 +1054,9 @@ class GroundedFinancialAssistant:
                 )
 
                 answer += (
-                    f" This is a **{abs(percentage)}% {direction}** "
-                    f"compared with the previous period "
+                    f" This is a **{abs(percentage)}% "
+                    f"{direction}** compared with the "
+                    f"previous period "
                     f"({format_currency_amount(previous, currency)})."
                 )
 
@@ -1005,6 +1069,7 @@ class GroundedFinancialAssistant:
         # RECURRING EXPENSES
         # --------------------------------------------------------------
         if intent == "recurring_expenses":
+
             items = tool_result.get(
                 "recurring_expenses",
                 [],
@@ -1018,19 +1083,38 @@ class GroundedFinancialAssistant:
             lines = []
 
             for item in items[:5]:
-                merchant = item.get("merchant", "Unknown")
-                frequency = item.get("frequency", 0)
-                average = item.get("average_amount", 0.0)
+
+                merchant = item.get(
+                    "merchant",
+                    "Unknown",
+                )
+
+                frequency = item.get(
+                    "frequency",
+                    0,
+                )
+
+                average = item.get(
+                    "average_amount",
+                    0.0,
+                )
+
                 classification = item.get(
                     "classification",
                     "",
+                )
+
+                classification_text = (
+                    f" ({classification})"
+                    if classification
+                    else ""
                 )
 
                 lines.append(
                     f"- **{merchant}**: "
                     f"{frequency} occurrences, average "
                     f"{format_currency_amount(average, currency)}"
-                    f"{f' ({classification})' if classification else ''}"
+                    f"{classification_text}"
                 )
 
             details = (
@@ -1041,9 +1125,9 @@ class GroundedFinancialAssistant:
 
             return {
                 "answer": (
-                    f"I found **{count} possible recurring expense "
-                    f"pattern(s)** in the available data.\n\n"
-                    f"{details}"
+                    f"I found **{count} possible recurring "
+                    f"expense pattern(s)** in the available data."
+                    f"\n\n{details}"
                 ),
                 "details": tool_result,
             }
@@ -1052,6 +1136,7 @@ class GroundedFinancialAssistant:
         # CLASSIFICATION
         # --------------------------------------------------------------
         if intent == "explain_classification":
+
             category = tool_result.get(
                 "predicted_category",
                 "Unknown",
@@ -1075,6 +1160,7 @@ class GroundedFinancialAssistant:
             feature_parts = []
 
             for feature in features[:3]:
+
                 feature_parts.append(
                     f"'{feature.get('feature', '')}' "
                     f"({feature.get('contribution', '')})"
@@ -1089,9 +1175,12 @@ class GroundedFinancialAssistant:
             return {
                 "answer": (
                     f"The predicted category is **{category}** "
-                    f"with **{confidence}% confidence**.\n\n"
-                    f"{summary}\n\n"
-                    f"Key contributing terms: {feature_text}."
+                    f"with **{confidence}% confidence**."
+                    f"\n\n"
+                    f"{summary}"
+                    f"\n\n"
+                    f"Key contributing terms: "
+                    f"{feature_text}."
                 ),
                 "details": tool_result,
             }
@@ -1100,6 +1189,7 @@ class GroundedFinancialAssistant:
         # FORECAST
         # --------------------------------------------------------------
         if intent == "forecast_expenses":
+
             predicted = tool_result.get(
                 "predicted_amount",
                 0.0,
@@ -1131,9 +1221,11 @@ class GroundedFinancialAssistant:
                     f"**{format_currency_amount(predicted, currency)}**, "
                     f"with an estimated range of "
                     f"**{format_currency_amount(lower, currency)}–"
-                    f"{format_currency_amount(upper, currency)}**.\n\n"
-                    f"This estimate uses {history_count} historical "
-                    f"month(s). The recent three-month average was "
+                    f"{format_currency_amount(upper, currency)}**."
+                    f"\n\n"
+                    f"This estimate uses "
+                    f"{history_count} historical month(s). "
+                    f"The recent three-month average was "
                     f"{format_currency_amount(recent_average, currency)}."
                 ),
                 "details": tool_result,
@@ -1143,6 +1235,7 @@ class GroundedFinancialAssistant:
         # ANOMALIES
         # --------------------------------------------------------------
         if intent == "detect_anomalies":
+
             items = tool_result.get(
                 "unusual_transactions",
                 [],
@@ -1156,6 +1249,7 @@ class GroundedFinancialAssistant:
             lines = []
 
             for item in items[:5]:
+
                 description = item.get(
                     "description",
                     "Unknown transaction",
@@ -1176,11 +1270,17 @@ class GroundedFinancialAssistant:
                     "",
                 )
 
+                reason_text = (
+                    f" — {reason}"
+                    if reason
+                    else ""
+                )
+
                 lines.append(
                     f"- **{description}**: "
                     f"{format_currency_amount(amount, currency)} "
                     f"({category})"
-                    f"{f' — {reason}' if reason else ''}"
+                    f"{reason_text}"
                 )
 
             details = (
@@ -1192,10 +1292,13 @@ class GroundedFinancialAssistant:
             return {
                 "answer": (
                     f"The analysis flagged **{count} unusual "
-                    f"transaction(s)** in the available data.\n\n"
-                    f"{details}\n\n"
-                    "An unusual-spending flag is a statistical signal; "
-                    "it does not by itself mean a transaction is fraudulent."
+                    f"transaction(s)** in the available data."
+                    f"\n\n"
+                    f"{details}"
+                    f"\n\n"
+                    "An unusual-spending flag is a statistical "
+                    "signal; it does not by itself mean a "
+                    "transaction is fraudulent."
                 ),
                 "details": tool_result,
             }
@@ -1204,30 +1307,52 @@ class GroundedFinancialAssistant:
         # MONTHLY CASH FLOW
         # --------------------------------------------------------------
         if intent == "monthly_cash_flow":
+
             monthly = tool_result.get(
                 "monthly_cash_flow",
                 [],
             )
 
             if isinstance(monthly, list) and monthly:
+
                 lines = []
 
                 for row in monthly[-5:]:
-                    month = row.get("month", "Unknown")
-                    income = row.get("income", 0.0)
-                    expense = row.get("expense", 0.0)
-                    net = row.get("net_cash_flow", 0.0)
+
+                    month = row.get(
+                        "month",
+                        "Unknown",
+                    )
+
+                    income = row.get(
+                        "income",
+                        0.0,
+                    )
+
+                    expense = row.get(
+                        "expense",
+                        0.0,
+                    )
+
+                    net = row.get(
+                        "net_cash_flow",
+                        0.0,
+                    )
 
                     lines.append(
                         f"- **{month}** — "
-                        f"Income: {format_currency_amount(income, currency)}, "
-                        f"Expenses: {format_currency_amount(expense, currency)}, "
-                        f"Net: {format_currency_amount(net, currency)}"
+                        f"Income: "
+                        f"{format_currency_amount(income, currency)}, "
+                        f"Expenses: "
+                        f"{format_currency_amount(expense, currency)}, "
+                        f"Net: "
+                        f"{format_currency_amount(net, currency)}"
                     )
 
                 return {
                     "answer": (
-                        "**Monthly cash-flow summary**\n\n"
+                        "**Monthly cash-flow summary**"
+                        f"\n\n"
                         + "\n".join(lines)
                     ),
                     "details": tool_result,
@@ -1235,8 +1360,9 @@ class GroundedFinancialAssistant:
 
             return {
                 "answer": (
-                    "The monthly cash-flow tool completed, but "
-                    "there is no monthly breakdown available to display."
+                    "The monthly cash-flow tool completed, "
+                    "but there is no monthly breakdown "
+                    "available to display."
                 ),
                 "details": tool_result,
             }
@@ -1245,6 +1371,7 @@ class GroundedFinancialAssistant:
         # TRANSACTION DETAILS
         # --------------------------------------------------------------
         if intent == "transaction_details":
+
             transactions = tool_result.get(
                 "transactions",
                 [],
@@ -1258,6 +1385,7 @@ class GroundedFinancialAssistant:
             lines = []
 
             for transaction in transactions[:10]:
+
                 date = transaction.get(
                     "date",
                     "N/A",
@@ -1293,7 +1421,8 @@ class GroundedFinancialAssistant:
 
             return {
                 "answer": (
-                    f"Found **{count} matching transaction(s)**.\n\n"
+                    f"Found **{count} matching transaction(s)**."
+                    f"\n\n"
                     f"{details}"
                 ),
                 "details": tool_result,
@@ -1304,8 +1433,9 @@ class GroundedFinancialAssistant:
         # --------------------------------------------------------------
         return {
             "answer": (
-                "The financial analysis completed, but there is "
-                "no dedicated response template for this result yet."
+                "The financial analysis completed, but there "
+                "is no dedicated response template for this "
+                "result yet."
             ),
             "details": tool_result,
         }
@@ -1316,6 +1446,7 @@ class GroundedFinancialAssistant:
 # ----------------------------------------------------------------------
 
 if __name__ == "__main__":
+
     assistant = GroundedFinancialAssistant()
 
     test_questions = [
