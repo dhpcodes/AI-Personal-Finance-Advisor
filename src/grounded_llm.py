@@ -33,16 +33,18 @@ class GroundedFinancialAssistant:
         api_key: Any = DEFAULT_KEY,
         timeout: Optional[int] = None,
         max_tokens: Optional[int] = None,
+        base_url: Optional[str] = None,
+        model: Optional[str] = None,
     ):
         self.provider = (
             provider or os.getenv("LLM_PROVIDER", "openai")
         ).lower().strip()
 
-        self.model_name = model_name or os.getenv(
+        self.model_name = model or model_name or os.getenv(
             "LLM_MODEL", "llama3.2:3b"
         )
 
-        self.base_url = os.getenv("LLM_BASE_URL", "http://localhost:11434/v1")
+        self.base_url = base_url or os.getenv("LLM_BASE_URL", "http://localhost:11434/v1")
 
         self.timeout = int(
             timeout or os.getenv("LLM_TIMEOUT_SECONDS", "30")
@@ -707,7 +709,7 @@ class GroundedFinancialAssistant:
             "tool_result": tool_result,
             "answer": response["answer"],
             "formatted_details": response["details"],
-            "is_llm_powered": self.client is not None,
+            "is_llm_powered": response.get("is_llm_powered", self.client is not None),
         }
 
     # ------------------------------------------------------------------
@@ -909,14 +911,17 @@ class GroundedFinancialAssistant:
                         f"Numeric grounding violation detected: {violation_reason}. "
                         "Discarding LLM output and falling back to deterministic template."
                     )
-                    return self._generate_template_response(
+                    fallback_resp = self._generate_template_response(
                         intent_info,
                         tool_result,
                     )
+                    fallback_resp["is_llm_powered"] = False
+                    return fallback_resp
 
                 return {
                     "answer": text_out.strip(),
                     "details": tool_result,
+                    "is_llm_powered": True,
                 }
 
         except Exception as exc:
@@ -925,10 +930,12 @@ class GroundedFinancialAssistant:
                 f"{exc}. Using offline response."
             )
 
-        return self._generate_template_response(
+        fallback_resp = self._generate_template_response(
             intent_info,
             tool_result,
         )
+        fallback_resp["is_llm_powered"] = False
+        return fallback_resp
 
     # ------------------------------------------------------------------
     # OFFLINE / DETERMINISTIC RESPONSES

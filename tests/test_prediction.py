@@ -34,6 +34,9 @@ def test_rent_rule_word_boundaries_and_false_positives():
 
     # True positives (should map to Rent)
     rent_texts = [
+        "pg rent",
+        "flat rent",
+        "landlord transfer",
         "House rent payment April",
         "Monthly PG accommodation fee",
         "Transfer to landlord for flat 302",
@@ -46,6 +49,9 @@ def test_rent_rule_word_boundaries_and_false_positives():
 
     # False positives (should NOT map to Rent)
     non_rent_texts = [
+        "page",
+        "PG&E",
+        "mortgage",
         "PG&E bill utility payment",
         "PG & E electric and gas service",
         "Page turner bookstore purchase",

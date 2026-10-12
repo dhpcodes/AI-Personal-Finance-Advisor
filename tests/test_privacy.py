@@ -40,3 +40,17 @@ def test_sanitize_payload_redacts_pii():
     assert "4111" not in sanitized["summary"]
     assert "unapproved_field" not in sanitized
     assert sanitized["total_spending"] == 5000.0
+
+
+def test_sanitize_payload_redacts_indian_pii():
+    payload = {
+        "summary": "User PAN ABCDE1234F and Aadhaar 2345 6789 0123 confirmed via mobile +91 9876543210",
+        "total_spending": 15000.0
+    }
+    sanitized = PrivacyGuard.sanitize_outbound_payload(payload)
+    summary = sanitized["summary"]
+    assert "ABCDE1234F" not in summary
+    assert "2345 6789 0123" not in summary
+    assert "9876543210" not in summary
+    assert "[REDACTED_PII]" in summary
+

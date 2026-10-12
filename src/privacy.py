@@ -63,7 +63,8 @@ class PrivacyGuard:
         re.compile(r"\b\d{9,18}\b"),                             # Bank account number
         re.compile(r"\b(password|pin|cvv|cvc|otp)\b", re.I),    # Credentials
         re.compile(r"\b[A-Z]{5}\d{4}[A-Z]\b"),                  # Indian PAN number
-        re.compile(r"\b\d{4}\s\d{4}\s\d{4}\b")                  # Aadhaar format
+        re.compile(r"\b\d{4}\s\d{4}\s\d{4}\b"),                 # Aadhaar format
+        re.compile(r"\b(?:(?:\+91|91|0)[ -]?)?[6789]\d{9}\b")   # Indian 10-digit mobile number
     ]
 
     @classmethod

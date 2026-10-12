@@ -38,3 +38,8 @@ def test_canonicalize_empty_and_edge_cases():
     assert canonicalize("") == ""
     assert canonicalize("   ") == ""
     assert canonicalize("Zomato") == "Zomato"
+    assert canonicalize("Amazon India Marketplace") == "Amazon India Marketplace"
+    # Non-string input handling
+    assert canonicalize(None) == ""
+    assert canonicalize(12345) == ""
+    assert canonicalize(float("nan")) == ""

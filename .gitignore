@@ -41,5 +41,8 @@ models/*.joblib
 
 # Logs & temp
 *.log
+*.db
+data/*.db
 scratch/
 !models/final_model.joblib
+
