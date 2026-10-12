@@ -1,0 +1,6 @@
+Model_Variant,Configuration,Tuning_Status,Clean_Test_Acc,Clean_Test_MacroF1,Noisy_Test_Acc,Noisy_Test_MacroF1,Train_Time_s,Finding
+LightGBM (Matched Baseline),"char 2-5 n-grams, depth=6, leaves=63, lr=0.1, colsample=0.5",MATCHED CONFIG,0.9568,0.9565,0.7158,0.7218,458.6,Sparse char n-grams partition poorly on depth-limited trees.
+LightGBM (Tuned + Stacked),Stacked (Char+Word TF-IDF + Handcrafted + OOF LogReg Probs) + Optuna (30 trials),TUNED / STACKED,0.9822,0.9821,0.7579,0.7588,133.7,Stacking linear OOF probabilities recovers strong performance on noisy test.
+XGBoost (Matched Baseline),"char 2-5 n-grams, depth=6, lr=0.1, colsample=0.5, early_stopping=30",MATCHED CONFIG,0.5462,0.5427,0.4074,0.4252,193.4,Premature early-stopping on noisy val loss + 50% feature subsampling.
+XGBoost (Tuned + Stacked),"Stacked (Char+Word + Handcrafted + OOF Probs), lr=0.15, colsample=0.8, 120 trees",TUNED / STACKED,0.985,0.9849,0.7609,0.7624,536.9,Proper feature fraction and linear meta-features dramatically elevate tree performance.
+Logistic Regression (Linear Reference),"char 2-5 n-grams, C=10, max_iter=300",LINEAR REFERENCE,0.9877,0.9877,0.8116,0.8104,10.5,Direct linear evidence aggregation remains the most compute-efficient champion.

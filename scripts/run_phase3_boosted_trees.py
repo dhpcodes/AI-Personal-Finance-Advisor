@@ -59,7 +59,7 @@ def add_noise(text: str, rng: random.Random, kinds: list) -> str:
     return "".join(s)
 
 
-def extract_handcrafted_features(texts: Sequence) -> np.ndarray:
+def extract_handcrafted_features(texts) -> np.ndarray:
     feats = []
     for t in texts:
         s = str(t)
