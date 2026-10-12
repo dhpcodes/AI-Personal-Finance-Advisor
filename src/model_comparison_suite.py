@@ -72,8 +72,8 @@ def group_bootstrap(y, pred_a, pred_b, groups, n=200, seed=0):
     ci = lambda v: (round(float(np.percentile(v, 2.5)), 4), round(float(np.percentile(v, 97.5)), 4))
     return ci(fa), ci(fb), ci(fa - fb)
 
-# Rent rule helper (Section 9)
-RENT_RE = re.compile(r"\b(rent|landlord|pg|lease|housing society)\b", re.I)
+# Rent rule helper with word-boundary keywords and negative lookahead for utilities like PG&E
+RENT_RE = re.compile(r"\b(rent|landlord|pg(?!\s*&\s*e\b)|lease|housing\s+society)\b", re.IGNORECASE)
 def with_rent_rule(texts, model_labels):
     return [("Rent" if RENT_RE.search(t) else l) for t, l in zip(texts, model_labels)]
 

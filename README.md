@@ -44,7 +44,7 @@ This platform addresses the fundamental challenge of personal financial manageme
                                     │
                                     ▼
                      GROUNDED LLM INTERFACE (src/grounded_llm.py)
-                   (Google Gemini / Local Deterministic Fallback)
+                   (Local Llama 3.2 via Ollama / OpenAI-Compatible / Offline Fallback)
                                     │
                                     ▼
                          EXPLAINABLE ADVICE & INSIGHTS
@@ -124,7 +124,7 @@ All models are trained strictly on the identical training split and evaluated on
 | **Model 1** | **TF-IDF (char 2-5) + Logistic Regression** 🏆 | **MEASURED** | **0.9877** | **0.9877** | **0.8116** | **0.8104** | **0.0016 ms** | CPU (Lightweight) |
 | **Model 2** | **TF-IDF + Linear SVM (Calibrated)** | **MEASURED** | **0.9893** | **0.9893** | **0.7823** | **0.7811** | **0.0060 ms** | CPU (Lightweight) |
 | **Model 3** | **TF-IDF + LightGBM (depth=6, leaves=63)** | **MEASURED** | **0.9568** | **0.9565** | **0.7158** | **0.7218** | **0.0459 ms** | CPU Multicore |
-| **Model 4** | **TF-IDF + XGBoost (tree_method=hist)** | **MEASURED** | `results` | `results` | `results` | `results` | `results` | CPU / GPU |
+| **Model 4** | **TF-IDF + XGBoost (tree_method=hist)** | **MEASURED** | **0.5462** | **0.5427** | **0.4074** | **0.4252** | **0.0212 ms** | CPU Multicore / GPU |
 | **Model 5** | **Sentence Transformers (all-MiniLM-L6-v2) + LogReg** | NOT RUN | — | — | — | — | ~12.0 ms | T4 GPU / 4GB RAM (`notebooks/04b_sentence_embeddings.py`) |
 | **Model 6** | **Fine-Tuned ModernBERT / DistilBERT** | NOT RUN | — | — | — | — | ~25.0 ms | NVIDIA T4 / A100 GPU (`notebooks/05_modernbert_training.py`) |
 | **Model 7** | **Llama 3.2 1B Instruct with QLoRA (4-bit)** | NOT RUN | — | — | — | — | ~120.0 ms | NVIDIA A10G / A100 GPU (`notebooks/06_llama_qlora_training.py`) |
