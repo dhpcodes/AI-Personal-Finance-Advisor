@@ -1,3 +1,3 @@
-Evaluation_Mode,Total_Transactions,Accuracy,Notes
-Model-Only (ML Classifier),105,0.5048,ML model alone cannot predict Rent as Rent is not in training classes.
-Model + Keyword Rent Rule,105,0.5524,Regex pattern captures Rent/Landlord/PG/Lease before ML assignment.
+Evaluation_Mode,Total_Transactions,Accuracy,Accuracy_Percent,Wilson_95_CI_Lower,Wilson_95_CI_Upper,Wilson_95_CI_Formatted,P_Value_vs_Baseline,Statistical_Conclusion
+Model-Only (ML Classifier),105,0.5048,50.48%,0.4107,0.5985,"[41.07%, 59.85%]",N/A (Baseline),Baseline evaluation on held-out Indian bank test set.
+Model + Keyword Rent Rule,105,0.5524,55.24%,0.4571,0.644,"[45.71%, 64.40%]",p = 0.4894,"Difference (+4.76%, 5 txns) is within confidence interval (overlap [45.71%, 59.85%], p=0.4894); rule benefit cannot be statistically claimed on N=105."
