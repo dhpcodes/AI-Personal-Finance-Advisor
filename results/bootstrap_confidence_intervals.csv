@@ -1,7 +1,8 @@
 Comparison,CI_Lower,CI_Upper,Notes
-Logistic Regression Macro-F1 (95% CI),0.7605,0.847,Resampled by merchant core (Top Performer)
-Linear SVM Macro-F1 (95% CI),0.7326,0.8237,Resampled by merchant core
-XGBoost Macro-F1 (95% CI),0.3496,0.4913,Resampled by merchant core
-LightGBM Macro-F1 (95% CI),0.7082,0.7351,Resampled by merchant core (458.6s CPU train)
-LogReg minus LinearSVM Paired Diff,0.0075,0.0462,LogReg has higher noisy macro-F1 than LinearSVM
-LogReg minus XGBoost Paired Diff,0.3257,0.4489,Linear model outperforms tree boosting on text n-grams
+Logistic Regression Macro-F1 (95% CI),0.7605,0.847,Resampled by 803 merchant clusters (Top Performer)
+Linear SVM Macro-F1 (95% CI),0.7326,0.8237,Resampled by 803 merchant clusters
+LightGBM Macro-F1 (95% CI),0.7082,0.7351,Resampled by 803 merchant clusters
+XGBoost Macro-F1 (95% CI),0.3496,0.4913,Resampled by 803 merchant clusters
+LogReg minus LinearSVM Paired Diff,0.0075,0.0462,CI excludes zero; LogReg has small positive advantage on noisy test
+LinearSVM minus LightGBM Paired Diff,0.0381,0.0795,CI excludes zero; LinearSVM outperforms tree booster on noisy test
+LogReg minus XGBoost Paired Diff,0.3257,0.4489,CI excludes zero; Linear model substantially outperforms shallow tree splits
