@@ -1,0 +1,11 @@
+,,,Clean_Test_Acc,Clean_Test_Acc,Clean_Test_MacroF1,Clean_Test_MacroF1,Noisy_Test_Acc,Noisy_Test_Acc,Noisy_Test_MacroF1,Noisy_Test_MacroF1
+,,,mean,std,mean,std,mean,std,mean,std
+Model,Input_Format,Training_Augmentation,,,,,,,,
+Linear SVM,Canonicalized,No Noise Aug (Clean Train),0.991,0.0,0.991,0.0,0.3561,0.0,0.3828,0.0
+Linear SVM,Canonicalized,With Noise Aug (35%),0.9908,0.0,0.9908,0.0,0.883,0.0,0.8836,0.0
+Linear SVM,Raw Text,No Noise Aug (Clean Train),0.991,0.0,0.991,0.0,0.4044,0.0,0.4309,0.0
+Linear SVM,Raw Text,With Noise Aug (35%),0.9863,0.0,0.9863,0.0,0.7914,0.0,0.7906,0.0
+Logistic Regression,Canonicalized,No Noise Aug (Clean Train),0.991,0.0,0.991,0.0,0.363,0.0,0.3895,0.0
+Logistic Regression,Canonicalized,With Noise Aug (35%),0.9899,0.0,0.9899,0.0,0.8872,0.0,0.887,0.0
+Logistic Regression,Raw Text,No Noise Aug (Clean Train),0.991,0.0,0.991,0.0,0.4042,0.0,0.4328,0.0
+Logistic Regression,Raw Text,With Noise Aug (35%),0.9888,0.0,0.9888,0.0,0.8002,0.0,0.8001,0.0

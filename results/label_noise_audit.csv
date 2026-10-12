@@ -1,0 +1,2 @@
+Audit_Method,Training_Samples_Audited,OOF_Accuracy,High_Confidence_Disagreements_N,Suspected_Label_Noise_Pct,Estimated_Theoretical_Ceiling_Pct,Notes
+5-Fold Out-of-Fold Cross-Validated Disagreement,69885,0.9815,5,0.007,99.99,Samples where model confidence >= 0.90 but disagrees with ground-truth label.

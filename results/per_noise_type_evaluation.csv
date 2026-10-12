@@ -1,0 +1,9 @@
+Noise_Type,Sample_Count,Training_Status,Raw_LogReg_Acc,Raw_LogReg_MacroF1,Canonicalized_LogReg_Acc,Canonicalized_LogReg_MacroF1,Accuracy_Delta_Pct
+UPI,2468,Included in Train Noise,0.8144,0.8103,0.9133,0.9114,9.89
+POS,2504,Included in Train Noise,0.8227,0.8249,0.9105,0.9102,8.79
+NEFT,2519,HELD-OUT FROM TRAINING,0.7781,0.7787,0.9079,0.9039,12.98
+IMPS,2554,HELD-OUT FROM TRAINING,0.6774,0.6809,0.8994,0.8985,22.2
+UPPER,2460,Included in Train Noise,0.8256,0.8294,0.9061,0.9072,8.05
+LOWER,2556,Included in Train Noise,0.8838,0.8848,0.8768,0.8772,-0.7
+TRUNC,2487,Included in Train Noise,0.6992,0.7005,0.7752,0.7778,7.6
+TYPO,2492,Included in Train Noise,0.9021,0.9016,0.9081,0.9074,0.6
