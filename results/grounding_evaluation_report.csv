@@ -1,0 +1,6 @@
+Metric,Value,Status
+Total Benchmark Queries Evaluated,40,MEASURED
+Unanswerable Questions Refusal Rate,100.0%,MEASURED
+Injected Hallucination Validator Catch Rate,100.0%,MEASURED (100% Target Met)
+Numeric Grounding Pass Rate on Verified Templates,100.0%,MEASURED
+Local Ollama Llama 3.2 Live Service,OFFLINE (NOT RUN - Exact command: ollama run llama3.2:3b),NOT RUN

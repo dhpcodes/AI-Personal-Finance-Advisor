@@ -35,12 +35,14 @@ class GroundedFinancialAssistant:
         max_tokens: Optional[int] = None,
     ):
         self.provider = (
-            provider or os.getenv("LLM_PROVIDER", "gemini")
+            provider or os.getenv("LLM_PROVIDER", "openai")
         ).lower().strip()
 
         self.model_name = model_name or os.getenv(
-            "LLM_MODEL", "gemini-3.8-flash"
+            "LLM_MODEL", "llama3.2:3b"
         )
+
+        self.base_url = os.getenv("LLM_BASE_URL", "http://localhost:11434/v1")
 
         self.timeout = int(
             timeout or os.getenv("LLM_TIMEOUT_SECONDS", "30")
@@ -64,32 +66,34 @@ class GroundedFinancialAssistant:
 
     def _get_secret_key(self) -> Optional[str]:
         """Read the configured API key without logging the secret."""
+        # 1. Environment variable priority
+        k = os.getenv("LLM_API_KEY")
+        if k and k.strip():
+            return k.strip()
+
+        # 2. Streamlit secrets
         try:
             import streamlit as st
 
-            if self.provider in ("gemini", "google"):
-                if "GEMINI_API_KEY" in st.secrets:
-                    return str(st.secrets["GEMINI_API_KEY"])
-
-            elif self.provider == "openai":
-                if "OPENAI_API_KEY" in st.secrets:
-                    return str(st.secrets["OPENAI_API_KEY"])
-
-            elif self.provider == "anthropic":
-                if "ANTHROPIC_API_KEY" in st.secrets:
-                    return str(st.secrets["ANTHROPIC_API_KEY"])
-
+            if "LLM_API_KEY" in st.secrets:
+                return str(st.secrets["LLM_API_KEY"])
+            elif "OPENAI_API_KEY" in st.secrets:
+                return str(st.secrets["OPENAI_API_KEY"])
+            elif "GEMINI_API_KEY" in st.secrets:
+                return str(st.secrets["GEMINI_API_KEY"])
+            elif "ANTHROPIC_API_KEY" in st.secrets:
+                return str(st.secrets["ANTHROPIC_API_KEY"])
         except Exception:
             pass
+
+        if self.provider in ("openai", "llama", "ollama", "groq", "together", "openrouter"):
+            return os.getenv("OPENAI_API_KEY") or os.getenv("GROQ_API_KEY") or "ollama"
 
         if self.provider in ("gemini", "google"):
             return (
                 os.getenv("GEMINI_API_KEY")
                 or os.getenv("GOOGLE_API_KEY")
             )
-
-        if self.provider == "openai":
-            return os.getenv("OPENAI_API_KEY")
 
         if self.provider == "anthropic":
             return os.getenv("ANTHROPIC_API_KEY")
@@ -110,26 +114,27 @@ class GroundedFinancialAssistant:
             return
 
         try:
-            if self.provider in ("gemini", "google"):
+            if self.provider in ("openai", "llama", "ollama", "groq", "together", "openrouter"):
+                import openai
+
+                self.client = openai.OpenAI(
+                    base_url=self.base_url,
+                    api_key=self.api_key,
+                    timeout=self.timeout,
+                )
+
+                logger.info(
+                    f"OpenAI-compatible client initialized ({self.provider}) at "
+                    f"'{self.base_url}' with model '{self.model_name}'."
+                )
+
+            elif self.provider in ("gemini", "google"):
                 from google import genai
 
                 self.client = genai.Client(api_key=self.api_key)
 
                 logger.info(
                     f"Gemini client initialized with model "
-                    f"'{self.model_name}'."
-                )
-
-            elif self.provider == "openai":
-                import openai
-
-                self.client = openai.OpenAI(
-                    api_key=self.api_key,
-                    timeout=self.timeout,
-                )
-
-                logger.info(
-                    f"OpenAI client initialized with model "
                     f"'{self.model_name}'."
                 )
 
@@ -834,6 +839,7 @@ class GroundedFinancialAssistant:
 
         from src.privacy import PrivacyGuard
         sanitized_result = PrivacyGuard.sanitize_outbound_payload(tool_result)
+        PrivacyGuard.validate_outbound_payload(sanitized_result)
 
         prompt = (
             f"User question:\n{question}\n\n"
@@ -843,16 +849,7 @@ class GroundedFinancialAssistant:
         )
 
         try:
-            if self.provider in ("gemini", "google"):
-                response = self.client.models.generate_content(
-                    model=self.model_name,
-                    contents=(
-                        f"{system_prompt}\n\n{prompt}"
-                    ),
-                )
-                text_out = response.text
-
-            elif self.provider == "openai":
+            if self.provider in ("openai", "llama", "ollama", "groq", "together", "openrouter"):
                 response = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=[
@@ -869,6 +866,15 @@ class GroundedFinancialAssistant:
                     timeout=self.timeout,
                 )
                 text_out = response.choices[0].message.content
+
+            elif self.provider in ("gemini", "google"):
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=(
+                        f"{system_prompt}\n\n{prompt}"
+                    ),
+                )
+                text_out = response.text
 
             elif self.provider == "anthropic":
                 response = self.client.messages.create(
@@ -893,6 +899,21 @@ class GroundedFinancialAssistant:
                 text_out = None
 
             if text_out and text_out.strip():
+                # Factual Numeric Grounding Validation
+                from src.numeric_validator import NumericGroundingValidator
+                is_valid_grounding, violation_reason = NumericGroundingValidator.validate(
+                    text_out, sanitized_result
+                )
+                if not is_valid_grounding:
+                    logger.warning(
+                        f"Numeric grounding violation detected: {violation_reason}. "
+                        "Discarding LLM output and falling back to deterministic template."
+                    )
+                    return self._generate_template_response(
+                        intent_info,
+                        tool_result,
+                    )
+
                 return {
                     "answer": text_out.strip(),
                     "details": tool_result,
