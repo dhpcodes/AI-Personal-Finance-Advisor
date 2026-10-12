@@ -1,0 +1,337 @@
+date,transaction_description,amount,category,transaction_type,is_synthetic,dataset_note
+2024-11-01,Salary Direct Deposit Infosys,120123.62035654209,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-10,Electricity and Internet Bills,-3960.5714451279327,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-03,Supermarket Grocery Order,-4451.592124354826,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-04,Weekend Restaurant & Dining,-2897.3169683940732,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-10,Supermarket Grocery Order,-3702.8242325751676,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-11,Weekend Restaurant & Dining,-2011.9890406724053,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-17,Supermarket Grocery Order,-3575.5086958186594,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-18,Weekend Restaurant & Dining,-3432.3522915498706,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-24,Supermarket Grocery Order,-4281.449515266171,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-25,Weekend Restaurant & Dining,-3116.145155592091,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-11-22,E-Commerce Shopping Festive Spree,-17716.13719010593,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-01,Salary Direct Deposit Infosys,121909.72955648598,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-10,Electricity and Internet Bills,-3865.9541126403374,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-03,Supermarket Grocery Order,-3776.040843881759,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-04,Weekend Restaurant & Dining,-2063.649934414201,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-10,Supermarket Grocery Order,-3738.425862809464,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-11,Weekend Restaurant & Dining,-2308.4844859190753,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-17,Supermarket Grocery Order,-4182.183361121909,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-18,Weekend Restaurant & Dining,-2563.8900372842318,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-24,Supermarket Grocery Order,-3878.5978822574543,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-25,Weekend Restaurant & Dining,-2923.705789444759,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2024-12-22,E-Commerce Shopping Festive Spree,-5418.481581956125,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-01,Salary Direct Deposit Infosys,119876.43394560565,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-10,Electricity and Internet Bills,-3493.089474634953,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-03,Supermarket Grocery Order,-4092.8909794821466,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-04,Weekend Restaurant & Dining,-3270.351922786027,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-10,Supermarket Grocery Order,-3759.5759168058676,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-11,Weekend Restaurant & Dining,-2728.4688768272235,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-17,Supermarket Grocery Order,-4270.138939520655,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-18,Weekend Restaurant & Dining,-1792.9008254399955,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-24,Supermarket Grocery Order,-4289.80830747187,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-25,Weekend Restaurant & Dining,-2041.048247374583,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-01-22,E-Commerce Shopping Festive Spree,-5195.154778955839,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-01,Salary Direct Deposit Infosys,121846.65661176,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-10,Electricity and Internet Bills,-3972.5056264596474,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-03,Supermarket Grocery Order,-4550.9165525514,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-04,Weekend Restaurant & Dining,-2309.2275383467413,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-10,Supermarket Grocery Order,-3626.973748208299,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-11,Weekend Restaurant & Dining,-3068.4660530243136,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-17,Supermarket Grocery Order,-4072.1982418614816,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-18,Weekend Restaurant & Dining,-1944.0764696895576,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-24,Supermarket Grocery Order,-4143.729983144651,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-25,Weekend Restaurant & Dining,-1768.7770422304368,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-02-22,E-Commerce Shopping Festive Spree,-7727.961206236347,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-01,Salary Direct Deposit Infosys,119776.33994480006,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-10,Electricity and Internet Bills,-3730.0178274831856,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-03,Supermarket Grocery Order,-3905.2243989162343,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-04,Weekend Restaurant & Dining,-2740.1360423556216,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-10,Supermarket Grocery Order,-4210.723363146263,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-11,Weekend Restaurant & Dining,-2069.708911051054,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-17,Supermarket Grocery Order,-4760.460016093926,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-18,Weekend Restaurant & Dining,-3250.265646722229,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-24,Supermarket Grocery Order,-4721.348624033446,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-25,Weekend Restaurant & Dining,-3489.654700855298,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-03-22,E-Commerce Shopping Festive Spree,-6793.699936433255,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-01,Salary Direct Deposit Infosys,121765.62270506936,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-10,Electricity and Internet Bills,-3270.7940016415355,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-03,Supermarket Grocery Order,-3754.777721144889,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-04,Weekend Restaurant & Dining,-1790.454577821076,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-10,Supermarket Grocery Order,-3922.9294299922435,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-11,Weekend Restaurant & Dining,-2477.354579378964,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-17,Supermarket Grocery Order,-3852.7537413060645,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-18,Weekend Restaurant & Dining,-3357.4750183038586,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-24,Supermarket Grocery Order,-3963.779324701666,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-25,Weekend Restaurant & Dining,-2261.8690193747616,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-04-22,E-Commerce Shopping Festive Spree,-6628.088249474746,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-01,Salary Direct Deposit Infosys,119422.77267492429,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-10,Electricity and Internet Bills,-3841.757584603232,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-03,Supermarket Grocery Order,-3596.915836783702,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-04,Weekend Restaurant & Dining,-3673.773873201035,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-10,Supermarket Grocery Order,-4503.9182000856545,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-11,Weekend Restaurant & Dining,-2097.4313630683446,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-17,Supermarket Grocery Order,-3507.1787522606833,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-18,Weekend Restaurant & Dining,-3330.9228569096686,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-24,Supermarket Grocery Order,-4418.914547001902,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-25,Weekend Restaurant & Dining,-3158.0143360819748,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-05-22,E-Commerce Shopping Festive Spree,-7313.811040057837,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-01,Salary Direct Deposit Infosys,119222.13395520227,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-10,Electricity and Internet Bills,-3486.7725828354182,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-03,Supermarket Grocery Order,-3650.6297773826686,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-04,Weekend Restaurant & Dining,-3426.206851751187,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-10,Supermarket Grocery Order,-4310.287564875825,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-11,Weekend Restaurant & Dining,-2361.796049705298,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-17,Supermarket Grocery Order,-3582.6258553718308,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-18,Weekend Restaurant & Dining,-2321.9646434313245,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-24,Supermarket Grocery Order,-3922.738318634771,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-25,Weekend Restaurant & Dining,-3159.2123566761284,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-06-22,E-Commerce Shopping Festive Spree,-6912.672414065639,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-01,Salary Direct Deposit Infosys,121661.63822772898,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-10,Electricity and Internet Bills,-3577.7719401295594,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-03,Supermarket Grocery Order,-3655.472519719792,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-04,Weekend Restaurant & Dining,-3126.48957444599,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-10,Supermarket Grocery Order,-4489.020563201967,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-11,Weekend Restaurant & Dining,-2822.5543951389927,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-17,Supermarket Grocery Order,-4502.257333940929,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-18,Weekend Restaurant & Dining,-2687.5911927287816,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-24,Supermarket Grocery Order,-4179.552678196593,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-25,Weekend Restaurant & Dining,-2555.082036717099,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-07-22,E-Commerce Shopping Festive Spree,-5076.257380232286,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-01,Salary Direct Deposit Infosys,119323.67428097992,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-10,Electricity and Internet Bills,-3225.143348549387,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-03,Supermarket Grocery Order,-4327.333534642915,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-04,Weekend Restaurant & Dining,-2328.7119621526535,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-10,Supermarket Grocery Order,-4161.141898514114,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-11,Weekend Restaurant & Dining,-3515.132947852186,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-17,Supermarket Grocery Order,-3824.0798978935372,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-18,Weekend Restaurant & Dining,-2520.7658460712596,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-24,Supermarket Grocery Order,-4482.2164801059635,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-25,Weekend Restaurant & Dining,-2157.596330983245,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-08-22,E-Commerce Shopping Festive Spree,-5230.939729486379,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-01,Salary Direct Deposit Infosys,119869.25435874131,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-10,Electricity and Internet Bills,-3328.9770298032035,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-03,Supermarket Grocery Order,-4708.606948045345,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-04,Weekend Restaurant & Dining,-3316.240759128834,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-10,Supermarket Grocery Order,-4323.424883463551,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-11,Weekend Restaurant & Dining,-3442.921180375435,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-17,Supermarket Grocery Order,-4544.773699968849,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-18,Weekend Restaurant & Dining,-2073.140117772072,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-24,Supermarket Grocery Order,-4660.326698036971,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-25,Weekend Restaurant & Dining,-2778.6844838313013,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-09-22,E-Commerce Shopping Festive Spree,-7422.320465492187,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-01,Salary Direct Deposit Infosys,121688.27389977047,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-10,Electricity and Internet Bills,-3454.4027799774913,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-03,Supermarket Grocery Order,-3643.0675018859797,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-04,Weekend Restaurant & Dining,-2155.8703250838835,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-10,Supermarket Grocery Order,-4055.240125214133,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-11,Weekend Restaurant & Dining,-3336.029531844986,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-17,Supermarket Grocery Order,-4618.949758233246,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-18,Weekend Restaurant & Dining,-1713.9042610623815,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-24,Supermarket Grocery Order,-4163.971493350836,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-25,Weekend Restaurant & Dining,-2534.822006297558,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-10-22,E-Commerce Shopping Festive Spree,-19832.132009942667,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-01,Salary Direct Deposit Infosys,119359.59610200104,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-10,Electricity and Internet Bills,-3470.0921371229024,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-03,Supermarket Grocery Order,-4725.782615086275,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-04,Weekend Restaurant & Dining,-2346.4058640415105,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-10,Supermarket Grocery Order,-4174.427808266376,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-11,Weekend Restaurant & Dining,-3106.037917790356,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-17,Supermarket Grocery Order,-3972.7184830930823,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-18,Weekend Restaurant & Dining,-3643.5641654419214,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-24,Supermarket Grocery Order,-4751.181483424744,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-25,Weekend Restaurant & Dining,-2203.5645916507283,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-11-22,E-Commerce Shopping Festive Spree,-22721.10931187005,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-01,Salary Direct Deposit Infosys,119902.63492945032,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-10,Electricity and Internet Bills,-3427.872395501974,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-03,Supermarket Grocery Order,-3547.9530315608927,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-04,Weekend Restaurant & Dining,-2919.128667959794,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-10,Supermarket Grocery Order,-4153.48273019752,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-11,Weekend Restaurant & Dining,-1802.9575024999785,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-17,Supermarket Grocery Order,-3862.2404035075947,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-18,Weekend Restaurant & Dining,-3516.5317719333075,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-24,Supermarket Grocery Order,-3811.430457867064,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-25,Weekend Restaurant & Dining,-1989.7897441824462,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2025-12-22,E-Commerce Shopping Festive Spree,-6468.358280832689,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-01,Salary Direct Deposit Infosys,121956.9513623318,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-10,Electricity and Internet Bills,-3393.6442172092,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-03,Supermarket Grocery Order,-4373.776211627643,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-04,Weekend Restaurant & Dining,-3223.239230657435,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-10,Supermarket Grocery Order,-3808.9288071901196,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-11,Weekend Restaurant & Dining,-3156.432697223719,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-17,Supermarket Grocery Order,-3978.118072535029,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-18,Weekend Restaurant & Dining,-2964.611661187159,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-24,Supermarket Grocery Order,-4323.588623989163,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-25,Weekend Restaurant & Dining,-2771.5493681495172,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-01-22,E-Commerce Shopping Festive Spree,-5270.869310163225,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-01,Salary Direct Deposit Infosys,121505.90748676771,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-10,Electricity and Internet Bills,-3456.6240519773887,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-03,Supermarket Grocery Order,-3742.4740635198104,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-04,Weekend Restaurant & Dining,-1781.5502831095278,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-10,Supermarket Grocery Order,-4268.1608261447145,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-11,Weekend Restaurant & Dining,-3055.1287236845646,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-17,Supermarket Grocery Order,-3521.564177606213,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-18,Weekend Restaurant & Dining,-2724.186116598562,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-24,Supermarket Grocery Order,-3794.444507757319,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-25,Weekend Restaurant & Dining,-2990.3455808188996,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-02-22,E-Commerce Shopping Festive Spree,-5523.099287014975,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-01,Salary Direct Deposit Infosys,121072.8132143074,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-10,Electricity and Internet Bills,-3509.38827704043,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-03,Supermarket Grocery Order,-4717.748985357755,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-04,Weekend Restaurant & Dining,-1975.0418882919864,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-10,Supermarket Grocery Order,-3943.386256365336,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-11,Weekend Restaurant & Dining,-1926.9470424811782,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-17,Supermarket Grocery Order,-4702.101703762131,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-18,Weekend Restaurant & Dining,-3454.678706761962,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-24,Supermarket Grocery Order,-3835.324116029702,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-25,Weekend Restaurant & Dining,-3019.968092068358,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-03-22,E-Commerce Shopping Festive Spree,-7451.666600603648,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-01,Salary Direct Deposit Infosys,120665.60243479839,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-10,Electricity and Internet Bills,-3623.720462684805,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-03,Supermarket Grocery Order,-3814.4079781705873,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-04,Weekend Restaurant & Dining,-1886.2055356117985,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-10,Supermarket Grocery Order,-4666.380485339325,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-11,Weekend Restaurant & Dining,-3500.836114326661,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-17,Supermarket Grocery Order,-4323.031894455248,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-18,Weekend Restaurant & Dining,-2378.0595820974013,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-24,Supermarket Grocery Order,-3953.972446996459,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-25,Weekend Restaurant & Dining,-3151.9113577404787,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-04-22,E-Commerce Shopping Festive Spree,-7691.330779857732,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-01,Salary Direct Deposit Infosys,121661.25927279535,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-10,Electricity and Internet Bills,-3823.900436686099,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-03,Supermarket Grocery Order,-4334.6411400005745,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-04,Weekend Restaurant & Dining,-1868.2799299900976,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-10,Supermarket Grocery Order,-3710.1173283229978,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-11,Weekend Restaurant & Dining,-3497.108377054158,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-17,Supermarket Grocery Order,-4288.357777557467,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-18,Weekend Restaurant & Dining,-1718.3941032332593,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-24,Supermarket Grocery Order,-3631.9130057258417,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-25,Weekend Restaurant & Dining,-3027.0035382161113,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-05-22,E-Commerce Shopping Festive Spree,-5015.184751538656,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-01,Salary Direct Deposit Infosys,119482.4241542525,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-10,Electricity and Internet Bills,-3638.9870314932687,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-03,Supermarket Grocery Order,-4399.463757000502,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-04,Weekend Restaurant & Dining,-3003.922519005201,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-10,Supermarket Grocery Order,-3791.550102298728,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-11,Weekend Restaurant & Dining,-3124.358442695072,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-17,Supermarket Grocery Order,-3808.42381374584,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-18,Weekend Restaurant & Dining,-2350.7993963185354,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-24,Supermarket Grocery Order,-4470.4388266534315,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-25,Weekend Restaurant & Dining,-2999.2657980944296,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-06-22,E-Commerce Shopping Festive Spree,-7547.670231482534,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-01,Salary Direct Deposit Infosys,120972.83867690102,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-10,Electricity and Internet Bills,-3654.646882668377,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-03,Supermarket Grocery Order,-3621.77719817652,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-04,Weekend Restaurant & Dining,-2435.431606118867,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-10,Supermarket Grocery Order,-3844.763077986243,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-11,Weekend Restaurant & Dining,-2187.9792867581673,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-17,Supermarket Grocery Order,-4764.913721178179,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-18,Weekend Restaurant & Dining,-2486.1954493335206,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-24,Supermarket Grocery Order,-4659.660521730248,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-25,Weekend Restaurant & Dining,-2962.2772519945256,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-07-22,E-Commerce Shopping Festive Spree,-7384.433910624945,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-01,Salary Direct Deposit Infosys,120507.91127931558,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-10,Electricity and Internet Bills,-3661.523107701087,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-03,Supermarket Grocery Order,-4140.273001964523,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-04,Weekend Restaurant & Dining,-2090.485975596089,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-10,Supermarket Grocery Order,-4439.187749839957,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-11,Weekend Restaurant & Dining,-2261.5447248817118,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-17,Supermarket Grocery Order,-3531.61075636089,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-18,Weekend Restaurant & Dining,-2990.9445918143356,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-24,Supermarket Grocery Order,-3730.2438832291637,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-25,Weekend Restaurant & Dining,-3580.9171687058288,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-08-22,E-Commerce Shopping Festive Spree,-7861.785731007762,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-01,Salary Direct Deposit Infosys,121744.59317066135,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-10,Electricity and Internet Bills,-3496.1269602043553,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-03,Supermarket Grocery Order,-3520.093601487528,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-04,Weekend Restaurant & Dining,-3556.637125175451,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-10,Supermarket Grocery Order,-4056.6393928125085,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-11,Weekend Restaurant & Dining,-3633.3096380873394,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-17,Supermarket Grocery Order,-4752.705970216029,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-18,Weekend Restaurant & Dining,-3406.01891093472,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-24,Supermarket Grocery Order,-3882.7835596904615,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-25,Weekend Restaurant & Dining,-2470.1954572038503,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-09-22,E-Commerce Shopping Festive Spree,-7553.410014550571,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-01,Salary Direct Deposit Infosys,119950.76601546883,Income,income,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-02,Apartment Rent Payment Landlord,-32000.0,Rent,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-05,Auto Loan EMI HDFC Bank,-14500.0,Financial Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-10,Electricity and Internet Bills,-3335.594197348874,Utilities & Services,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-15,Netflix and Spotify Subscriptions,-1199.0,Entertainment & Recreation,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-03,Supermarket Grocery Order,-4223.841641195855,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-04,Weekend Restaurant & Dining,-3572.309548321562,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-10,Supermarket Grocery Order,-4404.838735677465,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-11,Weekend Restaurant & Dining,-2840.12234017873,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-17,Supermarket Grocery Order,-3626.329441901999,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-18,Weekend Restaurant & Dining,-2930.0144533983394,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-24,Supermarket Grocery Order,-4787.0700051355425,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-25,Weekend Restaurant & Dining,-1980.168030473048,Food & Dining,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.
+2026-10-22,E-Commerce Shopping Festive Spree,-22942.461349819234,Shopping & Retail,expense,True,SYNTHETIC: Generated for forecast backtesting and methodology validation.

@@ -1,0 +1,11 @@
+Category,Clean_Precision,Clean_Recall,Clean_F1,Clean_Support,Noisy_Precision,Noisy_Recall,Noisy_F1,Noisy_Support
+Charity & Donations,0.9976,1.0,0.9988,2068,0.8087,0.8854,0.8453,2068
+Entertainment & Recreation,1.0,1.0,1.0,1969,0.9151,0.6628,0.7688,1969
+Financial Services,1.0,0.9995,0.9998,2012,0.9083,0.7927,0.8466,2012
+Food & Dining,0.9906,0.9995,0.995,1996,0.7947,0.9349,0.8591,1996
+Government & Legal,0.9882,0.9985,0.9933,2009,0.7282,0.8109,0.7673,2009
+Healthcare & Medical,0.9779,0.9285,0.9526,2001,0.9093,0.7761,0.8374,2001
+Income,0.997,0.9975,0.9972,1983,0.7911,0.9339,0.8566,1983
+Shopping & Retail,0.9319,0.9811,0.9559,2009,0.6859,0.6282,0.6558,2009
+Transportation,0.998,0.98,0.9889,1996,0.7334,0.8171,0.773,1996
+Utilities & Services,0.9985,0.992,0.9952,1997,0.9182,0.8718,0.8944,1997

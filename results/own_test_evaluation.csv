@@ -1,0 +1,3 @@
+Evaluation_Mode,Total_Transactions,Accuracy,Notes
+Model-Only (ML Classifier),105,0.5048,ML model alone cannot predict Rent as Rent is not in training classes.
+Model + Keyword Rent Rule,105,0.5524,Regex pattern captures Rent/Landlord/PG/Lease before ML assignment.

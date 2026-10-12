@@ -1,0 +1,2 @@
+split_strategy,model,accuracy,macro_f1,test_leakage_note
+INVALID LEAKY BASELINE (Row-level Random Split),TF-IDF (char 2-5) + Logistic Regression,0.98555,0.9855701700612641,"Raw transaction descriptions overlap across train and test sets, artificially inflating score."

@@ -1,0 +1,4 @@
+Forecasting_Model,Backtest_Method,Evaluation_Windows,MAE,RMSE,sMAPE (%),MASE,Model_Type
+Last-Month Naive,Rolling-Origin Expanding Window,18,4508.99,6708.3,4.99,0.948,Deterministic Baseline
+Moving-Average (3-Month SMA),Rolling-Origin Expanding Window,18,5148.58,7184.16,5.71,1.083,Deterministic Baseline
+Seasonal-Naive (12-Month Lag),Rolling-Origin Expanding Window,18,2977.71,3708.15,3.35,0.626,Deterministic Baseline

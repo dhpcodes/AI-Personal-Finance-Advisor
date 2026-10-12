@@ -31,6 +31,8 @@ ENV/
 
 # Environment variables & secrets
 .env
+.streamlit/
+.streamlit/secrets.toml
 
 # Large dataset files & trained artifacts (optional to track or ignore based on setup)
 data/raw/*.parquet
