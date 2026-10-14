@@ -1,0 +1,32 @@
+{
+  "SVM_Orig_vs_LeakageFree_105": {
+    "statistic": 14.0625,
+    "p_value": 0.00018,
+    "n10": 16,
+    "n01": 0
+  },
+  "LightGBM_Orig_vs_LeakageFree_105": {
+    "statistic": 1.125,
+    "p_value": 0.28884,
+    "n10": 6,
+    "n01": 2
+  },
+  "SVM_vs_LightGBM_LeakageFree_96": {
+    "statistic": 0.0714,
+    "p_value": 0.78927,
+    "n10": 6,
+    "n01": 8
+  },
+  "LightGBM_vs_MiniLM_LeakageFree_96": {
+    "statistic": 0.0,
+    "p_value": 1.0,
+    "n10": 8,
+    "n01": 9
+  },
+  "XGBoost_Orig_vs_ES100_CleanTest": {
+    "statistic": 238.8338,
+    "p_value": 0.0,
+    "n10": 1178,
+    "n01": 537
+  }
+}

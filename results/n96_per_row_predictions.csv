@@ -1,0 +1,106 @@
+transaction_description,category,canon,in_overlapping_9,in_seed_47,pred_DistilBERT,correct_DistilBERT,pred_Candidate_Linear_SVM_20k,correct_Candidate_Linear_SVM_20k,pred_LightGBM,correct_LightGBM,pred_MiniLM_LogReg,correct_MiniLM_LogReg
+UPI/308942189012/SWIGGY/swiggy@icici,Food & Dining,SWIGGY,True,False,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+UPI/489120938102/ZOMATO/zomato@hdfcbank,Food & Dining,ZOMATO,True,False,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+POS 4129XXXX8831 DOMINOS PIZZA MUMBAI,Food & Dining,DOMINOS PIZZA,True,False,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+HALDIRAMS SWEETS & RESTAURANT DELHI,Food & Dining,HALDIRAMS SWEETS & RESTAURANT DELHI,False,True,Food & Dining,True,Food & Dining,True,Government & Legal,False,Food & Dining,True
+CHAAYOS CAFE BANGALORE,Food & Dining,CHAAYOS CAFE BANGALORE,False,True,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+MCDONALDS CONNAUGHT PLACE NEW DELHI,Food & Dining,MCDONALDS CONNAUGHT PLACE NEW DELHI,False,False,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+STARBUCKS COFFEE KORAMANGALA,Food & Dining,STARBUCKS COFFEE KORAMANGALA,False,False,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+BARBEQUE NATION HOSPITALITY LTD,Food & Dining,BARBEQUE NATION HOSPITALITY LTD,False,True,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+SWIGGY INSTAMART GROCERIES GURGAON,Food & Dining,SWIGGY INSTAMART GROCERIES GURGAON,True,False,Food & Dining,True,Food & Dining,True,Shopping & Retail,False,Food & Dining,True
+ZEPTO 10 MIN GROCERY DELIVERY,Food & Dining,ZEPTO 10 MIN GROCERY DELIVERY,False,True,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+BLINKIT COMMERCE PVT LTD,Food & Dining,BLINKIT COMMERCE PVT LTD,False,True,Food & Dining,True,Food & Dining,True,Food & Dining,True,Financial Services,False
+BIGBASKET SUPERMARKET ORDER,Food & Dining,BIGBASKET SUPERMARKET ORDER,False,True,Food & Dining,True,Food & Dining,True,Shopping & Retail,False,Food & Dining,True
+NANDHINI DELUXE INDIRANAGAR,Food & Dining,NANDHINI DELUXE INDIRANAGAR,False,False,Entertainment & Recreation,False,Transportation,False,Transportation,False,Transportation,False
+PARAS MILK DAIRY PUNE,Food & Dining,PARAS MILK DAIRY PUNE,False,False,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+CAFE COFFEE DAY AIRPORT T3,Food & Dining,CAFE COFFEE DAY AIRPORT T3,False,True,Food & Dining,True,Food & Dining,True,Food & Dining,True,Food & Dining,True
+IMPS/3948201/FLIPKART INTERNET/REF921,Shopping & Retail,FLIPKART INTERNET,True,False,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+UPI/998124019283/AMAZON PAY/amazon@apl,Shopping & Retail,AMAZON PAY,True,False,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+POS 5241XXXX9021 MYNTRA DESIGNS BANGALORE,Shopping & Retail,MYNTRA DESIGNS,True,False,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+AJIO ONLINE RETAIL STORE,Shopping & Retail,AJIO ONLINE RETAIL STORE,False,False,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+NYKAA E-RETAIL BEAUTY PRODUCTS,Shopping & Retail,NYKAA E-RETAIL BEAUTY PRODUCTS,False,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+RELIANCE DIGITAL ELECTRONICS NOIDA,Shopping & Retail,RELIANCE DIGITAL ELECTRONICS NOIDA,False,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Financial Services,False
+CROMA INFINITI RETAIL MUMBAI,Shopping & Retail,CROMA INFINITI RETAIL MUMBAI,False,False,Shopping & Retail,True,Utilities & Services,False,Shopping & Retail,True,Shopping & Retail,True
+DECATHLON SPORTS SPORTSWEAR,Shopping & Retail,DECATHLON SPORTS SPORTSWEAR,False,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+ZARA PHOENIX MALL LOWER PAREL,Shopping & Retail,ZARA PHOENIX MALL LOWER PAREL,False,False,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+H&M CLOTHING STORE SELECT CITYWALK,Shopping & Retail,H&M CLOTHING STORE SELECT CITYWALK,False,False,Shopping & Retail,True,Shopping & Retail,True,Government & Legal,False,Shopping & Retail,True
+DMART AVENUE SUPERMARTS THANE,Shopping & Retail,DMART AVENUE SUPERMARTS THANE,False,False,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+TATA CLIQ LUXURY APPAREL,Shopping & Retail,TATA CLIQ LUXURY APPAREL,False,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+MEESHO ONLINE SHOPPING ORDER,Shopping & Retail,MEESHO ONLINE SHOPPING ORDER,False,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True
+LENSKART SOLUTIONS PVT LTD,Shopping & Retail,LENSKART SOLUTIONS PVT LTD,False,True,Shopping & Retail,True,Shopping & Retail,True,Shopping & Retail,True,Utilities & Services,False
+FABINDIA OVERSEAS ETHNIC WEAR,Shopping & Retail,FABINDIA OVERSEAS ETHNIC WEAR,False,False,Charity & Donations,False,Income,False,Transportation,False,Transportation,False
+NEFT-3891029481-SALARY CREDIT INFOSYS LTD,Income,SALARY CREDIT INFOSYS LTD,False,True,Income,True,Income,True,Income,True,Income,True
+NEFT-9918230192-MONTHLY SALARY TCS LTD,Income,MONTHLY SALARY TCS LTD,False,False,Income,True,Income,True,Income,True,Income,True
+DIRECT DEPOSIT WIPRO TECHNOLOGIES SALARY,Income,DIRECT DEPOSIT WIPRO TECHNOLOGIES SALARY,False,False,Income,True,Income,True,Income,True,Income,True
+IMPS/8829102/CONSULTING FEES CLIENT/REF102,Income,CONSULTING FEES CLIENT,False,False,Income,True,Income,True,Income,True,Income,True
+DIVIDEND HDFC BANK LTD ECS CREDIT,Income,DIVIDEND HDFC BANK LTD ECS CREDIT,False,False,Income,True,Income,True,Income,True,Income,True
+INTEREST CREDIT STATE BANK OF INDIA SAVINGS,Income,INTEREST CREDIT STATE BANK OF INDIA SAVINGS,False,False,Income,True,Income,True,Income,True,Income,True
+FREELANCE PAYMENT UPWORK ESCROW INC,Income,FREELANCE PAYMENT UPWORK ESCROW INC,False,False,Income,True,Income,True,Income,True,Income,True
+RENTAL INCOME TENANT FLAT 402,Income,RENTAL INCOME TENANT FLAT 402,False,False,Income,True,Income,True,Income,True,Income,True
+BONUS INCENTIVE ACCENTURE INDIA,Income,BONUS INCENTIVE ACCENTURE INDIA,False,False,Income,True,Income,True,Income,True,Income,True
+TAX REFUND INCOME TAX DEPT CPC,Income,TAX REFUND INCOME TAX DEPT CPC,False,True,Income,True,Government & Legal,False,Government & Legal,False,Income,True
+UPI/491029381029/UBER INDIA/uber@axisbank,Transportation,UBER INDIA,True,False,Transportation,True,Transportation,True,Transportation,True,Transportation,True
+UPI/992019283102/OLA CABS/olacabs@icici,Transportation,OLA CABS,True,False,Transportation,True,Transportation,True,Transportation,True,Transportation,True
+RAPIDO BIKE TAXI BANGALORE,Transportation,RAPIDO BIKE TAXI BANGALORE,False,True,Transportation,True,Transportation,True,Transportation,True,Transportation,True
+IRCTC RAILWAY TICKET BOOKING NEW DELHI,Transportation,IRCTC RAILWAY TICKET BOOKING NEW DELHI,False,False,Transportation,True,Transportation,True,Financial Services,False,Transportation,True
+MAKEMYTRIP INDIA AIR TICKETS,Transportation,MAKEMYTRIP INDIA AIR TICKETS,False,True,Transportation,True,Transportation,True,Food & Dining,False,Entertainment & Recreation,False
+INDIGO AIRLINES FLIGHT 6E-204,Transportation,INDIGO AIRLINES FLIGHT 6E-204,False,True,Transportation,True,Transportation,True,Transportation,True,Entertainment & Recreation,False
+METRO SMART CARD RECHARGE DMRC DELHI,Transportation,METRO SMART CARD RECHARGE DMRC DELHI,False,False,Transportation,True,Transportation,True,Transportation,True,Utilities & Services,False
+INDIAN OIL CORP PETROL PUMP MUMBAI,Transportation,INDIAN OIL CORP PETROL PUMP MUMBAI,False,False,Transportation,True,Transportation,True,Transportation,True,Transportation,True
+BHARAT PETROLEUM FUEL STATION PUNE,Transportation,BHARAT PETROLEUM FUEL STATION PUNE,False,True,Transportation,True,Transportation,True,Transportation,True,Food & Dining,False
+HPCL AUTO SERVICE STATION HIGHWAY,Transportation,HPCL AUTO SERVICE STATION HIGHWAY,False,False,Transportation,True,Government & Legal,False,Government & Legal,False,Government & Legal,False
+FASTAG TOLL PLAZA NH48 CHARGE,Transportation,FASTAG TOLL PLAZA NH48 CHARGE,False,False,Transportation,True,Transportation,True,Utilities & Services,False,Transportation,True
+BLUSMART ELECTRIC MOBILITY CAB,Transportation,BLUSMART ELECTRIC MOBILITY CAB,False,False,Transportation,True,Transportation,True,Utilities & Services,False,Transportation,True
+CHALO BUS PASS RECHARGE BEST MUMBAI,Transportation,CHALO BUS PASS RECHARGE BEST MUMBAI,False,False,Transportation,True,Transportation,True,Transportation,True,Transportation,True
+AUTORICKSHAW FARE METER CASHLESS,Transportation,AUTORICKSHAW FARE METER CASHLESS,False,False,Transportation,True,Transportation,True,Food & Dining,False,Shopping & Retail,False
+CLEARTRIP TRAVEL FLIGHT RESERVATION,Transportation,CLEARTRIP TRAVEL FLIGHT RESERVATION,False,False,Transportation,True,Charity & Donations,False,Utilities & Services,False,Transportation,True
+NETFLIX ENTERTAINMENT MONTHLY SUBSCRIPTION,Entertainment & Recreation,NETFLIX ENTERTAINMENT MONTHLY SUBSCRIPTION,False,False,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+DISNEY+ HOTSTAR PREMIUM ANNUAL PLAN,Entertainment & Recreation,DISNEY+ HOTSTAR PREMIUM ANNUAL PLAN,False,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Income,False
+AMAZON PRIME VIDEO SUBSCRIPTION,Entertainment & Recreation,AMAZON PRIME VIDEO SUBSCRIPTION,False,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+SPOTIFY INDIA MUSIC STREAMING,Entertainment & Recreation,SPOTIFY INDIA MUSIC STREAMING,False,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+PVR CINEMAS MOVIE TICKETS SAKET,Entertainment & Recreation,PVR CINEMAS MOVIE TICKETS SAKET,False,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+INOX LEISURE MULTIPLEX KOLKATA,Entertainment & Recreation,INOX LEISURE MULTIPLEX KOLKATA,False,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+BOOKMYSHOW CONCERT PASSES EVENT,Entertainment & Recreation,BOOKMYSHOW CONCERT PASSES EVENT,False,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+SONY LIV SPECIAL SUBSCRIPTION,Entertainment & Recreation,SONY LIV SPECIAL SUBSCRIPTION,False,False,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+YOUTUBE PREMIUM FAMILY MEMBERSHIP,Entertainment & Recreation,YOUTUBE PREMIUM FAMILY MEMBERSHIP,False,False,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+SMAASH ENTERTAINMENT GAMING ARENA,Entertainment & Recreation,SMAASH ENTERTAINMENT GAMING ARENA,False,False,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True,Entertainment & Recreation,True
+APOLLO PHARMACY MEDICINES CHENNAI,Healthcare & Medical,APOLLO PHARMACY MEDICINES CHENNAI,False,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+MEDPLUS HEALTH SERVICES HYDERABAD,Healthcare & Medical,MEDPLUS HEALTH SERVICES HYDERABAD,False,True,Healthcare & Medical,True,Government & Legal,False,Healthcare & Medical,True,Healthcare & Medical,True
+PHARMEASY ONLINE MEDICINE ORDER,Healthcare & Medical,PHARMEASY ONLINE MEDICINE ORDER,False,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+TATA 1MG HEALTHCARE DIAGNOSTICS,Healthcare & Medical,TATA 1MG HEALTHCARE DIAGNOSTICS,False,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+DR LAL PATHLABS BLOOD TEST REPORT,Healthcare & Medical,DR LAL PATHLABS BLOOD TEST REPORT,False,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+METROPOLIS HEALTHCARE LAB TEST,Healthcare & Medical,METROPOLIS HEALTHCARE LAB TEST,False,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+MAX SUPER SPECIALITY HOSPITAL CLINIC,Healthcare & Medical,MAX SUPER SPECIALITY HOSPITAL CLINIC,False,False,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+FORTIS HEALTHCARE OPD CONSULTATION,Healthcare & Medical,FORTIS HEALTHCARE OPD CONSULTATION,False,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+DENTAL CLINIC ROOT CANAL TREATMENT,Healthcare & Medical,DENTAL CLINIC ROOT CANAL TREATMENT,False,False,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True,Healthcare & Medical,True
+OPTICAL STORE EYE VISION GLASSES,Healthcare & Medical,OPTICAL STORE EYE VISION GLASSES,False,False,Healthcare & Medical,True,Charity & Donations,False,Charity & Donations,False,Shopping & Retail,False
+UPI/110293849102/RELIANCE JIO RECHARGE/jio@paytm,Utilities & Services,RELIANCE JIO RECHARGE,False,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True
+BHARTI AIRTEL POSTPAID BILL PAYMENT,Utilities & Services,BHARTI AIRTEL POSTPAID BILL PAYMENT,False,True,Utilities & Services,True,Utilities & Services,True,Income,False,Utilities & Services,True
+VODAFONE IDEA PREPAID RECHARGE,Utilities & Services,VODAFONE IDEA PREPAID RECHARGE,False,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True
+TATA POWER ELECTRICITY BILL MUMBAI,Utilities & Services,TATA POWER ELECTRICITY BILL MUMBAI,False,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True
+BESCOM ELECTRICITY BILL BANGALORE,Utilities & Services,BESCOM ELECTRICITY BILL BANGALORE,False,False,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True
+MAHAVITARAN MSEDCL POWER BILL,Utilities & Services,MAHAVITARAN MSEDCL POWER BILL,False,False,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True
+INDRAPRASTHA GAS LIMITED IGL PNG BILL,Utilities & Services,INDRAPRASTHA GAS LIMITED IGL PNG BILL,False,False,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True
+MAHANAGAR GAS LIMITED MGL BILL,Utilities & Services,MAHANAGAR GAS LIMITED MGL BILL,False,False,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Transportation,False
+ACT FIBERNET BROADBAND INTERNET BILL,Utilities & Services,ACT FIBERNET BROADBAND INTERNET BILL,False,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True,Utilities & Services,True
+URBAN COMPANY HOME CLEANING SERVICE,Utilities & Services,URBAN COMPANY HOME CLEANING SERVICE,False,True,Utilities & Services,True,Utilities & Services,True,Government & Legal,False,Utilities & Services,True
+MUNICIPAL CORPORATION PROPERTY TAX,Government & Legal,MUNICIPAL CORPORATION PROPERTY TAX,False,False,Government & Legal,True,Government & Legal,True,Government & Legal,True,Government & Legal,True
+DELHI TRAFFIC POLICE E-CHALLAN PAYMENT,Government & Legal,DELHI TRAFFIC POLICE E-CHALLAN PAYMENT,False,False,Government & Legal,True,Government & Legal,True,Government & Legal,True,Government & Legal,True
+COURT STAMP DUTY REGISTRATION FEES,Government & Legal,COURT STAMP DUTY REGISTRATION FEES,False,False,Government & Legal,True,Government & Legal,True,Government & Legal,True,Government & Legal,True
+PASSPORT SEVA KENDRA APPLICATION FEE,Government & Legal,PASSPORT SEVA KENDRA APPLICATION FEE,False,True,Government & Legal,True,Government & Legal,True,Government & Legal,True,Government & Legal,True
+RTO VEHICLE REGISTRATION CHARGES,Government & Legal,RTO VEHICLE REGISTRATION CHARGES,False,False,Government & Legal,True,Government & Legal,True,Government & Legal,True,Government & Legal,True
+MUTUAL FUND SIP GROWW INVESTECH,Financial Services,MUTUAL FUND SIP GROWW INVESTECH,False,True,Financial Services,True,Financial Services,True,Financial Services,True,Financial Services,True
+ZERODHA BROKING LTD EQUITY TRADING,Financial Services,ZERODHA BROKING LTD EQUITY TRADING,False,True,Financial Services,True,Financial Services,True,Financial Services,True,Financial Services,True
+LIC OF INDIA LIFE INSURANCE PREMIUM,Financial Services,LIC OF INDIA LIFE INSURANCE PREMIUM,False,True,Financial Services,True,Financial Services,True,Financial Services,True,Financial Services,True
+HDFC LIFE INSURANCE POLICY RENEWAL,Financial Services,HDFC LIFE INSURANCE POLICY RENEWAL,False,True,Financial Services,True,Financial Services,True,Financial Services,True,Financial Services,True
+SBI LIFE INSURANCE CO LTD PAYMENT,Financial Services,SBI LIFE INSURANCE CO LTD PAYMENT,False,True,Financial Services,True,Financial Services,True,Income,False,Income,False
+PRADHAN MANTRI PM CARES FUND DONATION,Charity & Donations,PRADHAN MANTRI PM CARES FUND DONATION,False,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True
+CRY CHILD RIGHTS AND YOU NGO CONTRIBUTION,Charity & Donations,CRY CHILD RIGHTS AND YOU NGO CONTRIBUTION,False,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True
+GOONJ DISASTER RELIEF FOUNDATION DONATION,Charity & Donations,GOONJ DISASTER RELIEF FOUNDATION DONATION,False,False,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True
+AKSHAYA PATRA MIDDAY MEAL DONATION,Charity & Donations,AKSHAYA PATRA MIDDAY MEAL DONATION,False,False,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True
+HELPAGE INDIA ELDER CARE CHARITY,Charity & Donations,HELPAGE INDIA ELDER CARE CHARITY,False,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True,Charity & Donations,True
+MONTHLY APARTMENT RENT TRANSFER TO LANDLORD,Rent,MONTHLY APARTMENT RENT TRANSFER TO LANDLORD,False,False,Income,False,Government & Legal,False,Government & Legal,False,Income,False
+PG RENT PAYMENT SRI SAI GENTS HOSTEL,Rent,PG RENT PAYMENT SRI SAI GENTS HOSTEL,False,False,Income,False,Income,False,Healthcare & Medical,False,Income,False
+HOUSE LEASE ADVANCE DEPOSIT TO OWNER,Rent,HOUSE LEASE ADVANCE DEPOSIT TO OWNER,False,False,Income,False,Income,False,Income,False,Income,False
+GOKULDHAM HOUSING SOCIETY MAINTENANCE & RENT,Rent,GOKULDHAM HOUSING SOCIETY MAINTENANCE & RENT,False,False,Charity & Donations,False,Charity & Donations,False,Charity & Donations,False,Charity & Donations,False
+FLAT 301 RESIDENTIAL RENT SHARMAJI,Rent,FLAT 301 RESIDENTIAL RENT SHARMAJI,False,False,Income,False,Healthcare & Medical,False,Healthcare & Medical,False,Income,False

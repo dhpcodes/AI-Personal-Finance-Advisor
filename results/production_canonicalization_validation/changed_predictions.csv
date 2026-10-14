@@ -1,0 +1,2 @@
+Index,Original_Description,Ground_Truth_Category,Noise_Type,Legacy_Prediction,Legacy_Confidence,Legacy_Correct,Canonicalized_Prediction,Canonicalized_Confidence,Canonicalized_Correct,Prediction_Changed,Confidence_Change,Effect
+16,UPI/998124019283/AMAZON PAY/amazon@apl,Shopping & Retail,UPI,Shopping & Retail,0.5417,True,Income,0.5,False,True,-0.0417,HARMED

@@ -97,7 +97,7 @@ A 5-fold out-of-fold label noise audit on 69,885 clean training transactions rev
 | **Model 4** | TF-IDF + XGBoost (Baseline) | **MEASURED** | 0.5462 | 0.5427 | 0.4074 | 0.4252 | 0.0212 | CPU Multicore |
 | **Model 4b** | Stacked XGBoost (Tuned + OOF LogReg) | **MEASURED** | 0.9850 | 0.9849 | 0.7609 | 0.7624 | 0.0195 | CPU Multicore |
 | **Model 5** | Sentence Embeddings (all-MiniLM-L6-v2) | **NOT RUN** | - | - | - | - | - | T4 GPU (Workflow: `notebooks/04b_sentence_embeddings.py`) |
-| **Model 6** | Fine-Tuned ModernBERT / DistilBERT | **NOT RUN** | - | - | - | - | - | T4 GPU (Workflow: `notebooks/05_modernbert_training.py`) |
+| **Model 6** | Fine-Tuned DistilBERT (2x T4 GPUs) | **MEASURED** | 0.9913 | 0.9913 | 0.6900 | 0.6960 | 1.69 ms | 2x T4 GPUs (Kaggle, 348.5s) |
 | **Model 7** | Llama 3.2 1B Instruct QLoRA | **NOT RUN** | - | - | - | - | - | A100 GPU (Workflow: `notebooks/06_llama_qlora_training.py`) |
 
 ### 4.2 Tree Tuning Post-Mortem & Diagnosis

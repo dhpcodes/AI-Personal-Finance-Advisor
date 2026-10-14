@@ -1,5 +1,6 @@
 import pytest
 import pandas as pd
+import numpy as np
 from src.predict import TransactionPredictor
 from src.explainability import ModelExplainer
 
@@ -62,3 +63,51 @@ def test_rent_rule_word_boundaries_and_false_positives():
     model_labels = ["Utilities & Services"] * len(non_rent_texts)
     results = with_rent_rule(non_rent_texts, model_labels)
     assert all(r == "Utilities & Services" for r in results), f"Expected none to be Rent, got {results}"
+
+
+def test_prediction_calibration_and_label_ordering(predictor):
+    """Verify that class probabilities sum to 1.0 and label ordering aligns with LabelEncoder."""
+    import numpy as np
+    assert list(predictor.classes) == list(predictor.label_encoder.classes_)
+    
+    test_desc = "UPI/981234123/UBER/uber@icici"
+    res = predictor.predict_single(test_desc, top_k=len(predictor.classes))
+    
+    probs = [item["probability"] for item in res["top_k"]]
+    assert len(probs) == len(predictor.classes)
+    assert abs(sum(probs) - 1.0) < 0.05, f"Probabilities do not sum to ~1.0: {sum(probs)}"
+    
+    # Strictly descending order
+    for i in range(len(probs) - 1):
+        assert probs[i] >= probs[i + 1]
+
+
+def test_prediction_abstention_threshold_routing(predictor):
+    """Verify that confidence thresholds allow safe abstention routing."""
+    df = pd.DataFrame({
+        "transaction_description": [
+            "Uber Trip",
+            "Random gibberish xyz abc 12345",
+            "Starbucks Coffee"
+        ]
+    })
+    res_df = predictor.predict_batch(df)
+    threshold = 0.70
+    res_df["abstained"] = res_df["confidence"] < threshold
+    
+    assert "abstained" in res_df.columns
+    assert isinstance(res_df.iloc[0]["abstained"], (bool, np.bool_))
+
+
+def test_prediction_canonicalized_wrappers(predictor):
+    """Verify Indian banking wrapper strings produce expected cleaned descriptions and valid predictions."""
+    test_inputs = [
+        ("UPI/412398124/UBER/uber@icici", "uber"),
+        ("NEFT-981241-STARBUCKS", "starbucks"),
+        ("POS 4129XXXX9812 NETFLIX MUMBAI", "netflix")
+    ]
+    for raw_desc, expected_token in test_inputs:
+        res = predictor.predict_single(raw_desc)
+        assert expected_token in res["cleaned_description"]
+        assert res["predicted_category"] != "Unknown"
+        assert res["confidence"] > 0.0

@@ -1,0 +1,106 @@
+Index,Original_Description,Ground_Truth_Category,Noise_Type,Legacy_Prediction,Legacy_Confidence,Legacy_Correct,Canonicalized_Prediction,Canonicalized_Confidence,Canonicalized_Correct,Prediction_Changed,Confidence_Change,Effect
+0,UPI/308942189012/SWIGGY/swiggy@icici,Food & Dining,UPI,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+1,UPI/489120938102/ZOMATO/zomato@hdfcbank,Food & Dining,UPI,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+2,POS 4129XXXX8831 DOMINOS PIZZA MUMBAI,Food & Dining,POS,Food & Dining,0.9973,True,Food & Dining,0.9973,True,False,0.0,NO_DIFFERENCE
+3,HALDIRAMS SWEETS & RESTAURANT DELHI,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+4,CHAAYOS CAFE BANGALORE,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+5,MCDONALDS CONNAUGHT PLACE NEW DELHI,Food & Dining,Clean_Indian,Shopping & Retail,0.9956,False,Shopping & Retail,0.9956,False,False,0.0,NO_DIFFERENCE
+6,STARBUCKS COFFEE KORAMANGALA,Food & Dining,Clean_Indian,Food & Dining,0.9999,True,Food & Dining,0.9999,True,False,0.0,NO_DIFFERENCE
+7,BARBEQUE NATION HOSPITALITY LTD,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+8,SWIGGY INSTAMART GROCERIES GURGAON,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+9,ZEPTO 10 MIN GROCERY DELIVERY,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+10,BLINKIT COMMERCE PVT LTD,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+11,BIGBASKET SUPERMARKET ORDER,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+12,NANDHINI DELUXE INDIRANAGAR,Food & Dining,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+13,PARAS MILK DAIRY PUNE,Food & Dining,Clean_Indian,Food & Dining,0.9969,True,Food & Dining,0.9969,True,False,0.0,NO_DIFFERENCE
+14,CAFE COFFEE DAY AIRPORT T3,Food & Dining,Clean_Indian,Shopping & Retail,0.6695,False,Shopping & Retail,0.6695,False,False,0.0,NO_DIFFERENCE
+15,IMPS/3948201/FLIPKART INTERNET/REF921,Shopping & Retail,IMPS,Utilities & Services,0.9994,False,Utilities & Services,0.9994,False,False,0.0,NO_DIFFERENCE
+16,UPI/998124019283/AMAZON PAY/amazon@apl,Shopping & Retail,UPI,Shopping & Retail,0.5417,True,Income,0.5,False,True,-0.0417,HARMED
+17,POS 5241XXXX9021 MYNTRA DESIGNS BANGALORE,Shopping & Retail,POS,Shopping & Retail,0.6385,True,Shopping & Retail,0.6385,True,False,0.0,NO_DIFFERENCE
+18,AJIO ONLINE RETAIL STORE,Shopping & Retail,Clean_Indian,Shopping & Retail,0.4886,True,Shopping & Retail,0.4886,True,False,0.0,NO_DIFFERENCE
+19,NYKAA E-RETAIL BEAUTY PRODUCTS,Shopping & Retail,Clean_Indian,Shopping & Retail,0.6385,True,Shopping & Retail,0.6385,True,False,0.0,NO_DIFFERENCE
+20,RELIANCE DIGITAL ELECTRONICS NOIDA,Shopping & Retail,Clean_Indian,Financial Services,0.552,False,Financial Services,0.552,False,False,0.0,NO_DIFFERENCE
+21,CROMA INFINITI RETAIL MUMBAI,Shopping & Retail,Clean_Indian,Shopping & Retail,0.6385,True,Shopping & Retail,0.6385,True,False,0.0,NO_DIFFERENCE
+22,DECATHLON SPORTS SPORTSWEAR,Shopping & Retail,Clean_Indian,Shopping & Retail,0.6385,True,Shopping & Retail,0.6385,True,False,0.0,NO_DIFFERENCE
+23,ZARA PHOENIX MALL LOWER PAREL,Shopping & Retail,Clean_Indian,Shopping & Retail,0.9995,True,Shopping & Retail,0.9995,True,False,0.0,NO_DIFFERENCE
+24,H&M CLOTHING STORE SELECT CITYWALK,Shopping & Retail,Clean_Indian,Shopping & Retail,0.7162,True,Shopping & Retail,0.7162,True,False,0.0,NO_DIFFERENCE
+25,DMART AVENUE SUPERMARTS THANE,Shopping & Retail,Clean_Indian,Shopping & Retail,0.9945,True,Shopping & Retail,0.9945,True,False,0.0,NO_DIFFERENCE
+26,TATA CLIQ LUXURY APPAREL,Shopping & Retail,Clean_Indian,Shopping & Retail,0.6385,True,Shopping & Retail,0.6385,True,False,0.0,NO_DIFFERENCE
+27,MEESHO ONLINE SHOPPING ORDER,Shopping & Retail,Clean_Indian,Shopping & Retail,0.6635,True,Shopping & Retail,0.6635,True,False,0.0,NO_DIFFERENCE
+28,LENSKART SOLUTIONS PVT LTD,Shopping & Retail,Clean_Indian,Shopping & Retail,0.6385,True,Shopping & Retail,0.6385,True,False,0.0,NO_DIFFERENCE
+29,FABINDIA OVERSEAS ETHNIC WEAR,Shopping & Retail,Clean_Indian,Shopping & Retail,0.6385,True,Shopping & Retail,0.6385,True,False,0.0,NO_DIFFERENCE
+30,NEFT-3891029481-SALARY CREDIT INFOSYS LTD,Income,NEFT,Income,1.0,True,Income,1.0,True,False,0.0,NO_DIFFERENCE
+31,NEFT-9918230192-MONTHLY SALARY TCS LTD,Income,NEFT,Income,1.0,True,Income,1.0,True,False,0.0,NO_DIFFERENCE
+32,DIRECT DEPOSIT WIPRO TECHNOLOGIES SALARY,Income,Clean_Indian,Income,1.0,True,Income,1.0,True,False,0.0,NO_DIFFERENCE
+33,IMPS/8829102/CONSULTING FEES CLIENT/REF102,Income,IMPS,Income,0.9999,True,Income,0.9999,True,False,0.0,NO_DIFFERENCE
+34,DIVIDEND HDFC BANK LTD ECS CREDIT,Income,Clean_Indian,Income,0.5,True,Income,0.5,True,False,0.0,NO_DIFFERENCE
+35,INTEREST CREDIT STATE BANK OF INDIA SAVINGS,Income,Clean_Indian,Income,0.4999,True,Income,0.4999,True,False,0.0,NO_DIFFERENCE
+36,FREELANCE PAYMENT UPWORK ESCROW INC,Income,Clean_Indian,Income,0.9999,True,Income,0.9999,True,False,0.0,NO_DIFFERENCE
+37,RENTAL INCOME TENANT FLAT 402,Income,Clean_Indian,Income,0.9997,True,Income,0.9997,True,False,0.0,NO_DIFFERENCE
+38,BONUS INCENTIVE ACCENTURE INDIA,Income,Clean_Indian,Income,0.9995,True,Income,0.9995,True,False,0.0,NO_DIFFERENCE
+39,TAX REFUND INCOME TAX DEPT CPC,Income,Clean_Indian,Income,0.5,True,Income,0.5,True,False,0.0,NO_DIFFERENCE
+40,UPI/491029381029/UBER INDIA/uber@axisbank,Transportation,UPI,Transportation,0.9991,True,Transportation,0.9974,True,False,-0.0017,NO_DIFFERENCE
+41,UPI/992019283102/OLA CABS/olacabs@icici,Transportation,UPI,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+42,RAPIDO BIKE TAXI BANGALORE,Transportation,Clean_Indian,Transportation,0.9998,True,Transportation,0.9998,True,False,0.0,NO_DIFFERENCE
+43,IRCTC RAILWAY TICKET BOOKING NEW DELHI,Transportation,Clean_Indian,Shopping & Retail,0.9956,False,Shopping & Retail,0.9956,False,False,0.0,NO_DIFFERENCE
+44,MAKEMYTRIP INDIA AIR TICKETS,Transportation,Clean_Indian,Shopping & Retail,0.6916,False,Shopping & Retail,0.6916,False,False,0.0,NO_DIFFERENCE
+45,INDIGO AIRLINES FLIGHT 6E-204,Transportation,Clean_Indian,Transportation,0.9997,True,Transportation,0.9997,True,False,0.0,NO_DIFFERENCE
+46,METRO SMART CARD RECHARGE DMRC DELHI,Transportation,Clean_Indian,Transportation,0.9993,True,Transportation,0.9993,True,False,0.0,NO_DIFFERENCE
+47,INDIAN OIL CORP PETROL PUMP MUMBAI,Transportation,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+48,BHARAT PETROLEUM FUEL STATION PUNE,Transportation,Clean_Indian,Shopping & Retail,0.5692,False,Shopping & Retail,0.5692,False,False,0.0,NO_DIFFERENCE
+49,HPCL AUTO SERVICE STATION HIGHWAY,Transportation,Clean_Indian,Government & Legal,0.9997,False,Government & Legal,0.9997,False,False,0.0,NO_DIFFERENCE
+50,FASTAG TOLL PLAZA NH48 CHARGE,Transportation,Clean_Indian,Transportation,0.9998,True,Transportation,0.9998,True,False,0.0,NO_DIFFERENCE
+51,BLUSMART ELECTRIC MOBILITY CAB,Transportation,Clean_Indian,Utilities & Services,0.9914,False,Utilities & Services,0.9914,False,False,0.0,NO_DIFFERENCE
+52,CHALO BUS PASS RECHARGE BEST MUMBAI,Transportation,Clean_Indian,Transportation,0.9204,True,Transportation,0.9204,True,False,0.0,NO_DIFFERENCE
+53,AUTORICKSHAW FARE METER CASHLESS,Transportation,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+54,CLEARTRIP TRAVEL FLIGHT RESERVATION,Transportation,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+55,NETFLIX ENTERTAINMENT MONTHLY SUBSCRIPTION,Entertainment & Recreation,Clean_Indian,Entertainment & Recreation,0.9998,True,Entertainment & Recreation,0.9998,True,False,0.0,NO_DIFFERENCE
+56,DISNEY+ HOTSTAR PREMIUM ANNUAL PLAN,Entertainment & Recreation,Clean_Indian,Entertainment & Recreation,0.9999,True,Entertainment & Recreation,0.9999,True,False,0.0,NO_DIFFERENCE
+57,AMAZON PRIME VIDEO SUBSCRIPTION,Entertainment & Recreation,Clean_Indian,Entertainment & Recreation,0.9992,True,Entertainment & Recreation,0.9992,True,False,0.0,NO_DIFFERENCE
+58,SPOTIFY INDIA MUSIC STREAMING,Entertainment & Recreation,Clean_Indian,Entertainment & Recreation,0.9975,True,Entertainment & Recreation,0.9975,True,False,0.0,NO_DIFFERENCE
+59,PVR CINEMAS MOVIE TICKETS SAKET,Entertainment & Recreation,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+60,INOX LEISURE MULTIPLEX KOLKATA,Entertainment & Recreation,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+61,BOOKMYSHOW CONCERT PASSES EVENT,Entertainment & Recreation,Clean_Indian,Entertainment & Recreation,0.9998,True,Entertainment & Recreation,0.9998,True,False,0.0,NO_DIFFERENCE
+62,SONY LIV SPECIAL SUBSCRIPTION,Entertainment & Recreation,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+63,YOUTUBE PREMIUM FAMILY MEMBERSHIP,Entertainment & Recreation,Clean_Indian,Entertainment & Recreation,0.5817,True,Entertainment & Recreation,0.5817,True,False,0.0,NO_DIFFERENCE
+64,SMAASH ENTERTAINMENT GAMING ARENA,Entertainment & Recreation,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+65,APOLLO PHARMACY MEDICINES CHENNAI,Healthcare & Medical,Clean_Indian,Healthcare & Medical,1.0,True,Healthcare & Medical,1.0,True,False,0.0,NO_DIFFERENCE
+66,MEDPLUS HEALTH SERVICES HYDERABAD,Healthcare & Medical,Clean_Indian,Government & Legal,0.9245,False,Government & Legal,0.9245,False,False,0.0,NO_DIFFERENCE
+67,PHARMEASY ONLINE MEDICINE ORDER,Healthcare & Medical,Clean_Indian,Shopping & Retail,0.6546,False,Shopping & Retail,0.6546,False,False,0.0,NO_DIFFERENCE
+68,TATA 1MG HEALTHCARE DIAGNOSTICS,Healthcare & Medical,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+69,DR LAL PATHLABS BLOOD TEST REPORT,Healthcare & Medical,Clean_Indian,Healthcare & Medical,0.9995,True,Healthcare & Medical,0.9995,True,False,0.0,NO_DIFFERENCE
+70,METROPOLIS HEALTHCARE LAB TEST,Healthcare & Medical,Clean_Indian,Healthcare & Medical,0.9999,True,Healthcare & Medical,0.9999,True,False,0.0,NO_DIFFERENCE
+71,MAX SUPER SPECIALITY HOSPITAL CLINIC,Healthcare & Medical,Clean_Indian,Healthcare & Medical,1.0,True,Healthcare & Medical,1.0,True,False,0.0,NO_DIFFERENCE
+72,FORTIS HEALTHCARE OPD CONSULTATION,Healthcare & Medical,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+73,DENTAL CLINIC ROOT CANAL TREATMENT,Healthcare & Medical,Clean_Indian,Healthcare & Medical,1.0,True,Healthcare & Medical,1.0,True,False,0.0,NO_DIFFERENCE
+74,OPTICAL STORE EYE VISION GLASSES,Healthcare & Medical,Clean_Indian,Charity & Donations,0.7081,False,Charity & Donations,0.7081,False,False,0.0,NO_DIFFERENCE
+75,UPI/110293849102/RELIANCE JIO RECHARGE/jio@paytm,Utilities & Services,UPI,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+76,BHARTI AIRTEL POSTPAID BILL PAYMENT,Utilities & Services,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+77,VODAFONE IDEA PREPAID RECHARGE,Utilities & Services,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+78,TATA POWER ELECTRICITY BILL MUMBAI,Utilities & Services,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+79,BESCOM ELECTRICITY BILL BANGALORE,Utilities & Services,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+80,MAHAVITARAN MSEDCL POWER BILL,Utilities & Services,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+81,INDRAPRASTHA GAS LIMITED IGL PNG BILL,Utilities & Services,Clean_Indian,Utilities & Services,0.9925,True,Utilities & Services,0.9925,True,False,0.0,NO_DIFFERENCE
+82,MAHANAGAR GAS LIMITED MGL BILL,Utilities & Services,Clean_Indian,Utilities & Services,0.9925,True,Utilities & Services,0.9925,True,False,0.0,NO_DIFFERENCE
+83,ACT FIBERNET BROADBAND INTERNET BILL,Utilities & Services,Clean_Indian,Utilities & Services,1.0,True,Utilities & Services,1.0,True,False,0.0,NO_DIFFERENCE
+84,URBAN COMPANY HOME CLEANING SERVICE,Utilities & Services,Clean_Indian,Government & Legal,0.7149,False,Government & Legal,0.7149,False,False,0.0,NO_DIFFERENCE
+85,MUNICIPAL CORPORATION PROPERTY TAX,Government & Legal,Clean_Indian,Government & Legal,0.9999,True,Government & Legal,0.9999,True,False,0.0,NO_DIFFERENCE
+86,DELHI TRAFFIC POLICE E-CHALLAN PAYMENT,Government & Legal,Clean_Indian,Government & Legal,0.9988,True,Government & Legal,0.9988,True,False,0.0,NO_DIFFERENCE
+87,COURT STAMP DUTY REGISTRATION FEES,Government & Legal,Clean_Indian,Government & Legal,1.0,True,Government & Legal,1.0,True,False,0.0,NO_DIFFERENCE
+88,PASSPORT SEVA KENDRA APPLICATION FEE,Government & Legal,Clean_Indian,Government & Legal,0.9998,True,Government & Legal,0.9998,True,False,0.0,NO_DIFFERENCE
+89,RTO VEHICLE REGISTRATION CHARGES,Government & Legal,Clean_Indian,Government & Legal,0.9999,True,Government & Legal,0.9999,True,False,0.0,NO_DIFFERENCE
+90,MUTUAL FUND SIP GROWW INVESTECH,Financial Services,Clean_Indian,Financial Services,0.9993,True,Financial Services,0.9993,True,False,0.0,NO_DIFFERENCE
+91,ZERODHA BROKING LTD EQUITY TRADING,Financial Services,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+92,LIC OF INDIA LIFE INSURANCE PREMIUM,Financial Services,Clean_Indian,Financial Services,0.9991,True,Financial Services,0.9991,True,False,0.0,NO_DIFFERENCE
+93,HDFC LIFE INSURANCE POLICY RENEWAL,Financial Services,Clean_Indian,Financial Services,0.9998,True,Financial Services,0.9998,True,False,0.0,NO_DIFFERENCE
+94,SBI LIFE INSURANCE CO LTD PAYMENT,Financial Services,Clean_Indian,Financial Services,0.9998,True,Financial Services,0.9998,True,False,0.0,NO_DIFFERENCE
+95,PRADHAN MANTRI PM CARES FUND DONATION,Charity & Donations,Clean_Indian,Charity & Donations,0.6547,True,Charity & Donations,0.6547,True,False,0.0,NO_DIFFERENCE
+96,CRY CHILD RIGHTS AND YOU NGO CONTRIBUTION,Charity & Donations,Clean_Indian,Charity & Donations,0.9819,True,Charity & Donations,0.9819,True,False,0.0,NO_DIFFERENCE
+97,GOONJ DISASTER RELIEF FOUNDATION DONATION,Charity & Donations,Clean_Indian,Charity & Donations,0.9999,True,Charity & Donations,0.9999,True,False,0.0,NO_DIFFERENCE
+98,AKSHAYA PATRA MIDDAY MEAL DONATION,Charity & Donations,Clean_Indian,Charity & Donations,0.9999,True,Charity & Donations,0.9999,True,False,0.0,NO_DIFFERENCE
+99,HELPAGE INDIA ELDER CARE CHARITY,Charity & Donations,Clean_Indian,Charity & Donations,0.518,True,Charity & Donations,0.518,True,False,0.0,NO_DIFFERENCE
+100,MONTHLY APARTMENT RENT TRANSFER TO LANDLORD,Rent,Clean_Indian,Financial Services,0.9996,False,Financial Services,0.9996,False,False,0.0,NO_DIFFERENCE
+101,PG RENT PAYMENT SRI SAI GENTS HOSTEL,Rent,Clean_Indian,Shopping & Retail,0.6385,False,Shopping & Retail,0.6385,False,False,0.0,NO_DIFFERENCE
+102,HOUSE LEASE ADVANCE DEPOSIT TO OWNER,Rent,Clean_Indian,Income,0.5857,False,Income,0.5857,False,False,0.0,NO_DIFFERENCE
+103,GOKULDHAM HOUSING SOCIETY MAINTENANCE & RENT,Rent,Clean_Indian,Charity & Donations,0.9991,False,Charity & Donations,0.9991,False,False,0.0,NO_DIFFERENCE
+104,FLAT 301 RESIDENTIAL RENT SHARMAJI,Rent,Clean_Indian,Shopping & Retail,0.4703,False,Shopping & Retail,0.4703,False,False,0.0,NO_DIFFERENCE

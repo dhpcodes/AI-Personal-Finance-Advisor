@@ -1,0 +1,11 @@
+Category,Precision_Legacy,Recall_Legacy,F1_Score_Legacy,Support,Precision_Canon,Recall_Canon,F1_Score_Canon
+Charity & Donations,1.0,1.0,1.0,2068,1.0,1.0,1.0
+Entertainment & Recreation,1.0,1.0,1.0,1969,1.0,1.0,1.0
+Financial Services,1.0,1.0,1.0,2012,1.0,1.0,1.0
+Food & Dining,0.9995,0.9995,0.9995,1996,0.9995,0.9995,0.9995
+Government & Legal,0.999,0.999,0.999,2009,0.999,0.999,0.999
+Healthcare & Medical,0.9431,0.9695,0.9561,2001,0.9431,0.9695,0.9561
+Income,0.999,0.9995,0.9992,1983,0.999,0.9995,0.9992
+Shopping & Retail,0.9682,0.9408,0.9543,2009,0.9682,0.9408,0.9543
+Transportation,1.0,0.9985,0.9992,1996,1.0,0.9985,0.9992
+Utilities & Services,0.9985,1.0,0.9992,1997,0.9985,1.0,0.9992

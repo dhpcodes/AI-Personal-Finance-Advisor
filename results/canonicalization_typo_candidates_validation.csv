@@ -1,0 +1,6 @@
+Candidate,Clean_Val_Acc,Mixed_Val_Acc,Pure_Typo_Val_Acc,Strategy
+"Baseline Variant B (Char TF-IDF 2-5, 20k, C=10)",0.9941439205955335,0.9666501240694789,0.9296277915632755,Pure character n-grams
+"Baseline Variant C (Char 20k + Word 5k + Handcrafted, C=10)",0.9895781637717121,0.9729032258064516,0.8911166253101737,Stack char + word + dense
+"Candidate 1: Extended Char TF-IDF (2-6 n-grams, 30k, C=10)",0.9928535980148884,0.9627791563275434,0.9249627791563275,Deep character subwords only
+Candidate 2: Char (20k) + Word (5k) with C=1.0 Regularization,0.9783622828784119,0.9609925558312655,0.8670967741935484,Stronger L2 penalty prevents word overfitting
+"Candidate 3: Char (20k) + Downweighted Word (0.5x, C=10)",0.9925558312655087,0.9731017369727047,0.9114640198511166,Balanced char-first hybrid

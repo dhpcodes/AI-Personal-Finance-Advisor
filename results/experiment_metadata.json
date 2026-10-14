@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-10-13 00:38:02",
+  "dataset": {
+    "split_file": "data/mitulshah_split.csv",
+    "train_rows": 69885,
+    "val_rows": 10075,
+    "test_rows": 20040,
+    "indian_seed_rows": 3062,
+    "own_test_indian_rows": 105
+  },
+  "artifact_hashes": {
+    "production_model": "fd898d98b9f6ec03902d825082d69a461d32b3318bca47b98f45e8e8dfc11195",
+    "production_backup": "fd898d98b9f6ec03902d825082d69a461d32b3318bca47b98f45e8e8dfc11195",
+    "candidate_linear_svm": "bdb1aa42becbae67f98b428d22fd61303f3ec14cd7cb90aaa49686ef6acc3e8a",
+    "lightgbm_classifier": "ac15b1257a1f8ca95b1045f6a843fba008fe60d3f49add79cd4ade37a85c1ec2",
+    "xgboost_classifier": "d91fadbbfa58a73f78245a410da5540c56a73da0b0bd9eee22e5e4cc7cc439a4"
+  },
+  "comparison_results": [
+    {
+      "Model": "Production_Baseline",
+      "Validation_Accuracy": null,
+      "Validation_Macro_F1": null,
+      "Clean_Test_Accuracy": 0.9907,
+      "Clean_Test_Macro_F1": 0.9907,
+      "Clean_Test_Weighted_F1": 0.9907,
+      "Noisy_Test_Accuracy": 0.9273,
+      "Noisy_Test_Macro_F1": 0.9326,
+      "Noisy_Test_Weighted_F1": 0.9326,
+      "Typo_Accuracy": 0.681,
+      "Indian_Own_Test_Model_Only_Acc": 0.5619,
+      "Indian_Own_Test_Model_Rent_Rule_Acc": 0.6095,
+      "Indian_Own_Test_Macro_F1": 0.6866,
+      "Training_Time_s": null,
+      "Inference_Latency_ms": 4.828,
+      "Artifact_Size_MB": 10.69
+    },
+    {
+      "Model": "Candidate_Linear_SVM",
+      "Validation_Accuracy": 0.9892,
+      "Validation_Macro_F1": 0.9892,
+      "Clean_Test_Accuracy": 0.99,
+      "Clean_Test_Macro_F1": 0.99,
+      "Clean_Test_Weighted_F1": 0.99,
+      "Noisy_Test_Accuracy": 0.9719,
+      "Noisy_Test_Macro_F1": 0.9719,
+      "Noisy_Test_Weighted_F1": 0.9719,
+      "Typo_Accuracy": 0.8953,
+      "Indian_Own_Test_Model_Only_Acc": 0.8762,
+      "Indian_Own_Test_Model_Rent_Rule_Acc": 0.9238,
+      "Indian_Own_Test_Macro_F1": 0.9213,
+      "Training_Time_s": 46.64,
+      "Inference_Latency_ms": 4.983,
+      "Artifact_Size_MB": 8.29
+    },
+    {
+      "Model": "LightGBM",
+      "Validation_Accuracy": 0.9886,
+      "Validation_Macro_F1": 0.9886,
+      "Clean_Test_Accuracy": 0.9772,
+      "Clean_Test_Macro_F1": 0.9772,
+      "Clean_Test_Weighted_F1": 0.9772,
+      "Noisy_Test_Accuracy": 0.9309,
+      "Noisy_Test_Macro_F1": 0.9314,
+      "Noisy_Test_Weighted_F1": 0.9313,
+      "Typo_Accuracy": 0.8054,
+      "Indian_Own_Test_Model_Only_Acc": 0.781,
+      "Indian_Own_Test_Model_Rent_Rule_Acc": 0.8286,
+      "Indian_Own_Test_Macro_F1": 0.8395,
+      "Training_Time_s": 132.88,
+      "Inference_Latency_ms": 1.561,
+      "Artifact_Size_MB": 6.96
+    },
+    {
+      "Model": "XGBoost",
+      "Validation_Accuracy": 0.7153,
+      "Validation_Macro_F1": 0.7295,
+      "Clean_Test_Accuracy": 0.7261,
+      "Clean_Test_Macro_F1": 0.7318,
+      "Clean_Test_Weighted_F1": 0.7317,
+      "Noisy_Test_Accuracy": 0.6689,
+      "Noisy_Test_Macro_F1": 0.6773,
+      "Noisy_Test_Weighted_F1": 0.6772,
+      "Typo_Accuracy": 0.5373,
+      "Indian_Own_Test_Model_Only_Acc": 0.7048,
+      "Indian_Own_Test_Model_Rent_Rule_Acc": 0.7524,
+      "Indian_Own_Test_Macro_F1": 0.771,
+      "Training_Time_s": 265.13,
+      "Inference_Latency_ms": 1.231,
+      "Artifact_Size_MB": 1.47
+    }
+  ]
+}

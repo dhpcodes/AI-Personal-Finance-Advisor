@@ -10,8 +10,8 @@ from src.utils import logger
 class TransactionPredictor:
     """Production inference pipeline for transaction categorization."""
 
-    def __init__(self, model_path: Path = None):
-        self.model_path = model_path or config.final_model_path
+    def __init__(self, model_path: Union[str, Path] = None):
+        self.model_path = Path(model_path) if model_path else config.final_model_path
         self._load_artifact()
         self.preprocessor = TextPreprocessor()
 
@@ -20,8 +20,18 @@ class TransactionPredictor:
             raise FileNotFoundError(f"Final model artifact not found at {self.model_path}")
         logger.info(f"Loading prediction model artifact from {self.model_path}...")
         artifact = joblib.load(self.model_path)
-        self.vectorizer = artifact["vectorizer"]
-        self.label_encoder = artifact["label_encoder"]
+        if "vectorizer" in artifact:
+            self.vectorizer = artifact["vectorizer"]
+            self.encoder = None
+        elif "encoder_name" in artifact:
+            self.vectorizer = None
+            from sentence_transformers import SentenceTransformer
+            self.encoder = SentenceTransformer(artifact["encoder_name"])
+            self.encoder.max_seq_length = 32
+        else:
+            self.vectorizer = None
+            self.encoder = None
+        self.label_encoder = artifact.get("label_encoder", None)
         self.model = artifact["model"]
         self.classes = artifact["classes"]
         self.model_name = artifact.get("model_name", "Classification Model")
@@ -37,7 +47,12 @@ class TransactionPredictor:
                 "top_k": []
             }
 
-        X_vec = self.vectorizer.transform([cleaned])
+        if self.vectorizer is not None:
+            X_vec = self.vectorizer.transform([cleaned])
+        elif self.encoder is not None:
+            X_vec = self.encoder.encode([cleaned], show_progress_bar=False, normalize_embeddings=True)
+        else:
+            raise ValueError("No feature extractor found in artifact.")
         
         # Get probabilities
         if hasattr(self.model, "predict_proba"):
@@ -74,7 +89,12 @@ class TransactionPredictor:
         raw_texts = df_out[desc_col].fillna("").astype(str)
         cleaned_texts = [self.preprocessor.clean_text(t) for t in raw_texts]
         
-        X_vec = self.vectorizer.transform(cleaned_texts)
+        if self.vectorizer is not None:
+            X_vec = self.vectorizer.transform(cleaned_texts)
+        elif self.encoder is not None:
+            X_vec = self.encoder.encode(cleaned_texts, batch_size=256, show_progress_bar=False, normalize_embeddings=True)
+        else:
+            raise ValueError("No feature extractor found in artifact.")
         
         if hasattr(self.model, "predict_proba"):
             probs_matrix = self.model.predict_proba(X_vec)

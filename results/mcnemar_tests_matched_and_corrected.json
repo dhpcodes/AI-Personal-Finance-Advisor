@@ -1,0 +1,98 @@
+{
+  "Matched_Linear_SVM_3k_vs_Matched_MLP_3k_CleanTest": {
+    "statistic": 93.7913,
+    "p_value": 0.0,
+    "n10": 173,
+    "n01": 33
+  },
+  "Matched_Linear_SVM_3k_vs_Matched_MLP_3k_NoisyV2": {
+    "statistic": 87.8793,
+    "p_value": 0.0,
+    "n10": 941,
+    "n01": 575
+  },
+  "Matched_Linear_SVM_3k_vs_Matched_LightGBM_3k_CleanTest": {
+    "statistic": 201.6787,
+    "p_value": 0.0,
+    "n10": 354,
+    "n01": 63
+  },
+  "Matched_Linear_SVM_3k_vs_Matched_LightGBM_3k_NoisyV2": {
+    "statistic": 400.4021,
+    "p_value": 0.0,
+    "n10": 2180,
+    "n01": 1043
+  },
+  "Matched_MLP_3k_vs_Matched_LightGBM_3k_CleanTest": {
+    "statistic": 48.8069,
+    "p_value": 0.0,
+    "n10": 306,
+    "n01": 155
+  },
+  "Matched_MLP_3k_vs_Matched_LightGBM_3k_NoisyV2": {
+    "statistic": 178.4231,
+    "p_value": 0.0,
+    "n10": 2047,
+    "n01": 1276
+  },
+  "Linear_SVM_Original_20k_vs_Matched_Linear_SVM_3k_CleanTest": {
+    "statistic": 23.7753,
+    "p_value": 0.0,
+    "n10": 68,
+    "n01": 21
+  },
+  "Linear_SVM_Original_20k_vs_Matched_Linear_SVM_3k_NoisyV2": {
+    "statistic": 390.6932,
+    "p_value": 0.0,
+    "n10": 1811,
+    "n01": 800
+  },
+  "Linear_SVM_Original_20k_vs_Matched_LightGBM_3k_CleanTest": {
+    "statistic": 291.2026,
+    "p_value": 0.0,
+    "n10": 364,
+    "n01": 26
+  },
+  "Linear_SVM_Original_20k_vs_Matched_LightGBM_3k_NoisyV2": {
+    "statistic": 1242.4822,
+    "p_value": 0.0,
+    "n10": 2929,
+    "n01": 781
+  },
+  "Linear_SVM_Original_20k_vs_Matched_MLP_3k_CleanTest": {
+    "statistic": 147.217,
+    "p_value": 0.0,
+    "n10": 211,
+    "n01": 24
+  },
+  "Linear_SVM_Original_20k_vs_Matched_MLP_3k_NoisyV2": {
+    "statistic": 632.6014,
+    "p_value": 0.0,
+    "n10": 2185,
+    "n01": 808
+  },
+  "LeakageFree_20k_vs_MiniLM_Indian96_ModelOnly": {
+    "statistic": 2.4,
+    "p_value": 0.12134,
+    "n10": 11,
+    "n01": 4
+  },
+  "LeakageFree_20k_vs_LightGBM_Indian96_ModelOnly": {
+    "statistic": 5.8182,
+    "p_value": 0.01586,
+    "n10": 10,
+    "n01": 1
+  },
+  "LeakageFree_20k_vs_MiniLM_Indian96_PlusRent": {
+    "statistic": 2.4,
+    "p_value": 0.12134,
+    "n10": 11,
+    "n01": 4
+  },
+  "LeakageFree_20k_vs_LightGBM_Indian96_PlusRent": {
+    "statistic": 5.8182,
+    "p_value": 0.01586,
+    "n10": 10,
+    "n01": 1
+  }
+}

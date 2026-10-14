@@ -4,20 +4,31 @@ from typing import List, Union
 from pathlib import Path
 from src.utils import logger, save_csv_report
 from src.config import config
+from src.canonicalize import canonicalize
 
 class TextPreprocessor:
     """Text preprocessing pipeline for transaction descriptions."""
 
-    def __init__(self, lowercase: bool = True, normalize_whitespace: bool = True):
+    def __init__(
+        self,
+        lowercase: bool = True,
+        normalize_whitespace: bool = True,
+        use_canonicalization: bool = True
+    ):
         self.lowercase = lowercase
         self.normalize_whitespace = normalize_whitespace
+        self.use_canonicalization = use_canonicalization
         
     def clean_text(self, text: str) -> str:
         """Clean single transaction description string safely."""
         if not isinstance(text, str) or pd.isna(text):
             return ""
             
-        # 1. Lowercase if configured
+        # 1. Strip Indian banking wrappers and authorization tokens via canonicalization
+        if self.use_canonicalization:
+            text = canonicalize(text)
+            
+        # 2. Lowercase if configured
         if self.lowercase:
             text = text.lower()
             

@@ -1,0 +1,32 @@
+{
+  "Clean_Test_SVM_vs_LightGBM": {
+    "model_a": "Candidate_Linear_SVM",
+    "model_b": "LightGBM",
+    "n_samples": 20040,
+    "statistic": 200.4159,
+    "p_value": 0.0,
+    "n01_b_better": 35,
+    "n10_a_better": 292,
+    "significant_p05": true
+  },
+  "Indian_105_SVM_vs_MiniLM": {
+    "model_a": "Candidate_Linear_SVM",
+    "model_b": "MiniLM_LogReg",
+    "n_samples": 105,
+    "statistic": 2.4,
+    "p_value": 0.12134,
+    "n01_b_better": 4,
+    "n10_a_better": 11,
+    "significant_p05": false
+  },
+  "Indian_105_LightGBM_vs_MiniLM": {
+    "model_a": "LightGBM",
+    "model_b": "MiniLM_LogReg",
+    "n_samples": 105,
+    "statistic": 0.2105,
+    "p_value": 0.64636,
+    "n01_b_better": 11,
+    "n10_a_better": 8,
+    "significant_p05": false
+  }
+}

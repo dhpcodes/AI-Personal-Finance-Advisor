@@ -1,0 +1,5 @@
+Dataset,Row_Count,Is_Held_Out,Has_Merchant_Leakage,Legacy_Accuracy,Canonicalized_Accuracy,Accuracy_Diff,Legacy_Macro_F1,Canonicalized_Macro_F1,Agreement_Rate_Pct,Changed_Count,Mean_Abs_Conf_Change
+own_test_indian.csv (Model-Only),105,True,False,0.5714,0.5619,-0.0095,0.5833,0.577,99.05,1,0.000413
+own_test_indian.csv (Model+RentRule),105,True,False,0.619,0.6095,-0.0095,0.6933,0.6866,99.05,1,0.000413
+mitulshah_split.csv (Test Split),20040,True,False,0.9907,0.9907,0.0,0.9907,0.9907,100.0,0,0.0
+test.parquet (Legacy V1 Split),30000,False,True,0.9869,0.9869,0.0,0.9869,0.9869,100.0,0,0.0

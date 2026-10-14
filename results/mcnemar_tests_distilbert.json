@@ -1,0 +1,38 @@
+{
+  "DistilBERT_vs_Linear_SVM_20k_CleanTest": {
+    "statistic": 11.1607,
+    "p_value": 0.00084,
+    "n10": 41,
+    "n01": 15
+  },
+  "DistilBERT_vs_Matched_Linear_SVM_3k_CleanTest": {
+    "statistic": 45.0783,
+    "p_value": 0.0,
+    "n10": 94,
+    "n01": 21
+  },
+  "DistilBERT_vs_Linear_SVM_20k_NoisyV2": {
+    "statistic": 690.4801,
+    "p_value": 0.0,
+    "n10": 844,
+    "n01": 2324
+  },
+  "DistilBERT_vs_Matched_Linear_SVM_3k_NoisyV2": {
+    "statistic": 54.7423,
+    "p_value": 0.0,
+    "n10": 1766,
+    "n01": 2235
+  },
+  "DistilBERT_vs_MiniLM_Indian96_ModelOnly": {
+    "statistic": 11.0769,
+    "p_value": 0.00087,
+    "n10": 13,
+    "n01": 0
+  },
+  "DistilBERT_vs_LightGBM_Indian96_ModelOnly": {
+    "statistic": 13.0667,
+    "p_value": 0.0003,
+    "n10": 15,
+    "n01": 0
+  }
+}

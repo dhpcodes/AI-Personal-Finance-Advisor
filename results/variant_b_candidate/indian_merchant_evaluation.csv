@@ -1,0 +1,12 @@
+Merchant,Input_Transaction,Expected_Category,Present_In_Train_Set,Train_Occurrences,Production_Pred,Production_Conf,Production_Correct,Candidate_Pred,Candidate_Conf,Candidate_Correct
+Amazon Pay,UPI/998124019283/AMAZON PAY/amazon@apl,Shopping & Retail,True,14,Income,0.5,False,Shopping & Retail,0.9184,True
+Swiggy,UPI/308942189012/SWIGGY/swiggy@icici,Food & Dining,True,13,Shopping & Retail,0.6385,False,Food & Dining,0.8027,True
+Zomato,UPI/489120938102/ZOMATO/zomato@hdfcbank,Food & Dining,True,13,Shopping & Retail,0.6385,False,Food & Dining,0.8015,True
+Ola,UPI/992019283102/OLA CABS/olacabs@icici,Transportation,True,26,Shopping & Retail,0.6385,False,Transportation,0.8388,True
+Jio,UPI/110293849102/RELIANCE JIO RECHARGE/jio@paytm,Utilities & Services,True,69,Shopping & Retail,0.6385,False,Utilities & Services,0.8148,True
+Blinkit,BLINKIT COMMERCE PVT LTD,Food & Dining,True,13,Shopping & Retail,0.6385,False,Food & Dining,0.8311,True
+Zepto,ZEPTO 10 MIN GROCERY DELIVERY,Food & Dining,True,13,Shopping & Retail,0.6385,False,Food & Dining,0.837,True
+BigBasket,BIGBASKET SUPERMARKET ORDER,Food & Dining,True,14,Shopping & Retail,0.6385,False,Food & Dining,0.8074,True
+Flipkart,IMPS/3948201/FLIPKART INTERNET/REF921,Shopping & Retail,True,14,Utilities & Services,0.9994,False,Shopping & Retail,0.7995,True
+Myntra,POS 5241XXXX9021 MYNTRA DESIGNS BANGALORE,Shopping & Retail,True,14,Shopping & Retail,0.6385,True,Shopping & Retail,0.8085,True
+Airtel,BHARTI AIRTEL POSTPAID BILL PAYMENT,Utilities & Services,True,28,Shopping & Retail,0.6385,False,Utilities & Services,0.6645,True

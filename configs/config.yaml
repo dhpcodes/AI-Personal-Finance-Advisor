@@ -10,7 +10,7 @@ paths:
   processed_data_dir: "data/processed"
   models_dir: "models"
   reports_dir: "reports"
-  final_model_path: "models/final_model.joblib"
+  final_model_path: "models/variant_b_candidate.joblib"
   split_metadata_path: "reports/split_metadata.json"
 
 data_split:

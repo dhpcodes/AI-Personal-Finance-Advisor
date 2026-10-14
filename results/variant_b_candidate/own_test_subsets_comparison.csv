@@ -1,0 +1,6 @@
+Noise_Subset,Count,Production_Accuracy,Candidate_Accuracy,Accuracy_Delta
+Clean_Indian,93,0.6237,0.914,0.2903
+IMPS,2,0.5,1.0,0.5
+NEFT,2,1.0,1.0,0.0
+POS,2,1.0,1.0,0.0
+UPI,6,0.1667,1.0,0.8333

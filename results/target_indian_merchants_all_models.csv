@@ -1,0 +1,12 @@
+Brand,Input_Description,Expected_Category,Production_Baseline_Pred,Production_Baseline_Conf,Production_Baseline_Status,Candidate_Linear_SVM_Pred,Candidate_Linear_SVM_Conf,Candidate_Linear_SVM_Status,LightGBM_Pred,LightGBM_Conf,LightGBM_Status,XGBoost_Pred,XGBoost_Conf,XGBoost_Status,MiniLM_LogReg_Pred,MiniLM_LogReg_Conf,MiniLM_LogReg_Status
+Amazon Pay,UPI/998124019283/AMAZON PAY/amazon@apl,Shopping & Retail,Income,0.5,FAIL,Shopping & Retail,0.9184,PASS,Shopping & Retail,1.0,PASS,Shopping & Retail,0.9616,PASS,Shopping & Retail,0.941,PASS
+Swiggy,UPI/308942189012/SWIGGY/swiggy@icici,Food & Dining,Shopping & Retail,0.6385,FAIL,Food & Dining,0.8027,PASS,Food & Dining,0.9999,PASS,Food & Dining,0.6078,PASS,Food & Dining,0.7597,PASS
+Zomato,UPI/489120938102/ZOMATO/zomato@hdfcbank,Food & Dining,Shopping & Retail,0.6385,FAIL,Food & Dining,0.8015,PASS,Food & Dining,1.0,PASS,Food & Dining,0.787,PASS,Food & Dining,0.919,PASS
+Ola Cabs,UPI/992019283102/OLA CABS/olacabs@icici,Transportation,Shopping & Retail,0.6385,FAIL,Transportation,0.8388,PASS,Transportation,1.0,PASS,Transportation,0.4648,PASS,Transportation,0.7704,PASS
+Reliance Jio,UPI/110293849102/RELIANCE JIO RECHARGE/jio@paytm,Utilities & Services,Shopping & Retail,0.6385,FAIL,Utilities & Services,0.8148,PASS,Utilities & Services,0.9994,PASS,Utilities & Services,0.5304,PASS,Utilities & Services,0.9645,PASS
+Blinkit,BLINKIT COMMERCE PVT LTD,Food & Dining,Shopping & Retail,0.6385,FAIL,Food & Dining,0.8311,PASS,Food & Dining,0.9803,PASS,Food & Dining,0.8677,PASS,Financial Services,0.6091,FAIL
+Zepto,ZEPTO 10 MIN GROCERY DELIVERY,Food & Dining,Shopping & Retail,0.6385,FAIL,Food & Dining,0.837,PASS,Food & Dining,0.9954,PASS,Charity & Donations,0.5857,FAIL,Food & Dining,0.964,PASS
+BigBasket,BIGBASKET SUPERMARKET ORDER,Food & Dining,Shopping & Retail,0.6385,FAIL,Food & Dining,0.8074,PASS,Shopping & Retail,0.7248,FAIL,Shopping & Retail,0.4013,FAIL,Food & Dining,0.9602,PASS
+Flipkart,IMPS/3948201/FLIPKART INTERNET/REF921,Shopping & Retail,Utilities & Services,0.9994,FAIL,Shopping & Retail,0.7995,PASS,Shopping & Retail,0.9999,PASS,Shopping & Retail,0.6906,PASS,Shopping & Retail,0.4996,PASS
+Myntra,POS 5241XXXX9021 MYNTRA DESIGNS BANGALORE,Shopping & Retail,Shopping & Retail,0.6385,PASS,Shopping & Retail,0.8085,PASS,Shopping & Retail,0.9999,PASS,Shopping & Retail,0.7934,PASS,Shopping & Retail,0.9994,PASS
+Airtel,BHARTI AIRTEL POSTPAID BILL PAYMENT,Utilities & Services,Shopping & Retail,0.6385,FAIL,Utilities & Services,0.6645,PASS,Income,0.8153,FAIL,Income,0.4949,FAIL,Utilities & Services,0.9245,PASS

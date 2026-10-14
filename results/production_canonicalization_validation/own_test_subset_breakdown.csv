@@ -1,0 +1,6 @@
+Noise_Subset,Sample_Count,Legacy_Accuracy,Canonicalized_Accuracy,Accuracy_Diff,Changed_Predictions,Mean_Abs_Conf_Change
+Clean_Indian,93,0.6237,0.6237,0.0,0,0.0
+IMPS,2,0.5,0.5,0.0,0,0.0
+NEFT,2,1.0,1.0,0.0,0,0.0
+POS,2,1.0,1.0,0.0,0,0.0
+UPI,6,0.3333,0.1667,-0.1667,1,0.007233

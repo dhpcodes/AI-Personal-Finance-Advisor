@@ -1,0 +1,50 @@
+{
+  "Linear_SVM_Full_vs_MLP_TFIDF_Clean": {
+    "statistic": 372.9604,
+    "p_value": 0.0,
+    "n10": 415,
+    "n01": 14
+  },
+  "Linear_SVM_Full_vs_MLP_TFIDF_NoisyV2": {
+    "statistic": 670.9475,
+    "p_value": 0.0,
+    "n10": 2648,
+    "n01": 1068
+  },
+  "Linear_SVM_Full_vs_LightGBM_Clean": {
+    "statistic": 200.4159,
+    "p_value": 0.0,
+    "n10": 292,
+    "n01": 35
+  },
+  "Linear_SVM_Full_vs_LightGBM_NoisyV2": {
+    "statistic": 1496.1614,
+    "p_value": 0.0,
+    "n10": 3495,
+    "n01": 923
+  },
+  "Linear_SVM_Full_vs_MiniLM_LogReg_Clean": {
+    "statistic": 1794.2022,
+    "p_value": 0.0,
+    "n10": 1910,
+    "n01": 39
+  },
+  "Linear_SVM_Full_vs_MiniLM_LogReg_NoisyV2": {
+    "statistic": 4668.8925,
+    "p_value": 0.0,
+    "n10": 6373,
+    "n01": 647
+  },
+  "Linear_20k_vs_RBF_20k_Clean": {
+    "statistic": 1045.262,
+    "p_value": 0.0,
+    "n10": 1229,
+    "n01": 65
+  },
+  "Linear_20k_vs_RBF_20k_NoisyV2": {
+    "statistic": 193.7037,
+    "p_value": 0.0,
+    "n10": 1603,
+    "n01": 905
+  }
+}

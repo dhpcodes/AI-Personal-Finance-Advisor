@@ -1,0 +1,10 @@
+Metric,Production_Model,Candidate_Variant_B,Delta
+mitulshah_clean_accuracy,0.9907,0.99,-0.0006
+mitulshah_clean_macro_f1,0.9907,0.99,-0.0007
+mitulshah_noisy_accuracy,0.9273,0.9719,0.0446
+mitulshah_noisy_macro_f1,0.9326,0.9719,0.0393
+mitulshah_typo_accuracy,0.681,0.8953,0.2143
+own_test_indian_model_only_acc,0.5619,0.8762,0.3143
+own_test_indian_model_rent_rule_acc,0.6095,0.9238,0.3143
+inference_latency_ms_per_txn,4.6921,4.4959,-0.1963
+model_artifact_size_mb,10.69,8.29,-2.4

@@ -1,0 +1,4 @@
+Experiment,Data_Scale,Matrix_Type,Train_Accuracy,Val_Accuracy,Test_Accuracy,Fit_Time_Sec
+"(a) XGBoost lossguide (max_leaves=63, lr=0.20, sparse)","Full (72,947 rows)",Sparse CSR,0.9835,0.8019,0.8074,138.84
+"(b) XGBoost lossguide (max_leaves=63, lr=0.20, dense zeros)","Full (72,947 rows)",Dense ndarray,0.9838,0.9546,0.9002,353.2
+"(c) LightGBM (num_leaves=63, lr=0.20, 20k control)","Subsample (20,000 rows)",Sparse CSR,0.9937,0.8803,0.8237,49.02

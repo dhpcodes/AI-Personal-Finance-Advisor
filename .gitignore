@@ -38,6 +38,10 @@ ENV/
 data/raw/*.parquet
 data/processed/
 models/*.joblib
+*.pt
+*.bin
+*.safetensors
+results/distilbert/checkpoint-*/
 
 # Logs & temp
 *.log
@@ -45,4 +49,11 @@ models/*.joblib
 data/*.db
 scratch/
 !models/final_model.joblib
+!models/variant_b_candidate.joblib
 
+
+.env
+env/
+
+kaggle_export/
+kaggle_export.zip

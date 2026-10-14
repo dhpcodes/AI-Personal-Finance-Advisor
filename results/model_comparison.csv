@@ -1,0 +1,6 @@
+Model,Validation_Accuracy,Validation_Macro_F1,Clean_Test_Accuracy,Clean_Test_Macro_F1,Clean_Test_Weighted_F1,Noisy_Test_Accuracy,Noisy_Test_Macro_F1,Noisy_Test_Weighted_F1,Typo_Accuracy,Indian_Own_Test_Model_Only_Acc,Indian_Own_Test_Model_Rent_Rule_Acc,Indian_Own_Test_Macro_F1,Training_Time_s,Inference_Latency_ms,Artifact_Size_MB,Indian_Statement_Model_Acc,Indian_Statement_Model_Plus_RentRule_Acc,Indian_Statement_Macro_F1,Training_Time_Sec,Inference_Latency_ms_per_txn
+Production_Baseline,,,0.9907,0.9907,0.9907,0.9273,0.9326,0.9326,0.681,0.5619,0.6095,0.6866,,4.828,10.69,,,,,
+Candidate_Linear_SVM,0.9892,0.9892,0.99,0.99,0.99,0.9719,0.9719,0.9719,0.8953,0.8762,0.9238,0.9213,46.64,4.983,8.29,,,,,
+LightGBM,0.9886,0.9886,0.9772,0.9772,0.9772,0.9309,0.9314,0.9313,0.8054,0.781,0.8286,0.8395,132.88,1.561,6.96,,,,,
+XGBoost,0.7153,0.7295,0.7261,0.7318,0.7317,0.6689,0.6773,0.6772,0.5373,0.7048,0.7524,0.771,265.13,1.231,1.47,,,,,
+MiniLM_LogReg,0.9235,0.9231,0.8967,0.8977,0.898,0.8282,0.8323,0.8326,0.5706,,,,,,0.02,0.8095,0.8571,0.8725,11.98,7.596

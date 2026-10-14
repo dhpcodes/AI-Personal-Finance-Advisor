@@ -1,0 +1,16 @@
+Validation_Index,Original_Noisy_Description,Canonicalized_Description,True_Category,Raw_Model_Prediction,Canonicalized_Model_Prediction
+33,DSL #3418,DSL #3418,Utilities & Services,Utilities & Services,Government & Legal
+61,DSL #5078,DSL #5078,Utilities & Services,Utilities & Services,Transportation
+83,h&m #1655 store,h&m #1655 store,Shopping & Retail,Shopping & Retail,Government & Legal
+465,UPI/415016293817/DINING OUT - SUSHI RESTAURANT/diningouts@okaxis,DINING OUT - SUSHI RESTAURANT,Food & Dining,Food & Dining,Financial Services
+568,DSL TXN270367,DSL TXN270367,Utilities & Services,Utilities & Services,Shopping & Retail
+588,MOUNT SI...,MOUNT SI,Healthcare & Medical,Healthcare & Medical,Financial Services
+604,go-kart - india,go-kart - india,Entertainment & Recreation,Entertainment & Recreation,Transportation
+875,go-kart store,go-kart store,Entertainment & Recreation,Entertainment & Recreation,Transportation
+881,UPI/778873972217/WINDSTREAM #3272 ONLINE CENTER/windstream@okaxis,WINDSTREAM #3272 ONLINE CENTER,Utilities & Services,Utilities & Services,Charity & Donations
+1014,OFFIC...,OFFIC,Shopping & Retail,Shopping & Retail,Government & Legal
+1250,OFFIC...,OFFIC,Shopping & Retail,Shopping & Retail,Government & Legal
+1438,DSL A(pp),DSL A(pp),Utilities & Services,Utilities & Services,Government & Legal
+1579,uber #8857 - uk,uber #8857 - uk,Transportation,Transportation,Utilities & Services
+1655,MOUNT SI...,MOUNT SI,Healthcare & Medical,Healthcare & Medical,Financial Services
+1680,wmata - usa store center,wmata - usa store center,Transportation,Transportation,Charity & Donations

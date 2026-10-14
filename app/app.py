@@ -1557,11 +1557,12 @@ elif nav_option == "⚠️ Budget & Anomalies":
             goal_eval = GoalSavingPlanner.evaluate_goal(
                 target_amount=target_amount,
                 current_savings=current_savings,
-                target_date_or_months=target_months,
-                historical_df=df_active,
+                months_remaining=target_months,
+                df=df_active,
             )
+            avg_surp = goal_eval.get("history_analysis", {}).get("average_monthly_surplus", 0.0)
 
-            req_monthly = goal_eval.get("required_monthly_savings", 0.0)
+            req_monthly = goal_eval.get("required_monthly_saving", 0.0)
             st.markdown(f"#### Goal Assessment for **{goal_name}**")
 
             eval_c1, eval_c2, eval_c3 = st.columns(3)
@@ -1578,7 +1579,7 @@ elif nav_option == "⚠️ Budget & Anomalies":
                     f"the required INR {req_monthly:,.2f}/mo with an extra cushion of INR {avg_surp - req_monthly:,.2f}/mo."
                 )
             else:
-                shortfall = goal_eval.get("monthly_shortfall", 0.0)
+                shortfall = goal_eval.get("estimated_shortfall", 0.0)
                 st.warning(
                     f"**Monthly Shortfall of INR {shortfall:,.2f}/mo**: Your current monthly surplus of "
                     f"INR {avg_surp:,.2f} is insufficient to reach INR {target_amount:,.2f} in {target_months} months."
@@ -1588,10 +1589,7 @@ elif nav_option == "⚠️ Budget & Anomalies":
                 recs = goal_eval.get("recommendations", [])
                 if recs:
                     for r in recs:
-                        st.markdown(
-                            f"- **{r.get('category')}**: Current monthly spending is INR {r.get('current_monthly_spending', 0.0):,.2f}. "
-                            f"Suggested reduction of INR {r.get('suggested_reduction', 0.0):,.2f}/mo ({r.get('reduction_pct', 0.0):.0f}% cutback)."
-                        )
+                        st.markdown(f"- {r}")
                 else:
                     st.info("No discretionary categories (Food & Dining, Entertainment, Shopping) had recorded spending to suggest cutbacks.")
 
